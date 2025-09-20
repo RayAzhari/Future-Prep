@@ -84,14 +84,14 @@ src/
 ### 🚀 Deploy to Vercel (Recommended)
 
 **Option 1: One-Click Deploy**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/future-prep)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/RayAzhari/future-prep)
 
 **Option 2: Manual Deployment**
 
 1. **Push to GitHub:**
    ```bash
    # Create a new repository on GitHub, then:
-   git remote add origin https://github.com/yourusername/future-prep.git
+   git remote add origin https://github.com/RayAzhari/future-prep.git
    git branch -M main
    git push -u origin main
    ```
