@@ -165,7 +165,7 @@ export default function AboutSection() {
 
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="mb-6">
-                  Hi! I'm Rayan Azhari, a high school student who understands the challenges of navigating college admissions firsthand. After spending countless hours researching scholarships, study resources, and research opportunities, I realized how scattered and overwhelming this information can be.
+                  Hi! I&apos;m Rayan Azhari, a high school student who understands the challenges of navigating college admissions firsthand. After spending countless hours researching scholarships, study resources, and research opportunities, I realized how scattered and overwhelming this information can be.
                 </p>
                 
                 <p className="mb-6">
@@ -178,7 +178,7 @@ export default function AboutSection() {
                 
                 <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-6 border border-primary-200">
                   <p className="text-lg font-medium text-gray-900 mb-2">
-                    "Education should be accessible to everyone, regardless of their background or financial situation."
+                    &ldquo;Education should be accessible to everyone, regardless of their background or financial situation.&rdquo;
                   </p>
                   <p className="text-gray-600">
                     — Rayan Azhari
