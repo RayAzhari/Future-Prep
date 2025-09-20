@@ -81,18 +81,34 @@ src/
 
 ## Deployment
 
-### Vercel (Recommended)
+### 🚀 Deploy to Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy with one click
+**Option 1: One-Click Deploy**
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/future-prep)
 
-### Other Platforms
+**Option 2: Manual Deployment**
+
+1. **Push to GitHub:**
+   ```bash
+   # Create a new repository on GitHub, then:
+   git remote add origin https://github.com/yourusername/future-prep.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+2. **Deploy to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect it's a Next.js app
+   - Click "Deploy" - your app will be live in minutes!
+
+### 🌐 Other Platforms
 
 The app can be deployed to any platform that supports Next.js:
-- Netlify
-- Railway
-- AWS Amplify
+- **Netlify**: Drag and drop the `out` folder after running `npm run build && npm run export`
+- **Railway**: Connect GitHub repo for automatic deployments
+- **AWS Amplify**: Connect GitHub repo for CI/CD pipeline
 
 ## Features Overview
 
