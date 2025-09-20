@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "STEM Scholars Award",
+    "majors": ["Computer Science", "Engineering", "Mathematics", "Physics"],
+    "deadline": "2025-10-15",
+    "amount": 5000,
+    "description": "Awarded to students pursuing STEM fields with demonstrated academic excellence",
+    "link": "https://www.nsf.gov/edu/fellowships/",
+    "eligibility": "High school seniors with 3.5+ GPA"
+  },
+  {
+    "id": 2,
+    "title": "Women in Tech Scholarship",
+    "majors": ["Computer Science", "Information Systems", "Software Engineering"],
+    "deadline": "2026-01-10",
+    "amount": 3500,
+    "description": "Supporting women pursuing careers in technology",
+    "link": "https://www.ncwit.org/scholarships",
+    "eligibility": "Female high school seniors interested in tech"
+  },
+  {
+    "id": 3,
+    "title": "Future Leaders Scholarship",
+    "majors": ["Business", "Economics", "Political Science", "Public Policy"],
+    "deadline": "2025-12-01",
+    "amount": 4000,
+    "description": "For students demonstrating leadership potential",
+    "link": "https://www.pointfoundation.org/",
+    "eligibility": "Students with leadership experience and community service"
+  },
+  {
+    "id": 4,
+    "title": "Creative Arts Excellence Award",
+    "majors": ["Fine Arts", "Graphic Design", "Music", "Theater"],
+    "deadline": "2025-11-30",
+    "amount": 2500,
+    "description": "Supporting talented students in creative fields",
+    "link": "https://www.artandwriting.org/scholarships/",
+    "eligibility": "Portfolio submission required"
+  },
+  {
+    "id": 5,
+    "title": "First Generation College Student Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-09-15",
+    "amount": 3000,
+    "description": "Supporting first-generation college students",
+    "link": "https://www.questbridge.org/",
+    "eligibility": "First in family to attend college"
+  },
+  {
+    "id": 6,
+    "title": "Environmental Science Scholarship",
+    "majors": ["Environmental Science", "Biology", "Chemistry", "Geology"],
+    "deadline": "2026-02-28",
+    "amount": 4500,
+    "description": "For students passionate about environmental conservation",
+    "link": "https://www.epa.gov/students",
+    "eligibility": "Students with environmental volunteer experience"
+  },
+  {
+    "id": 7,
+    "title": "Community Service Leadership Award",
+    "majors": ["Social Work", "Education", "Public Health", "All Majors"],
+    "deadline": "2025-10-31",
+    "amount": 2000,
+    "description": "Recognizing students dedicated to community service",
+    "link": "https://www.americorps.gov/",
+    "eligibility": "Minimum 100 volunteer hours"
+  },
+  {
+    "id": 8,
+    "title": "Innovation in Healthcare Scholarship",
+    "majors": ["Pre-Med", "Nursing", "Biomedical Engineering", "Public Health"],
+    "deadline": "2026-01-15",
+    "amount": 6000,
+    "description": "Supporting future healthcare innovators",
+    "link": "https://www.aamc.org/students/aspiring/",
+    "eligibility": "Students with healthcare-related experience"
+  },
+  {
+    "id": 9,
+    "title": "Gates Millennium Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-09-15",
+    "amount": 50000,
+    "description": "Full scholarship for outstanding minority students",
+    "link": "https://gmsp.org/",
+    "eligibility": "Minority students with demonstrated financial need"
+  },
+  {
+    "id": 10,
+    "title": "Coca-Cola Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-10-31",
+    "amount": 20000,
+    "description": "Merit-based scholarship for exceptional students",
+    "link": "https://www.coca-colascholarsfoundation.org/",
+    "eligibility": "High school seniors with leadership and service"
+  },
+  {
+    "id": 11,
+    "title": "Dell Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-15",
+    "amount": 20000,
+    "description": "Supporting students who overcome significant obstacles",
+    "link": "https://www.dellscholars.org/",
+    "eligibility": "Students from underserved backgrounds"
+  },
+  {
+    "id": 12,
+    "title": "Jack Kent Cooke Foundation Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-11-20",
+    "amount": 55000,
+    "description": "Comprehensive scholarship for exceptional students",
+    "link": "https://www.jkcf.org/",
+    "eligibility": "High academic achievement and financial need"
+  },
+  {
+    "id": 13,
+    "title": "Intel Science Talent Search",
+    "majors": ["STEM Fields"],
+    "deadline": "2025-11-13",
+    "amount": 250000,
+    "description": "Premier science competition for high school seniors",
+    "link": "https://www.societyforscience.org/regeneron-sts/",
+    "eligibility": "High school seniors with original research projects"
+  },
+  {
+    "id": 14,
+    "title": "Google Science Fair",
+    "majors": ["STEM Fields"],
+    "deadline": "2025-12-12",
+    "amount": 50000,
+    "description": "Global science competition for students 13-18",
+    "link": "https://www.googlesciencefair.com/",
+    "eligibility": "Students worldwide with innovative science projects"
+  },
+  {
+    "id": 15,
+    "title": "Siemens Competition",
+    "majors": ["STEM Fields"],
+    "deadline": "2025-09-30",
+    "amount": 100000,
+    "description": "Premier STEM research competition",
+    "link": "https://www.siemens-foundation.org/",
+    "eligibility": "High school students with original research"
+  },
+  {
+    "id": 16,
+    "title": "Regeneron ISEF",
+    "majors": ["STEM Fields"],
+    "deadline": "2025-03-15",
+    "amount": 75000,
+    "description": "International Science and Engineering Fair",
+    "link": "https://www.societyforscience.org/isef/",
+    "eligibility": "Students 13-18 with science/engineering projects"
+  },
+  {
+    "id": 17,
+    "title": "Microsoft Imagine Cup",
+    "majors": ["Computer Science", "Engineering"],
+    "deadline": "2025-05-15",
+    "amount": 100000,
+    "description": "Global technology competition",
+    "link": "https://imaginecup.microsoft.com/",
+    "eligibility": "Students with innovative technology solutions"
+  },
+  {
+    "id": 18,
+    "title": "Apple WWDC Student Scholarship",
+    "majors": ["Computer Science", "Software Engineering"],
+    "deadline": "2025-04-25",
+    "amount": 1599,
+    "description": "Free WWDC conference attendance for students",
+    "link": "https://developer.apple.com/wwdc23/scholarships/",
+    "eligibility": "Student developers with Swift Playgrounds apps"
+  },
+  {
+    "id": 19,
+    "title": "Google Code-in",
+    "majors": ["Computer Science"],
+    "deadline": "2025-01-25",
+    "amount": 1000,
+    "description": "Open source coding competition for teens",
+    "link": "https://codein.withgoogle.com/",
+    "eligibility": "Students 13-17 interested in open source"
+  },
+  {
+    "id": 20,
+    "title": "Congressional App Challenge",
+    "majors": ["Computer Science", "App Development"],
+    "deadline": "2025-11-01",
+    "amount": 250,
+    "description": "Annual app competition for high school students",
+    "link": "https://www.congressionalappchallenge.us/",
+    "eligibility": "High school students in participating districts"
+  },
+  {
+    "id": 21,
+    "title": "National History Day",
+    "majors": ["History", "Social Sciences"],
+    "deadline": "2025-06-15",
+    "amount": 5000,
+    "description": "Historical research competition",
+    "link": "https://www.nhd.org/",
+    "eligibility": "Students grades 6-12 with historical research projects"
+  },
+  {
+    "id": 22,
+    "title": "Model UN Scholarships",
+    "majors": ["International Relations", "Political Science"],
+    "deadline": "2025-04-01",
+    "amount": 2000,
+    "description": "For students active in Model United Nations",
+    "link": "https://www.unausa.org/",
+    "eligibility": "Students with Model UN experience"
+  },
+  {
+    "id": 23,
+    "title": "Debate Scholarships",
+    "majors": ["Communication", "Political Science", "Law"],
+    "deadline": "2025-03-15",
+    "amount": 3000,
+    "description": "For students active in competitive debate",
+    "link": "https://www.speechanddebate.org/",
+    "eligibility": "Students with debate team experience"
+  },
+  {
+    "id": 24,
+    "title": "DECA Business Competition",
+    "majors": ["Business", "Marketing", "Finance"],
+    "deadline": "2025-04-25",
+    "amount": 1000,
+    "description": "Business and entrepreneurship competition",
+    "link": "https://www.deca.org/",
+    "eligibility": "Students in DECA programs"
+  },
+  {
+    "id": 25,
+    "title": "FBLA Business Leadership",
+    "majors": ["Business", "Leadership"],
+    "deadline": "2025-03-01",
+    "amount": 1500,
+    "description": "Future Business Leaders of America scholarship",
+    "link": "https://www.fbla.org/",
+    "eligibility": "FBLA members with leadership experience"
+  },
+  {
+    "id": 26,
+    "title": "HOSA Health Science",
+    "majors": ["Health Sciences", "Medicine", "Nursing"],
+    "deadline": "2025-04-15",
+    "amount": 2000,
+    "description": "Health Occupations Students of America",
+    "link": "https://www.hosa.org/",
+    "eligibility": "HOSA members pursuing health careers"
+  },
+  {
+    "id": 27,
+    "title": "SkillsUSA Technical",
+    "majors": ["Technical Fields", "Trade Skills"],
+    "deadline": "2025-03-20",
+    "amount": 1000,
+    "description": "For students in technical and trade programs",
+    "link": "https://www.skillsusa.org/",
+    "eligibility": "SkillsUSA members in technical programs"
+  },
+  {
+    "id": 28,
+    "title": "National Honor Society",
+    "majors": ["All Majors"],
+    "deadline": "2025-02-01",
+    "amount": 3200,
+    "description": "Merit scholarship for NHS members",
+    "link": "https://www.nhs.us/",
+    "eligibility": "NHS members with leadership and service"
+  },
+  {
+    "id": 29,
+    "title": "Key Club International",
+    "majors": ["All Majors"],
+    "deadline": "2025-03-15",
+    "amount": 1000,
+    "description": "Service-based scholarship for Key Club members",
+    "link": "https://www.keyclub.org/",
+    "eligibility": "Key Club members with service hours"
+  },
+  {
+    "id": 30,
+    "title": "National Art Honor Society",
+    "majors": ["Fine Arts", "Graphic Design", "Art History"],
+    "deadline": "2025-04-01",
+    "amount": 500,
+    "description": "For students demonstrating excellence in visual arts",
+    "link": "https://www.arteducators.org/",
+    "eligibility": "NAHS members with artistic portfolios"
+  }
+]

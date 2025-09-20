@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "Official SAT Practice - Khan Academy",
+    "platform": "Khan Academy",
+    "category": "SAT",
+    "link": "https://www.khanacademy.org/sat",
+    "description": "The #1 best and free resource with official SAT practice tests and personalized study plans"
+  },
+  {
+    "id": 2,
+    "title": "Official SAT Study Guide",
+    "platform": "College Board",
+    "category": "SAT",
+    "link": "https://collegereadiness.collegeboard.org/sat/practice",
+    "description": "Contains real past SATs and official practice materials"
+  },
+  {
+    "id": 3,
+    "title": "The Organic Chemistry Tutor - SAT Math",
+    "platform": "YouTube",
+    "category": "SAT",
+    "link": "https://www.youtube.com/c/TheOrganicChemistryTutor",
+    "description": "Excellent for SAT Math review with comprehensive tutorials"
+  },
+  {
+    "id": 4,
+    "title": "UWorld SAT Prep",
+    "platform": "UWorld",
+    "category": "SAT",
+    "link": "https://www.uworld.com/sat/",
+    "description": "Thousands of realistic practice questions with detailed explanations"
+  },
+  {
+    "id": 5,
+    "title": "College Panda Math",
+    "platform": "College Panda",
+    "category": "SAT",
+    "link": "https://thecollegepanda.com/sat-math/",
+    "description": "Highly recommended math guide for high scorers"
+  },
+  {
+    "id": 6,
+    "title": "Knowt SAT Resources",
+    "platform": "Knowt",
+    "category": "SAT",
+    "link": "https://knowt.com/sat",
+    "description": "Free flashcards and review materials for SAT preparation"
+  },
+  {
+    "id": 7,
+    "title": "ACT Official Practice Tests",
+    "platform": "ACT",
+    "category": "ACT",
+    "link": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html",
+    "description": "Official ACT practice tests and study guides"
+  },
+  {
+    "id": 8,
+    "title": "ACT Online Prep",
+    "platform": "ACT",
+    "category": "ACT",
+    "link": "https://www.act.org/content/act/en/products-and-services/act-online-prep.html",
+    "description": "Official customizable study plans and practice questions"
+  },
+  {
+    "id": 9,
+    "title": "UWorld ACT Prep",
+    "platform": "UWorld",
+    "category": "ACT",
+    "link": "https://www.uworld.com/act/",
+    "description": "Excellent for detailed explanations and realistic practice"
+  },
+  {
+    "id": 10,
+    "title": "Magoosh ACT Prep",
+    "platform": "Magoosh",
+    "category": "ACT",
+    "link": "https://magoosh.com/act/",
+    "description": "Affordable, high-quality video lessons and practice"
+  },
+  {
+    "id": 11,
+    "title": "AP Classroom",
+    "platform": "College Board",
+    "category": "AP",
+    "link": "https://myap.collegeboard.org/",
+    "description": "Official progress checks, practice questions, and videos for all AP subjects"
+  },
+  {
+    "id": 12,
+    "title": "Heimler's History",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/c/SteveHeimler",
+    "description": "Best for AP History, Government, and Economics with clear explanations"
+  },
+  {
+    "id": 13,
+    "title": "Khan Academy AP Courses",
+    "platform": "Khan Academy",
+    "category": "AP",
+    "link": "https://www.khanacademy.org/",
+    "description": "Comprehensive AP Math and Science courses with practice problems"
+  },
+  {
+    "id": 14,
+    "title": "Bozeman Science",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/user/bozemanbiology",
+    "description": "Excellent for Biology and Environmental Science with detailed explanations"
+  },
+  {
+    "id": 15,
+    "title": "Knowt AP Resources",
+    "platform": "Knowt",
+    "category": "AP",
+    "link": "https://knowt.com/",
+    "description": "AI-powered study notes and flashcards for all AP subjects"
+  },
+  {
+    "id": 16,
+    "title": "Crash Course",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/user/crashcourse",
+    "description": "Fast-paced, entertaining reviews for multiple AP subjects"
+  },
+  {
+    "id": 17,
+    "title": "Princeton Review AP Guides",
+    "platform": "Princeton Review",
+    "category": "AP",
+    "link": "https://www.princetonreview.com/college/ap-test-prep",
+    "description": "Good for content review and test-taking strategies"
+  },
+  {
+    "id": 18,
+    "title": "Barron's AP Guides",
+    "platform": "Barron's",
+    "category": "AP",
+    "link": "https://www.barronseduc.com/ap",
+    "description": "More in-depth practice with comprehensive content review"
+  },
+  {
+    "id": 19,
+    "title": "Fiveable AP Community",
+    "platform": "Fiveable",
+    "category": "AP",
+    "link": "https://fiveable.me/",
+    "description": "Community-based live reviews, guides, and practice sessions"
+  },
+  {
+    "id": 20,
+    "title": "Quizlet AP Flashcards",
+    "platform": "Quizlet",
+    "category": "AP",
+    "link": "https://quizlet.com/subject/ap/",
+    "description": "User-made flashcards for every AP subject and topic"
+  },
+  {
+    "id": 21,
+    "title": "Tyler DeWitt Chemistry",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/c/TylerDeWitt",
+    "description": "Clear, step-by-step chemistry explanations perfect for AP Chemistry"
+  },
+  {
+    "id": 22,
+    "title": "Flipping Physics",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/c/FlippingPhysics",
+    "description": "Comprehensive physics tutorials for AP Physics 1, 2, and C"
+  },
+  {
+    "id": 23,
+    "title": "Stats Medic",
+    "platform": "Stats Medic",
+    "category": "AP",
+    "link": "https://www.statsmedic.com/",
+    "description": "Excellent resources for AP Statistics with real-world applications"
+  },
+  {
+    "id": 24,
+    "title": "CodingBat",
+    "platform": "CodingBat",
+    "category": "AP",
+    "link": "https://codingbat.com/java",
+    "description": "Java practice problems perfect for AP Computer Science A"
+  },
+  {
+    "id": 25,
+    "title": "Gilder Lehrman Institute",
+    "platform": "Gilder Lehrman",
+    "category": "AP",
+    "link": "https://www.gilderlehrman.org/",
+    "description": "Premium resources for AP US History with primary sources and essays"
+  },
+  {
+    "id": 26,
+    "title": "LitCharts",
+    "platform": "LitCharts",
+    "category": "AP",
+    "link": "https://www.litcharts.com/",
+    "description": "Detailed literary analysis perfect for AP English Literature"
+  },
+  {
+    "id": 27,
+    "title": "ACDC Economics",
+    "platform": "YouTube",
+    "category": "AP",
+    "link": "https://www.youtube.com/user/ACDCEcon",
+    "description": "Clear explanations for AP Macroeconomics and Microeconomics"
+  },
+  {
+    "id": 28,
+    "title": "Teoria Music Theory",
+    "platform": "Teoria",
+    "category": "AP",
+    "link": "https://www.teoria.com/",
+    "description": "Interactive exercises and tutorials for AP Music Theory"
+  },
+  {
+    "id": 29,
+    "title": "Wheelock's Latin",
+    "platform": "Wheelock's Latin",
+    "category": "AP",
+    "link": "https://www.wheelockslatin.com/",
+    "description": "Comprehensive Latin textbook and resources for AP Latin"
+  },
+  {
+    "id": 30,
+    "title": "Reddit AP Students",
+    "platform": "Reddit",
+    "category": "AP",
+    "link": "https://www.reddit.com/r/APStudents/",
+    "description": "Community tips, study resources, and peer support for all AP subjects"
+  }
+]
