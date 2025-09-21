@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Clock, Users, Search, Filter, Star } from 'lucide-react'
 import extracurricularsData from '../data/extracurriculars.json'
@@ -11,28 +11,41 @@ export default function ExtracurricularsSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [filteredExtracurriculars, setFilteredExtracurriculars] = useState<Extracurricular[]>(extracurricularsData)
 
-  // Get unique categories for filter
-  const allCategories = Array.from(new Set(extracurricularsData.map(e => e.category))).sort()
+  // Reset function to clear all filters
+  const resetFilters = () => {
+    setSearchTerm('')
+    setSelectedCategory('All')
+  }
+
+  // Get unique categories for filter - memoize to prevent unnecessary re-renders
+  const allCategories = useMemo(() => 
+    Array.from(new Set(extracurricularsData.map(e => e.category))).sort(), 
+    []
+  )
   const categoryOptions = ['All', ...allCategories]
 
   useEffect(() => {
-    let filtered = extracurricularsData
+    // Start with all data
+    let filtered = [...extracurricularsData]
 
-    if (searchTerm) {
+    // Apply search filter
+    if (searchTerm && searchTerm.trim() !== '') {
+      const searchLower = searchTerm.toLowerCase().trim()
       filtered = filtered.filter(extracurricular =>
-        extracurricular.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        extracurricular.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        extracurricular.benefits.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        extracurricular.category.toLowerCase().includes(searchTerm.toLowerCase())
+        extracurricular.title.toLowerCase().includes(searchLower) ||
+        extracurricular.description.toLowerCase().includes(searchLower) ||
+        extracurricular.benefits.toLowerCase().includes(searchLower) ||
+        extracurricular.category.toLowerCase().includes(searchLower)
       )
     }
 
-    if (selectedCategory !== 'All') {
+    // Apply category filter
+    if (selectedCategory && selectedCategory !== 'All') {
       filtered = filtered.filter(extracurricular =>
         extracurricular.category === selectedCategory
       )
     }
-
+    
     setFilteredExtracurriculars(filtered)
   }, [searchTerm, selectedCategory])
 
@@ -124,6 +137,20 @@ export default function ExtracurricularsSection() {
                 ))}
               </select>
             </div>
+
+            {/* Reset Button */}
+            {(searchTerm || selectedCategory !== 'All') && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={resetFilters}
+                className="px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+              >
+                Reset Filters
+              </motion.button>
+            )}
           </div>
         </motion.div>
 
@@ -234,13 +261,19 @@ export default function ExtracurricularsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
         >
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
               {extracurricularsData.length}+
             </div>
-            <div className="text-gray-600">Activities Available</div>
+            <div className="text-gray-600">Total Activities</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">
+              {filteredExtracurriculars.length}
+            </div>
+            <div className="text-gray-600">Showing Now</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
