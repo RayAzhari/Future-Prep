@@ -6,7 +6,8 @@
     "description": "Serve as a representative for your class and help make important decisions about school policies and activities",
     "timeCommitment": "5-10 hours/week",
     "benefits": "Leadership experience, public speaking, decision-making skills",
-    "requirements": "Elected by peers, good academic standing"
+    "requirements": "Elected by peers, good academic standing",
+    "website": "https://www.nassp.org/"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "description": "Recognize and promote academic excellence, leadership, service, and character",
     "timeCommitment": "2-5 hours/week",
     "benefits": "Scholarship opportunities, college applications, community service",
-    "requirements": "3.5+ GPA, leadership experience, community service hours"
+    "requirements": "3.5+ GPA, leadership experience, community service hours",
+    "website": "https://www.nhs.us/"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "description": "Develop critical thinking and public speaking skills through competitive debate",
     "timeCommitment": "8-15 hours/week",
     "benefits": "Public speaking, research skills, critical thinking, college scholarships",
-    "requirements": "Strong research and speaking abilities"
+    "requirements": "Strong research and speaking abilities",
+    "website": "https://www.speechanddebate.org/"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "description": "Simulate UN conferences and develop understanding of international relations",
     "timeCommitment": "6-12 hours/week",
     "benefits": "Global awareness, diplomacy skills, public speaking, networking",
-    "requirements": "Interest in international affairs, research skills"
+    "requirements": "Interest in international affairs, research skills",
+    "website": "https://www.unausa.org/"
   },
   {
     "id": 5,
@@ -897,6 +901,147 @@
     "description": "Learn sailing skills and participate in regattas",
     "timeCommitment": "6-12 hours/week",
     "benefits": "Sailing skills, teamwork, weather knowledge, adventure",
-    "requirements": "Access to water, swimming ability, commitment to safety"
+    "requirements": "Access to water, swimming ability, commitment to safety",
+    "website": "https://www.ussailing.org/"
+  },
+  {
+    "id": 101,
+    "title": "FIRST Robotics Competition",
+    "category": "STEM",
+    "description": "Build and program robots to compete in annual robotics competitions",
+    "timeCommitment": "15-25 hours/week",
+    "benefits": "Engineering skills, programming, teamwork, competition experience, college recognition",
+    "requirements": "Interest in robotics, programming ability, commitment to team",
+    "website": "https://www.firstinspires.org/robotics/frc"
+  },
+  {
+    "id": 102,
+    "title": "VEX Robotics",
+    "category": "STEM",
+    "description": "Design, build, and program robots for VEX competitions",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Robotics skills, problem-solving, teamwork, engineering design",
+    "requirements": "Interest in robotics, basic programming knowledge",
+    "website": "https://www.vexrobotics.com/vexedr"
+  },
+  {
+    "id": 103,
+    "title": "Science Bowl",
+    "category": "STEM",
+    "description": "Compete in fast-paced science trivia competitions",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Scientific knowledge, quick thinking, teamwork, competition experience",
+    "requirements": "Strong science background, quick recall ability",
+    "website": "https://science.osti.gov/wdts/nsb"
+  },
+  {
+    "id": 104,
+    "title": "Physics Olympiad",
+    "category": "STEM",
+    "description": "Compete in physics problem-solving competitions",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Advanced physics knowledge, problem-solving skills, competition experience",
+    "requirements": "Strong physics background, mathematical ability",
+    "website": "https://www.aapt.org/physicsteam/"
+  },
+  {
+    "id": 105,
+    "title": "Chemistry Olympiad",
+    "category": "STEM",
+    "description": "Compete in chemistry knowledge and laboratory competitions",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Advanced chemistry knowledge, lab skills, competition experience",
+    "requirements": "Strong chemistry background, lab experience",
+    "website": "https://www.acs.org/content/acs/en/education/students/highschool/olympiad.html"
+  },
+  {
+    "id": 106,
+    "title": "Biology Olympiad",
+    "category": "STEM",
+    "description": "Compete in biology knowledge and laboratory competitions",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Advanced biology knowledge, lab skills, competition experience",
+    "requirements": "Strong biology background, lab experience",
+    "website": "https://www.usabo-trc.org/"
+  },
+  {
+    "id": 107,
+    "title": "AI and Machine Learning Club",
+    "category": "Technology",
+    "description": "Learn artificial intelligence and machine learning concepts",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "AI knowledge, programming skills, future technology understanding",
+    "requirements": "Programming background, interest in AI",
+    "website": "https://www.ai4all.org/"
+  },
+  {
+    "id": 108,
+    "title": "Blockchain and Cryptocurrency Club",
+    "category": "Technology",
+    "description": "Study blockchain technology and cryptocurrency",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Blockchain knowledge, financial technology understanding, innovation",
+    "requirements": "Interest in technology and finance",
+    "website": "https://www.blockchain-council.org/"
+  },
+  {
+    "id": 109,
+    "title": "Mobile App Development Club",
+    "category": "Technology",
+    "description": "Learn to develop mobile applications for iOS and Android",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "App development skills, programming, design, entrepreneurship",
+    "requirements": "Programming interest, creativity, problem-solving",
+    "website": "https://developer.apple.com/swift/"
+  },
+  {
+    "id": 110,
+    "title": "Student Council President",
+    "category": "Leadership",
+    "description": "Lead the student government and represent student interests",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Leadership experience, public speaking, decision-making, college applications",
+    "requirements": "Elected by student body, strong leadership skills",
+    "website": "https://www.nassp.org/"
+  },
+  {
+    "id": 111,
+    "title": "Academic Decathlon",
+    "category": "Academic",
+    "description": "Compete in comprehensive academic competitions across multiple subjects",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Broad academic knowledge, competition experience, teamwork",
+    "requirements": "Strong academic performance across subjects",
+    "website": "https://www.usad.org/"
+  },
+  {
+    "id": 112,
+    "title": "Spelling Bee Team",
+    "category": "Academic",
+    "description": "Compete in spelling competitions at local, state, and national levels",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Vocabulary skills, competition experience, public speaking",
+    "requirements": "Strong spelling ability, memorization skills",
+    "website": "https://spellingbee.com/"
+  },
+  {
+    "id": 113,
+    "title": "Geography Bee",
+    "category": "Academic",
+    "description": "Compete in geography knowledge competitions",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Geography knowledge, global awareness, competition experience",
+    "requirements": "Interest in geography, memorization ability",
+    "website": "https://www.nationalgeographic.org/education/student-experiences/geobee/"
+  },
+  {
+    "id": 114,
+    "title": "Mathematics Competition Team",
+    "category": "Academic",
+    "description": "Compete in various mathematics competitions",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Advanced math skills, problem-solving, competition experience",
+    "requirements": "Strong math background, problem-solving interest",
+    "website": "https://www.maa.org/math-competitions"
   }
 ]

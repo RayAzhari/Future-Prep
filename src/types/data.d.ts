@@ -38,4 +38,5 @@ export interface Extracurricular {
   timeCommitment: string
   benefits: string
   requirements: string
+  website?: string
 }

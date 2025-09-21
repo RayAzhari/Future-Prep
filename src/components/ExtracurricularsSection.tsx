@@ -184,13 +184,27 @@ export default function ExtracurricularsSection() {
               </div>
 
               {/* Learn More Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 text-sm font-medium"
-              >
-                Learn More
-              </motion.button>
+              {extracurricular.website ? (
+                <motion.a
+                  href={extracurricular.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 text-sm font-medium text-center inline-block"
+                >
+                  Learn More
+                </motion.a>
+              ) : (
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-gray-400 text-white px-4 py-2 rounded-lg cursor-not-allowed text-sm font-medium"
+                  disabled
+                >
+                  No Website Available
+                </motion.button>
+              )}
             </motion.div>
           ))}
         </motion.div>
