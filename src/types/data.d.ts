@@ -29,3 +29,13 @@ export interface ResearchOpportunity {
   stipend: string | number
   location: string
 }
+
+export interface Extracurricular {
+  id: number
+  title: string
+  category: string
+  description: string
+  timeCommitment: string
+  benefits: string
+  requirements: string
+}

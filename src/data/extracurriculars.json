@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "title": "Student Government Association",
+    "category": "Leadership",
+    "description": "Serve as a representative for your class and help make important decisions about school policies and activities",
+    "timeCommitment": "5-10 hours/week",
+    "benefits": "Leadership experience, public speaking, decision-making skills",
+    "requirements": "Elected by peers, good academic standing"
+  },
+  {
+    "id": 2,
+    "title": "National Honor Society",
+    "category": "Academic",
+    "description": "Recognize and promote academic excellence, leadership, service, and character",
+    "timeCommitment": "2-5 hours/week",
+    "benefits": "Scholarship opportunities, college applications, community service",
+    "requirements": "3.5+ GPA, leadership experience, community service hours"
+  },
+  {
+    "id": 3,
+    "title": "Debate Team",
+    "category": "Academic",
+    "description": "Develop critical thinking and public speaking skills through competitive debate",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Public speaking, research skills, critical thinking, college scholarships",
+    "requirements": "Strong research and speaking abilities"
+  },
+  {
+    "id": 4,
+    "title": "Model United Nations",
+    "category": "Academic",
+    "description": "Simulate UN conferences and develop understanding of international relations",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Global awareness, diplomacy skills, public speaking, networking",
+    "requirements": "Interest in international affairs, research skills"
+  },
+  {
+    "id": 5,
+    "title": "Robotics Club",
+    "category": "STEM",
+    "description": "Design, build, and program robots for competitions",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Engineering skills, programming, teamwork, competition experience",
+    "requirements": "Interest in engineering and programming"
+  },
+  {
+    "id": 6,
+    "title": "Science Olympiad",
+    "category": "STEM",
+    "description": "Compete in various science and engineering events",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Scientific knowledge, problem-solving, teamwork, competition experience",
+    "requirements": "Strong science background, dedication to practice"
+  },
+  {
+    "id": 7,
+    "title": "Math Club",
+    "category": "STEM",
+    "description": "Participate in math competitions and problem-solving activities",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Advanced math skills, competition experience, scholarships",
+    "requirements": "Strong math background, problem-solving interest"
+  },
+  {
+    "id": 8,
+    "title": "Computer Science Club",
+    "category": "STEM",
+    "description": "Learn programming, participate in coding competitions, and work on projects",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Programming skills, project portfolio, competition experience",
+    "requirements": "Interest in computer science and programming"
+  },
+  {
+    "id": 9,
+    "title": "Environmental Club",
+    "category": "Service",
+    "description": "Promote environmental awareness and sustainability initiatives",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Environmental knowledge, leadership, community impact",
+    "requirements": "Interest in environmental issues, commitment to sustainability"
+  },
+  {
+    "id": 10,
+    "title": "Key Club",
+    "category": "Service",
+    "description": "International student-led organization providing service opportunities",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Community service, leadership development, networking",
+    "requirements": "Commitment to service, good character"
+  },
+  {
+    "id": 11,
+    "title": "Volunteer Club",
+    "category": "Service",
+    "description": "Organize and participate in various community service activities",
+    "timeCommitment": "5-10 hours/week",
+    "benefits": "Community impact, empathy, leadership, college applications",
+    "requirements": "Commitment to helping others, reliable attendance"
+  },
+  {
+    "id": 12,
+    "title": "Peer Tutoring",
+    "category": "Service",
+    "description": "Help fellow students with academic subjects",
+    "timeCommitment": "3-8 hours/week",
+    "benefits": "Teaching skills, subject mastery, helping others",
+    "requirements": "Strong academic performance, patience, communication skills"
+  },
+  {
+    "id": 13,
+    "title": "School Newspaper",
+    "category": "Media",
+    "description": "Write articles, take photos, and manage school publication",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Writing skills, journalism experience, leadership, portfolio",
+    "requirements": "Strong writing skills, interest in journalism"
+  },
+  {
+    "id": 14,
+    "title": "Yearbook Committee",
+    "category": "Media",
+    "description": "Design and create the school yearbook",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Design skills, photography, project management, creativity",
+    "requirements": "Design interest, attention to detail, commitment"
+  },
+  {
+    "id": 15,
+    "title": "Broadcasting Club",
+    "category": "Media",
+    "description": "Produce school announcements, videos, and media content",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Video production, public speaking, technical skills",
+    "requirements": "Interest in media production, technical aptitude"
+  },
+  {
+    "id": 16,
+    "title": "Photography Club",
+    "category": "Arts",
+    "description": "Learn photography techniques and showcase student work",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Artistic skills, technical knowledge, creative expression",
+    "requirements": "Interest in photography, access to camera equipment"
+  },
+  {
+    "id": 17,
+    "title": "Art Club",
+    "category": "Arts",
+    "description": "Explore various art forms and create student exhibitions",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Creative skills, artistic expression, portfolio development",
+    "requirements": "Interest in art, creative mindset"
+  },
+  {
+    "id": 18,
+    "title": "Drama Club",
+    "category": "Arts",
+    "description": "Participate in school plays and theatrical productions",
+    "timeCommitment": "8-20 hours/week",
+    "benefits": "Acting skills, confidence, teamwork, public speaking",
+    "requirements": "Interest in theater, commitment to rehearsals"
+  },
+  {
+    "id": 19,
+    "title": "Music Club",
+    "category": "Arts",
+    "description": "Perform in school bands, orchestras, or choirs",
+    "timeCommitment": "6-15 hours/week",
+    "benefits": "Musical skills, performance experience, teamwork",
+    "requirements": "Musical ability, instrument proficiency"
+  },
+  {
+    "id": 20,
+    "title": "Dance Team",
+    "category": "Arts",
+    "description": "Perform at school events and competitions",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Dance skills, fitness, teamwork, performance experience",
+    "requirements": "Dance experience, physical fitness, commitment"
+  },
+  {
+    "id": 21,
+    "title": "Chess Club",
+    "category": "Academic",
+    "description": "Learn and compete in chess tournaments",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Strategic thinking, problem-solving, competition experience",
+    "requirements": "Interest in chess, strategic thinking ability"
+  },
+  {
+    "id": 22,
+    "title": "Quiz Bowl",
+    "category": "Academic",
+    "description": "Compete in academic trivia competitions",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "General knowledge, quick thinking, teamwork",
+    "requirements": "Broad academic knowledge, quick recall ability"
+  },
+  {
+    "id": 23,
+    "title": "Mock Trial",
+    "category": "Academic",
+    "description": "Simulate courtroom trials and legal proceedings",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Public speaking, legal knowledge, critical thinking",
+    "requirements": "Interest in law, strong speaking skills"
+  },
+  {
+    "id": 24,
+    "title": "Future Business Leaders of America (FBLA)",
+    "category": "Business",
+    "description": "Develop business and leadership skills through competitions",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Business knowledge, leadership, networking, competitions",
+    "requirements": "Interest in business, leadership potential"
+  },
+  {
+    "id": 25,
+    "title": "DECA",
+    "category": "Business",
+    "description": "Marketing, finance, hospitality, and management competitions",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Business skills, competition experience, networking",
+    "requirements": "Interest in business careers, competitive spirit"
+  },
+  {
+    "id": 26,
+    "title": "Entrepreneurship Club",
+    "category": "Business",
+    "description": "Learn about starting and running businesses",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Business skills, innovation, leadership, real-world experience",
+    "requirements": "Interest in entrepreneurship, creative thinking"
+  },
+  {
+    "id": 27,
+    "title": "Investment Club",
+    "category": "Business",
+    "description": "Learn about investing and manage a student investment portfolio",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Financial literacy, investment knowledge, analytical skills",
+    "requirements": "Interest in finance, analytical thinking"
+  },
+  {
+    "id": 28,
+    "title": "Health Occupations Students of America (HOSA)",
+    "category": "Health",
+    "description": "Prepare for careers in healthcare through competitions and activities",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Healthcare knowledge, leadership, competition experience",
+    "requirements": "Interest in healthcare careers, academic excellence"
+  },
+  {
+    "id": 29,
+    "title": "Red Cross Club",
+    "category": "Health",
+    "description": "Promote health and safety awareness in the community",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Health knowledge, community service, leadership",
+    "requirements": "Interest in health and safety, commitment to service"
+  },
+  {
+    "id": 30,
+    "title": "Mental Health Awareness Club",
+    "category": "Health",
+    "description": "Promote mental health awareness and support among students",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Mental health knowledge, empathy, leadership, community impact",
+    "requirements": "Interest in mental health, compassionate nature"
+  },
+  {
+    "id": 31,
+    "title": "Varsity Sports",
+    "category": "Athletics",
+    "description": "Compete in school sports at the highest level",
+    "timeCommitment": "15-25 hours/week",
+    "benefits": "Physical fitness, teamwork, discipline, college opportunities",
+    "requirements": "Athletic ability, commitment to training, good grades"
+  },
+  {
+    "id": 32,
+    "title": "Intramural Sports",
+    "category": "Athletics",
+    "description": "Participate in recreational sports leagues",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Physical fitness, teamwork, stress relief, social connections",
+    "requirements": "Interest in sports, basic athletic ability"
+  },
+  {
+    "id": 33,
+    "title": "Fitness Club",
+    "category": "Athletics",
+    "description": "Promote physical fitness and healthy lifestyle habits",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Physical fitness, health knowledge, leadership, motivation",
+    "requirements": "Interest in fitness, commitment to healthy lifestyle"
+  },
+  {
+    "id": 34,
+    "title": "Swimming Club",
+    "category": "Athletics",
+    "description": "Improve swimming skills and compete in meets",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Swimming skills, physical fitness, competition experience",
+    "requirements": "Basic swimming ability, commitment to practice"
+  },
+  {
+    "id": 35,
+    "title": "Track and Field",
+    "category": "Athletics",
+    "description": "Compete in running, jumping, and throwing events",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Physical fitness, individual achievement, teamwork",
+    "requirements": "Athletic ability, commitment to training"
+  },
+  {
+    "id": 36,
+    "title": "Cultural Club",
+    "category": "Cultural",
+    "description": "Celebrate and share different cultures within the school",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Cultural awareness, diversity appreciation, leadership",
+    "requirements": "Interest in cultural diversity, open-mindedness"
+  },
+  {
+    "id": 37,
+    "title": "Language Club",
+    "category": "Cultural",
+    "description": "Learn and practice foreign languages",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Language skills, cultural understanding, communication",
+    "requirements": "Interest in languages, commitment to learning"
+  },
+  {
+    "id": 38,
+    "title": "International Club",
+    "category": "Cultural",
+    "description": "Promote global awareness and international understanding",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Global perspective, cultural exchange, leadership",
+    "requirements": "Interest in international affairs, open-mindedness"
+  },
+  {
+    "id": 39,
+    "title": "Diversity and Inclusion Club",
+    "category": "Cultural",
+    "description": "Promote diversity, equity, and inclusion in the school community",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Social awareness, leadership, community building",
+    "requirements": "Commitment to equity, leadership potential"
+  },
+  {
+    "id": 40,
+    "title": "LGBTQ+ Alliance",
+    "category": "Cultural",
+    "description": "Support LGBTQ+ students and promote acceptance",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Advocacy skills, community support, leadership",
+    "requirements": "Support for LGBTQ+ rights, commitment to inclusion"
+  },
+  {
+    "id": 41,
+    "title": "Coding Bootcamp",
+    "category": "Technology",
+    "description": "Intensive programming and software development training",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Programming skills, project portfolio, career preparation",
+    "requirements": "Interest in programming, commitment to learning"
+  },
+  {
+    "id": 42,
+    "title": "Cybersecurity Club",
+    "category": "Technology",
+    "description": "Learn about cybersecurity and ethical hacking",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Cybersecurity knowledge, ethical thinking, technical skills",
+    "requirements": "Interest in technology, ethical mindset"
+  },
+  {
+    "id": 43,
+    "title": "Gaming Club",
+    "category": "Technology",
+    "description": "Organize gaming tournaments and events",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Strategic thinking, teamwork, social connections",
+    "requirements": "Interest in gaming, good sportsmanship"
+  },
+  {
+    "id": 44,
+    "title": "3D Printing Club",
+    "category": "Technology",
+    "description": "Learn 3D modeling and printing technology",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Technical skills, creativity, innovation, design thinking",
+    "requirements": "Interest in technology, creative thinking"
+  },
+  {
+    "id": 45,
+    "title": "Drone Club",
+    "category": "Technology",
+    "description": "Learn to fly and program drones for various applications",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Technical skills, aviation knowledge, creativity",
+    "requirements": "Interest in aviation, technical aptitude"
+  },
+  {
+    "id": 46,
+    "title": "Cooking Club",
+    "category": "Life Skills",
+    "description": "Learn cooking techniques and explore different cuisines",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Cooking skills, nutrition knowledge, creativity, independence",
+    "requirements": "Interest in cooking, willingness to try new foods"
+  },
+  {
+    "id": 47,
+    "title": "Financial Literacy Club",
+    "category": "Life Skills",
+    "description": "Learn about personal finance, budgeting, and investing",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Financial knowledge, life skills, independence",
+    "requirements": "Interest in finance, commitment to learning"
+  },
+  {
+    "id": 48,
+    "title": "Public Speaking Club",
+    "category": "Life Skills",
+    "description": "Develop confidence and skills in public speaking",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Communication skills, confidence, leadership",
+    "requirements": "Willingness to practice speaking, commitment to improvement"
+  },
+  {
+    "id": 49,
+    "title": "Time Management Club",
+    "category": "Life Skills",
+    "description": "Learn effective study habits and time management techniques",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Organization skills, productivity, academic success",
+    "requirements": "Desire to improve study habits, commitment to practice"
+  },
+  {
+    "id": 50,
+    "title": "Leadership Development Program",
+    "category": "Leadership",
+    "description": "Comprehensive program to develop leadership skills",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Leadership skills, confidence, networking, opportunities",
+    "requirements": "Leadership potential, commitment to growth"
+  },
+  {
+    "id": 51,
+    "title": "Peer Mediation",
+    "category": "Leadership",
+    "description": "Help resolve conflicts between students",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Conflict resolution skills, empathy, leadership",
+    "requirements": "Maturity, good listening skills, impartiality"
+  },
+  {
+    "id": 52,
+    "title": "Mentorship Program",
+    "category": "Leadership",
+    "description": "Mentor younger students or new students",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Teaching skills, empathy, leadership, personal growth",
+    "requirements": "Academic success, maturity, commitment to helping others"
+  },
+  {
+    "id": 53,
+    "title": "Event Planning Committee",
+    "category": "Leadership",
+    "description": "Plan and organize school events and activities",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Project management, creativity, teamwork, leadership",
+    "requirements": "Organizational skills, creativity, commitment"
+  },
+  {
+    "id": 54,
+    "title": "Student Ambassador Program",
+    "category": "Leadership",
+    "description": "Represent the school at events and to prospective students",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Public speaking, networking, school pride, leadership",
+    "requirements": "Good academic standing, school spirit, communication skills"
+  },
+  {
+    "id": 55,
+    "title": "Community Garden Club",
+    "category": "Service",
+    "description": "Maintain school or community gardens and promote sustainability",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Environmental knowledge, community service, teamwork",
+    "requirements": "Interest in gardening, commitment to sustainability"
+  },
+  {
+    "id": 56,
+    "title": "Food Bank Volunteering",
+    "category": "Service",
+    "description": "Help organize and distribute food to those in need",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Community service, empathy, teamwork, social awareness",
+    "requirements": "Commitment to helping others, reliable attendance"
+  },
+  {
+    "id": 57,
+    "title": "Animal Shelter Volunteering",
+    "category": "Service",
+    "description": "Help care for animals and promote adoption",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Animal care knowledge, empathy, responsibility",
+    "requirements": "Love for animals, commitment to regular volunteering"
+  },
+  {
+    "id": 58,
+    "title": "Senior Center Volunteering",
+    "category": "Service",
+    "description": "Spend time with elderly community members",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Intergenerational connections, empathy, communication skills",
+    "requirements": "Patience, respect for elderly, good communication"
+  },
+  {
+    "id": 59,
+    "title": "Tutoring Elementary Students",
+    "category": "Service",
+    "description": "Help elementary school students with their studies",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Teaching skills, patience, community impact",
+    "requirements": "Academic success, patience, commitment to helping children"
+  },
+  {
+    "id": 60,
+    "title": "Habitat for Humanity",
+    "category": "Service",
+    "description": "Help build homes for families in need",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Construction skills, teamwork, community impact",
+    "requirements": "Physical ability, commitment to service, teamwork"
+  },
+  {
+    "id": 61,
+    "title": "Special Olympics Volunteering",
+    "category": "Service",
+    "description": "Support athletes with intellectual disabilities",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Empathy, inclusion awareness, leadership, community service",
+    "requirements": "Patience, respect for diversity, commitment to inclusion"
+  },
+  {
+    "id": 62,
+    "title": "Environmental Cleanup Crew",
+    "category": "Service",
+    "description": "Organize and participate in environmental cleanup activities",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Environmental awareness, community impact, teamwork",
+    "requirements": "Interest in environmental protection, commitment to service"
+  },
+  {
+    "id": 63,
+    "title": "Blood Drive Organizer",
+    "category": "Service",
+    "description": "Organize blood drives and promote blood donation",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Event planning, health awareness, community impact",
+    "requirements": "Organizational skills, commitment to health causes"
+  },
+  {
+    "id": 64,
+    "title": "Literacy Program Volunteer",
+    "category": "Service",
+    "description": "Help adults or children improve their reading skills",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Teaching skills, patience, community impact",
+    "requirements": "Strong reading skills, patience, commitment to education"
+  },
+  {
+    "id": 65,
+    "title": "Hospital Volunteering",
+    "category": "Service",
+    "description": "Assist patients and staff in healthcare settings",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Healthcare exposure, empathy, professional experience",
+    "requirements": "Maturity, compassion, commitment to helping others"
+  },
+  {
+    "id": 66,
+    "title": "Library Assistant",
+    "category": "Academic",
+    "description": "Help organize and maintain school or public library",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Organization skills, research skills, community service",
+    "requirements": "Interest in books, organizational skills, reliability"
+  },
+  {
+    "id": 67,
+    "title": "Study Group Leader",
+    "category": "Academic",
+    "description": "Lead study groups for challenging subjects",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Teaching skills, subject mastery, leadership",
+    "requirements": "Strong academic performance, teaching ability, patience"
+  },
+  {
+    "id": 68,
+    "title": "Academic Competition Team",
+    "category": "Academic",
+    "description": "Compete in various academic competitions",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Academic excellence, competition experience, teamwork",
+    "requirements": "Strong academic performance, competitive spirit"
+  },
+  {
+    "id": 69,
+    "title": "Research Assistant",
+    "category": "Academic",
+    "description": "Assist teachers or professors with research projects",
+    "timeCommitment": "4-10 hours/week",
+    "benefits": "Research skills, academic exposure, mentorship",
+    "requirements": "Academic excellence, interest in research, reliability"
+  },
+  {
+    "id": 70,
+    "title": "Peer Academic Coach",
+    "category": "Academic",
+    "description": "Help struggling students improve their academic performance",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Teaching skills, empathy, leadership, academic mastery",
+    "requirements": "Strong academic performance, patience, teaching ability"
+  },
+  {
+    "id": 71,
+    "title": "Language Exchange Program",
+    "category": "Cultural",
+    "description": "Practice foreign languages with native speakers",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Language skills, cultural exchange, communication",
+    "requirements": "Interest in languages, commitment to regular practice"
+  },
+  {
+    "id": 72,
+    "title": "Cultural Festival Organizer",
+    "category": "Cultural",
+    "description": "Plan and organize cultural festivals and events",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Event planning, cultural awareness, leadership",
+    "requirements": "Organizational skills, cultural interest, leadership ability"
+  },
+  {
+    "id": 73,
+    "title": "Exchange Student Program",
+    "category": "Cultural",
+    "description": "Host or be an exchange student",
+    "timeCommitment": "Varies",
+    "benefits": "Cultural immersion, language skills, global perspective",
+    "requirements": "Open-mindedness, cultural sensitivity, family support"
+  },
+  {
+    "id": 74,
+    "title": "Heritage Club",
+    "category": "Cultural",
+    "description": "Celebrate and preserve cultural heritage",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Cultural pride, community building, leadership",
+    "requirements": "Connection to cultural heritage, commitment to preservation"
+  },
+  {
+    "id": 75,
+    "title": "Multicultural Awareness Group",
+    "category": "Cultural",
+    "description": "Promote understanding and appreciation of different cultures",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Cultural awareness, empathy, leadership, community building",
+    "requirements": "Open-mindedness, interest in diversity, leadership potential"
+  },
+  {
+    "id": 76,
+    "title": "Creative Writing Club",
+    "category": "Arts",
+    "description": "Write and share creative works including poetry, fiction, and essays",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Writing skills, creativity, self-expression, portfolio building",
+    "requirements": "Interest in writing, creativity, willingness to share work"
+  },
+  {
+    "id": 77,
+    "title": "Poetry Slam Team",
+    "category": "Arts",
+    "description": "Write and perform poetry in competitive events",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Performance skills, creativity, confidence, self-expression",
+    "requirements": "Interest in poetry, performance ability, creativity"
+  },
+  {
+    "id": 78,
+    "title": "Film Club",
+    "category": "Arts",
+    "description": "Create, analyze, and discuss films",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Film production skills, critical thinking, creativity",
+    "requirements": "Interest in film, creative thinking, technical aptitude"
+  },
+  {
+    "id": 79,
+    "title": "Graphic Design Club",
+    "category": "Arts",
+    "description": "Learn graphic design and create visual content",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Design skills, creativity, technical proficiency, portfolio",
+    "requirements": "Interest in design, creativity, access to design software"
+  },
+  {
+    "id": 80,
+    "title": "Sculpture Club",
+    "category": "Arts",
+    "description": "Create three-dimensional art pieces",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Artistic skills, creativity, spatial thinking, portfolio",
+    "requirements": "Interest in sculpture, creativity, access to materials"
+  },
+  {
+    "id": 81,
+    "title": "Jazz Band",
+    "category": "Arts",
+    "description": "Perform jazz music in school ensembles",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Musical skills, improvisation, teamwork, performance experience",
+    "requirements": "Musical ability, instrument proficiency, commitment to practice"
+  },
+  {
+    "id": 82,
+    "title": "Marching Band",
+    "category": "Arts",
+    "description": "Perform at school events and competitions",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Musical skills, teamwork, discipline, school spirit",
+    "requirements": "Musical ability, physical fitness, commitment to practice"
+  },
+  {
+    "id": 83,
+    "title": "A Cappella Group",
+    "category": "Arts",
+    "description": "Sing without instrumental accompaniment",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Vocal skills, harmony, teamwork, performance experience",
+    "requirements": "Singing ability, musical ear, commitment to practice"
+  },
+  {
+    "id": 84,
+    "title": "Percussion Ensemble",
+    "category": "Arts",
+    "description": "Perform percussion music in various styles",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Rhythm skills, coordination, teamwork, musical expression",
+    "requirements": "Rhythm ability, coordination, commitment to practice"
+  },
+  {
+    "id": 85,
+    "title": "Chamber Music Group",
+    "category": "Arts",
+    "description": "Perform classical music in small ensembles",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Musical skills, precision, teamwork, classical music appreciation",
+    "requirements": "Advanced musical ability, instrument proficiency, commitment"
+  },
+  {
+    "id": 86,
+    "title": "Ultimate Frisbee Club",
+    "category": "Athletics",
+    "description": "Play ultimate frisbee in recreational and competitive settings",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Physical fitness, teamwork, sportsmanship, social connections",
+    "requirements": "Basic athletic ability, interest in the sport"
+  },
+  {
+    "id": 87,
+    "title": "Rock Climbing Club",
+    "category": "Athletics",
+    "description": "Learn rock climbing techniques and safety",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Physical fitness, problem-solving, courage, teamwork",
+    "requirements": "Physical fitness, courage, commitment to safety"
+  },
+  {
+    "id": 88,
+    "title": "Yoga Club",
+    "category": "Athletics",
+    "description": "Practice yoga for physical and mental wellness",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Flexibility, stress relief, mindfulness, physical fitness",
+    "requirements": "Interest in wellness, commitment to practice"
+  },
+  {
+    "id": 89,
+    "title": "Martial Arts Club",
+    "category": "Athletics",
+    "description": "Learn martial arts for self-defense and discipline",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Self-defense, discipline, physical fitness, confidence",
+    "requirements": "Commitment to discipline, physical fitness, respect"
+  },
+  {
+    "id": 90,
+    "title": "Cycling Club",
+    "category": "Athletics",
+    "description": "Organize cycling trips and promote bike safety",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Physical fitness, environmental awareness, adventure, teamwork",
+    "requirements": "Access to bicycle, physical fitness, interest in cycling"
+  },
+  {
+    "id": 91,
+    "title": "Hiking Club",
+    "category": "Athletics",
+    "description": "Organize hiking trips and outdoor adventures",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Physical fitness, nature appreciation, teamwork, adventure",
+    "requirements": "Physical fitness, interest in outdoors, commitment to safety"
+  },
+  {
+    "id": 92,
+    "title": "Water Polo Club",
+    "category": "Athletics",
+    "description": "Play water polo in recreational and competitive settings",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Swimming skills, teamwork, physical fitness, competition",
+    "requirements": "Swimming ability, physical fitness, commitment to practice"
+  },
+  {
+    "id": 93,
+    "title": "Lacrosse Club",
+    "category": "Athletics",
+    "description": "Learn and play lacrosse",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Athletic skills, teamwork, physical fitness, competition",
+    "requirements": "Athletic ability, commitment to practice, teamwork"
+  },
+  {
+    "id": 94,
+    "title": "Golf Club",
+    "category": "Athletics",
+    "description": "Learn golf skills and participate in tournaments",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Golf skills, patience, concentration, networking opportunities",
+    "requirements": "Interest in golf, patience, commitment to practice"
+  },
+  {
+    "id": 95,
+    "title": "Tennis Club",
+    "category": "Athletics",
+    "description": "Learn tennis skills and participate in matches",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Tennis skills, physical fitness, competition, social connections",
+    "requirements": "Interest in tennis, basic athletic ability, commitment"
+  },
+  {
+    "id": 96,
+    "title": "Badminton Club",
+    "category": "Athletics",
+    "description": "Play badminton in recreational and competitive settings",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Hand-eye coordination, physical fitness, social connections",
+    "requirements": "Interest in badminton, basic athletic ability"
+  },
+  {
+    "id": 97,
+    "title": "Table Tennis Club",
+    "category": "Athletics",
+    "description": "Play table tennis and participate in tournaments",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Hand-eye coordination, quick reflexes, social connections",
+    "requirements": "Interest in table tennis, basic coordination"
+  },
+  {
+    "id": 98,
+    "title": "Archery Club",
+    "category": "Athletics",
+    "description": "Learn archery skills and participate in competitions",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Concentration, precision, patience, physical fitness",
+    "requirements": "Interest in archery, patience, commitment to safety"
+  },
+  {
+    "id": 99,
+    "title": "Fencing Club",
+    "category": "Athletics",
+    "description": "Learn fencing techniques and participate in tournaments",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Strategy, physical fitness, discipline, competition",
+    "requirements": "Interest in fencing, physical fitness, commitment to practice"
+  },
+  {
+    "id": 100,
+    "title": "Sailing Club",
+    "category": "Athletics",
+    "description": "Learn sailing skills and participate in regattas",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Sailing skills, teamwork, weather knowledge, adventure",
+    "requirements": "Access to water, swimming ability, commitment to safety"
+  }
+]

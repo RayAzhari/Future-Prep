@@ -33,9 +33,9 @@ export default function Navigation() {
   const navItems = [
     { label: 'Home', id: 'home' },
     { label: 'Resources', id: 'resources' },
-    { label: 'Scholarships', id: 'scholarships' },
-    { label: 'Research', id: 'research' },
-    { label: 'About', id: 'about', href: '/about' },
+    { label: 'Scholarships', id: 'scholarships', href: '/scholarships' },
+    { label: 'Research', id: 'research', href: '/research' },
+    { label: 'Extracurriculars', id: 'extracurriculars', href: '/extracurriculars' },
   ]
 
   return (
