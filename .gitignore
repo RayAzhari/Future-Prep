@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# visitor counter data (should be unique per deployment)
+/data/visitor-counter.json
