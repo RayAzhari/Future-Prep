@@ -6,46 +6,61 @@ export const useVisitorCounter = () => {
 
   useEffect(() => {
     const incrementGlobalCounter = async () => {
-      try {
-        // First, get the current global count
-        const getResponse = await fetch('/api/visitor-count')
-        const getData = await getResponse.json()
-        
-        if (getResponse.ok) {
-          // Then increment the global counter
-          const postResponse = await fetch('/api/visitor-count', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
-          
-          const postData = await postResponse.json()
-          
-          if (postResponse.ok) {
-            setVisitorCount(postData.count)
-          } else {
-            // Fallback to the count we got from GET
-            setVisitorCount(getData.count)
+      // Check if we've already incremented in this session
+      const hasIncremented = sessionStorage.getItem('future-prep-counter-incremented')
+      
+      if (hasIncremented) {
+        // Just get the current count without incrementing
+        console.log('🔄 Already incremented this session, getting current count')
+        try {
+          const response = await fetch('/api/visitor-count')
+          const data = await response.json()
+          if (response.ok) {
+            setVisitorCount(data.count)
+            console.log('📊 Current count:', data.count)
           }
+        } catch (error) {
+          console.error('💥 Error getting current count:', error)
+          setVisitorCount(1000)
+        } finally {
+          setIsLoading(false)
+        }
+        return
+      }
+
+      console.log('🚀 Visitor counter hook triggered - first time this session')
+      try {
+        console.log('📡 Making POST request to /api/visitor-count')
+        // Increment the global counter
+        const response = await fetch('/api/visitor-count', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        
+        const data = await response.json()
+        console.log('📊 API response:', data)
+        
+        if (response.ok) {
+          setVisitorCount(data.count)
+          console.log('✅ Counter updated to:', data.count)
+          // Mark that we've incremented in this session
+          sessionStorage.setItem('future-prep-counter-incremented', 'true')
         } else {
-          // Fallback: try to increment anyway
-          const fallbackResponse = await fetch('/api/visitor-count', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
-          
-          if (fallbackResponse.ok) {
-            const fallbackData = await fallbackResponse.json()
-            setVisitorCount(fallbackData.count)
+          console.error('❌ Failed to increment counter:', data)
+          // Fallback: try to get current count
+          const getResponse = await fetch('/api/visitor-count')
+          const getData = await getResponse.json()
+          if (getResponse.ok) {
+            setVisitorCount(getData.count)
+          } else {
+            setVisitorCount(1000)
           }
         }
       } catch (error) {
-        console.error('Error updating visitor counter:', error)
-        // Fallback to a default value if API fails
-        setVisitorCount(1000) // Show a reasonable default
+        console.error('💥 Error updating visitor counter:', error)
+        setVisitorCount(1000)
       } finally {
         setIsLoading(false)
       }
