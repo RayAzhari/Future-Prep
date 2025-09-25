@@ -19,7 +19,7 @@
     "id": 3,
     "title": "The Organic Chemistry Tutor - SAT Math",
     "platform": "YouTube",
-    "category": "SAT",
+    "category": "AP Math/Science",
     "link": "https://www.youtube.com/c/TheOrganicChemistryTutor",
     "description": "Excellent for SAT Math review with comprehensive tutorials"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "title": "Heimler's History",
     "platform": "YouTube",
-    "category": "AP US History",
+    "category": "AP History",
     "link": "https://www.youtube.com/c/SteveHeimler",
     "description": "Best for AP History, Government, and Economics with clear explanations"
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "title": "Khan Academy AP Courses",
     "platform": "Khan Academy",
-    "category": "AP Math/Science",
+    "category": "AP General",
     "link": "https://www.khanacademy.org/",
     "description": "Comprehensive AP Math and Science courses with practice problems"
   },

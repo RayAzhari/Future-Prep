@@ -3,8 +3,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Users, BookOpen, Target, Lightbulb, Globe } from 'lucide-react'
+import { useVisitorCounter } from '../hooks/useVisitorCounter'
 
 export default function AboutSection() {
+  const { visitorCount, isLoading } = useVisitorCounter()
+  
   const features = [
     {
       icon: BookOpen,
@@ -232,6 +235,66 @@ export default function AboutSection() {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Impact Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl p-8 text-white"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Students We&apos;ve Helped
+              </h3>
+              <p className="text-primary-100 text-lg">
+                Join thousands of students who are preparing for their future
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-3xl md:text-4xl font-bold mb-2">
+                  {isLoading ? (
+                    <div className="animate-pulse bg-white/20 h-10 w-20 mx-auto rounded"></div>
+                  ) : (
+                    visitorCount.toLocaleString()
+                  )}
+                </div>
+                <div className="text-primary-100 text-sm md:text-base">
+                  Total Visits
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-3xl md:text-4xl font-bold mb-2">
+                  135+
+                </div>
+                <div className="text-primary-100 text-sm md:text-base">
+                  Activities Listed
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-3xl md:text-4xl font-bold mb-2">
+                  50+
+                </div>
+                <div className="text-primary-100 text-sm md:text-base">
+                  Scholarships
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-3xl md:text-4xl font-bold mb-2">
+                  50+
+                </div>
+                <div className="text-primary-100 text-sm md:text-base">
+                  Research Programs
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
