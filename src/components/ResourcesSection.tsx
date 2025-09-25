@@ -1,35 +1,45 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Filter } from 'lucide-react'
 import resourcesData from '../data/resources.json'
 import type { Resource } from '../types/data'
 
 export default function ResourcesSection() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  // source-of-truth: never overwrite this array
+  const [allResources] = useState<Resource[]>(resourcesData)
+
+  // UI filter state
   const [searchTerm, setSearchTerm] = useState('')
-  const [filteredResources, setFilteredResources] = useState<Resource[]>(resourcesData)
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
 
-  const categories = ['All', 'SAT', 'ACT', 'AP']
+  const categories = ['All', 'SAT', 'ACT', 'AP General', 'AP Psychology', 'AP Biology', 'AP Chemistry', 'AP Physics', 'AP Calculus', 'AP Statistics', 'AP Computer Science', 'AP US History', 'AP World History', 'AP Economics', 'AP English', 'AP Spanish', 'AP French', 'AP Environmental Science', 'AP Music Theory', 'AP Latin']
 
-  useEffect(() => {
-    let filtered = resourcesData
-
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(resource => resource.category === selectedCategory)
-    }
-
-    if (searchTerm) {
-      filtered = filtered.filter(resource =>
-        resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        resource.platform.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+  // derived filtered list — safe, pure, and recomputes when inputs change
+  const filteredResources = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase()
+    return allResources.filter(resource => {
+      // Category filter
+      if (selectedCategory !== 'All' && resource.category !== selectedCategory) {
+        return false
+      }
+      // Search filter
+      if (!query) return true
+      return (
+        resource.title.toLowerCase().includes(query) ||
+        resource.platform.toLowerCase().includes(query) ||
+        resource.description.toLowerCase().includes(query)
       )
-    }
+    })
+  }, [allResources, searchTerm, selectedCategory])
 
-    setFilteredResources(filtered)
-  }, [selectedCategory, searchTerm])
+  // Reset function to clear all filters
+  const resetFilters = () => {
+    setSearchTerm('')
+    setSelectedCategory('All')
+    // do NOT call setAllResources or mutate any arrays here
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,10 +67,10 @@ export default function ResourcesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Study Resources
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Access free SAT, ACT, and AP prep materials from trusted platforms
           </p>
         </motion.div>
@@ -73,9 +83,9 @@ export default function ResourcesSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
             {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 w-full sm:max-w-md">
               <input
                 type="text"
                 placeholder="Search resources..."
@@ -87,23 +97,34 @@ export default function ResourcesSection() {
             </div>
 
             {/* Category Filter */}
-            <div className="flex gap-2 flex-wrap">
-              {categories.map((category) => (
-                <motion.button
-                  key={category}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-primary-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-primary-50 border border-gray-200'
-                  }`}
-                >
-                  {category}
-                </motion.button>
-              ))}
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <Filter className="text-gray-400 w-4 h-4" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent min-w-[200px]"
+              >
+                {categories.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
             </div>
+
+            {/* Reset Button */}
+            {(searchTerm || selectedCategory !== 'All') && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={resetFilters}
+                className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+              >
+                Reset Filters
+              </motion.button>
+            )}
           </div>
         </motion.div>
 
@@ -129,6 +150,38 @@ export default function ResourcesSection() {
                     ? 'bg-blue-100 text-blue-800'
                     : resource.category === 'ACT'
                     ? 'bg-green-100 text-green-800'
+                    : resource.category.includes('AP Psychology')
+                    ? 'bg-pink-100 text-pink-800'
+                    : resource.category.includes('AP Biology')
+                    ? 'bg-emerald-100 text-emerald-800'
+                    : resource.category.includes('AP Chemistry')
+                    ? 'bg-orange-100 text-orange-800'
+                    : resource.category.includes('AP Physics')
+                    ? 'bg-indigo-100 text-indigo-800'
+                    : resource.category.includes('AP Calculus')
+                    ? 'bg-teal-100 text-teal-800'
+                    : resource.category.includes('AP Statistics')
+                    ? 'bg-cyan-100 text-cyan-800'
+                    : resource.category.includes('AP Computer Science')
+                    ? 'bg-slate-100 text-slate-800'
+                    : resource.category.includes('AP US History')
+                    ? 'bg-red-100 text-red-800'
+                    : resource.category.includes('AP World History')
+                    ? 'bg-amber-100 text-amber-800'
+                    : resource.category.includes('AP Economics')
+                    ? 'bg-yellow-100 text-yellow-800'
+                    : resource.category.includes('AP English')
+                    ? 'bg-rose-100 text-rose-800'
+                    : resource.category.includes('AP Spanish')
+                    ? 'bg-lime-100 text-lime-800'
+                    : resource.category.includes('AP French')
+                    ? 'bg-violet-100 text-violet-800'
+                    : resource.category.includes('AP Environmental Science')
+                    ? 'bg-green-100 text-green-800'
+                    : resource.category.includes('AP Music Theory')
+                    ? 'bg-purple-100 text-purple-800'
+                    : resource.category.includes('AP Latin')
+                    ? 'bg-stone-100 text-stone-800'
                     : 'bg-purple-100 text-purple-800'
                 }`}>
                   {resource.category}
@@ -189,7 +242,7 @@ export default function ResourcesSection() {
         >
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
-              {resourcesData.length}+
+              {allResources.length}+
             </div>
             <div className="text-gray-600">Free Resources</div>
           </div>

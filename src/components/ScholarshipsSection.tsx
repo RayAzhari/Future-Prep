@@ -1,39 +1,59 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, DollarSign, Calendar, Search, Filter } from 'lucide-react'
 import scholarshipsData from '../data/scholarships.json'
 import type { Scholarship } from '../types/data'
 
 export default function ScholarshipsSection() {
+  // source-of-truth: never overwrite this array
+  const [allScholarships] = useState<Scholarship[]>(scholarshipsData)
+
+  // UI filter state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedMajor, setSelectedMajor] = useState<string>('All')
-  const [filteredScholarships, setFilteredScholarships] = useState<Scholarship[]>(scholarshipsData)
 
   // Get unique majors for filter
-  const allMajors = Array.from(new Set(scholarshipsData.flatMap(s => s.majors))).sort()
+  const allMajors = useMemo(() => 
+    Array.from(new Set(allScholarships.flatMap(s => s.majors))).sort(),
+    [allScholarships]
+  )
   const majorOptions = ['All', ...allMajors]
 
-  useEffect(() => {
-    let filtered = scholarshipsData
+  // derived filtered list — safe, pure, and recomputes when inputs change
+  const filteredScholarships = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase()
+    return allScholarships.filter(scholarship => {
+      // Search filter
+      if (query) {
+        const matchesSearch = (
+          scholarship.title.toLowerCase().includes(query) ||
+          scholarship.description.toLowerCase().includes(query) ||
+          scholarship.eligibility.toLowerCase().includes(query)
+        )
+        if (!matchesSearch) return false
+      }
 
-    if (searchTerm) {
-      filtered = filtered.filter(scholarship =>
-        scholarship.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        scholarship.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        scholarship.eligibility.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }
+      // Major filter
+      if (selectedMajor !== 'All') {
+        const matchesMajor = (
+          scholarship.majors.includes(selectedMajor) || 
+          scholarship.majors.includes('All Majors')
+        )
+        if (!matchesMajor) return false
+      }
 
-    if (selectedMajor !== 'All') {
-      filtered = filtered.filter(scholarship =>
-        scholarship.majors.includes(selectedMajor) || scholarship.majors.includes('All Majors')
-      )
-    }
+      return true
+    })
+  }, [allScholarships, searchTerm, selectedMajor])
 
-    setFilteredScholarships(filtered)
-  }, [searchTerm, selectedMajor])
+  // Reset function to clear all filters
+  const resetFilters = () => {
+    setSearchTerm('')
+    setSelectedMajor('All')
+    // do NOT call setAllScholarships or mutate any arrays here
+  }
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -77,10 +97,10 @@ export default function ScholarshipsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Scholarships & Opportunities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Find funding opportunities that match your interests and academic goals
           </p>
         </motion.div>
@@ -93,9 +113,9 @@ export default function ScholarshipsSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
             {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 w-full sm:max-w-md">
               <input
                 type="text"
                 placeholder="Search scholarships..."
@@ -107,12 +127,12 @@ export default function ScholarshipsSection() {
             </div>
 
             {/* Major Filter */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               <Filter className="text-gray-400 w-4 h-4" />
               <select
                 value={selectedMajor}
                 onChange={(e) => setSelectedMajor(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 {majorOptions.map((major) => (
                   <option key={major} value={major}>
@@ -121,6 +141,20 @@ export default function ScholarshipsSection() {
                 ))}
               </select>
             </div>
+
+            {/* Reset Button */}
+            {(searchTerm || selectedMajor !== 'All') && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={resetFilters}
+                className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+              >
+                Reset Filters
+              </motion.button>
+            )}
           </div>
         </motion.div>
 
@@ -268,13 +302,13 @@ export default function ScholarshipsSection() {
         >
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
-              {scholarshipsData.length}+
+              {allScholarships.length}+
             </div>
             <div className="text-gray-600">Scholarships Available</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
-              {formatCurrency(scholarshipsData.reduce((sum, s) => sum + s.amount, 0))}
+              {formatCurrency(allScholarships.reduce((sum, s) => sum + s.amount, 0))}
             </div>
             <div className="text-gray-600">Total Award Amount</div>
           </div>

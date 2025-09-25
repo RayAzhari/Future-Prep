@@ -298,5 +298,205 @@
     "description": "For students demonstrating excellence in visual arts",
     "link": "https://www.arteducators.org/",
     "eligibility": "NAHS members with artistic portfolios"
+  },
+  {
+    "id": 31,
+    "title": "Gates Millennium Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-15",
+    "amount": 25000,
+    "description": "Full-ride scholarship for minority students with leadership potential",
+    "link": "https://www.gmsp.org/",
+    "eligibility": "African American, American Indian/Alaska Native, Asian Pacific Islander American, or Hispanic American students with 3.3+ GPA"
+  },
+  {
+    "id": 32,
+    "title": "QuestBridge National College Match",
+    "majors": ["All Majors"],
+    "deadline": "2025-09-26",
+    "amount": 200000,
+    "description": "Full four-year scholarship to top colleges for low-income students",
+    "link": "https://www.questbridge.org/",
+    "eligibility": "High-achieving low-income students with 3.5+ GPA"
+  },
+  {
+    "id": 33,
+    "title": "Coca-Cola Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-10-31",
+    "amount": 20000,
+    "description": "Leadership-based scholarship recognizing students who make a difference",
+    "link": "https://www.coca-colascholarsfoundation.org/",
+    "eligibility": "High school seniors with 3.0+ GPA and leadership experience"
+  },
+  {
+    "id": 34,
+    "title": "Dell Scholars Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-15",
+    "amount": 20000,
+    "description": "Comprehensive support program for students who have overcome significant obstacles",
+    "link": "https://www.dellscholars.org/",
+    "eligibility": "Students from low-income backgrounds with 2.4+ GPA"
+  },
+  {
+    "id": 35,
+    "title": "Jack Kent Cooke Foundation Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-11-08",
+    "amount": 55000,
+    "description": "Comprehensive scholarship for exceptional students with financial need",
+    "link": "https://www.jkcf.org/",
+    "eligibility": "High-achieving students with financial need and 3.5+ GPA"
+  },
+  {
+    "id": 36,
+    "title": "Posse Foundation Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-10-15",
+    "amount": 180000,
+    "description": "Full-tuition scholarship with peer support groups",
+    "link": "https://www.possefoundation.org/",
+    "eligibility": "Students from diverse backgrounds with leadership potential"
+  },
+  {
+    "id": 37,
+    "title": "Horatio Alger Association Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-10-25",
+    "amount": 25000,
+    "description": "For students who have overcome adversity and demonstrate integrity",
+    "link": "https://www.horatioalger.org/",
+    "eligibility": "Students who have overcome major obstacles with 2.0+ GPA"
+  },
+  {
+    "id": 38,
+    "title": "AXA Achievement Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-12-15",
+    "amount": 25000,
+    "description": "For students who have achieved success despite obstacles",
+    "link": "https://www.axa-achievement.com/",
+    "eligibility": "High school seniors with 3.0+ GPA who have overcome challenges"
+  },
+  {
+    "id": 39,
+    "title": "Elks Most Valuable Student Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-11-15",
+    "amount": 50000,
+    "description": "Based on scholarship, leadership, and financial need",
+    "link": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+    "eligibility": "High school seniors who are US citizens"
+  },
+  {
+    "id": 40,
+    "title": "National Merit Scholarship Program",
+    "majors": ["All Majors"],
+    "deadline": "2025-10-15",
+    "amount": 2500,
+    "description": "Based on PSAT/NMSQT scores and academic achievement",
+    "link": "https://www.nationalmerit.org/",
+    "eligibility": "Students who score in the top 1% on PSAT/NMSQT"
+  },
+  {
+    "id": 41,
+    "title": "Ronald McDonald House Charities Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-21",
+    "amount": 100000,
+    "description": "For students who have demonstrated academic excellence and community involvement",
+    "link": "https://rmhc.org/",
+    "eligibility": "High school seniors with 2.7+ GPA and community service"
+  },
+  {
+    "id": 42,
+    "title": "Hispanic Scholarship Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-02-15",
+    "amount": 5000,
+    "description": "For Hispanic students pursuing higher education",
+    "link": "https://www.hsf.net/",
+    "eligibility": "Hispanic students with 3.0+ GPA and US citizenship"
+  },
+  {
+    "id": 43,
+    "title": "Asian & Pacific Islander American Scholarship Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-09",
+    "amount": 2500,
+    "description": "For Asian and Pacific Islander students with financial need",
+    "link": "https://www.apiasf.org/",
+    "eligibility": "API students with 2.7+ GPA and financial need"
+  },
+  {
+    "id": 44,
+    "title": "United Negro College Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-03-31",
+    "amount": 5000,
+    "description": "For African American students pursuing higher education",
+    "link": "https://www.uncf.org/",
+    "eligibility": "African American students with 2.5+ GPA"
+  },
+  {
+    "id": 45,
+    "title": "American Indian College Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-05-31",
+    "amount": 4000,
+    "description": "For Native American students pursuing higher education",
+    "link": "https://collegefund.org/",
+    "eligibility": "Enrolled tribal members with 2.0+ GPA"
+  },
+  {
+    "id": 46,
+    "title": "Military Officers Association of America Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-02-10",
+    "amount": 10000,
+    "description": "For children of military officers pursuing higher education",
+    "link": "https://www.moaa.org/",
+    "eligibility": "Children of active duty or retired military officers"
+  },
+  {
+    "id": 47,
+    "title": "Fisher House Foundation Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-02-15",
+    "amount": 2500,
+    "description": "For children of fallen or disabled veterans",
+    "link": "https://fisherhouse.org/",
+    "eligibility": "Children of veterans who died or were disabled in service"
+  },
+  {
+    "id": 48,
+    "title": "National FFA Organization Scholarships",
+    "majors": ["Agriculture", "Veterinary Science", "Environmental Science"],
+    "deadline": "2025-02-08",
+    "amount": 15000,
+    "description": "For FFA members pursuing agricultural education",
+    "link": "https://www.ffa.org/",
+    "eligibility": "FFA members with 2.0+ GPA"
+  },
+  {
+    "id": 49,
+    "title": "4-H Youth Development Scholarships",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-15",
+    "amount": 5000,
+    "description": "For 4-H members who have demonstrated leadership and community service",
+    "link": "https://4-h.org/",
+    "eligibility": "Active 4-H members with 2.5+ GPA"
+  },
+  {
+    "id": 50,
+    "title": "Boy Scouts of America Eagle Scout Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-03-31",
+    "amount": 10000,
+    "description": "For Eagle Scouts pursuing higher education",
+    "link": "https://www.scouting.org/",
+    "eligibility": "Eagle Scouts with 2.5+ GPA"
   }
 ]

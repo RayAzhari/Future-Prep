@@ -1043,5 +1043,215 @@
     "benefits": "Advanced math skills, problem-solving, competition experience",
     "requirements": "Strong math background, problem-solving interest",
     "website": "https://www.maa.org/math-competitions"
+  },
+  {
+    "id": 115,
+    "title": "Future Farmers of America (FFA)",
+    "category": "Leadership",
+    "description": "Develop leadership skills and agricultural knowledge through FFA activities",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Leadership skills, agricultural knowledge, career development, scholarships",
+    "requirements": "Interest in agriculture, commitment to leadership development",
+    "website": "https://www.ffa.org/"
+  },
+  {
+    "id": 116,
+    "title": "SkillsUSA",
+    "category": "Leadership",
+    "description": "Develop technical skills and leadership through competitions and activities",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Technical skills, leadership development, career preparation, networking",
+    "requirements": "Interest in technical careers, commitment to skill development",
+    "website": "https://www.skillsusa.org/"
+  },
+  {
+    "id": 117,
+    "title": "Junior Achievement",
+    "category": "Business",
+    "description": "Learn about entrepreneurship and financial literacy",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Business knowledge, financial literacy, entrepreneurship skills",
+    "requirements": "Interest in business and finance",
+    "website": "https://www.juniorachievement.org/"
+  },
+  {
+    "id": 118,
+    "title": "National Beta Club",
+    "category": "Leadership",
+    "description": "Promote academic achievement, character, service, and leadership",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Leadership experience, community service, academic recognition",
+    "requirements": "High academic achievement, commitment to service",
+    "website": "https://www.betaclub.org/"
+  },
+  {
+    "id": 119,
+    "title": "Tri-M Music Honor Society",
+    "category": "Arts",
+    "description": "Recognize and promote music excellence in high school",
+    "timeCommitment": "4-8 hours/week",
+    "benefits": "Musical recognition, leadership opportunities, community service",
+    "requirements": "Musical ability, academic excellence, character",
+    "website": "https://nafme.org/programs/tri-m-music-honor-society/"
+  },
+  {
+    "id": 120,
+    "title": "National Art Honor Society",
+    "category": "Arts",
+    "description": "Recognize and promote excellence in visual arts",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Artistic recognition, leadership opportunities, community service",
+    "requirements": "Artistic ability, academic excellence, character",
+    "website": "https://www.arteducators.org/"
+  },
+  {
+    "id": 121,
+    "title": "National Thespian Society",
+    "category": "Arts",
+    "description": "Recognize and promote excellence in theater arts",
+    "timeCommitment": "6-15 hours/week",
+    "benefits": "Theater recognition, leadership opportunities, community service",
+    "requirements": "Theater involvement, academic excellence, character",
+    "website": "https://www.schooltheatre.org/"
+  },
+  {
+    "id": 122,
+    "title": "National Speech and Debate Association",
+    "category": "Academic",
+    "description": "Develop public speaking and debate skills through competition",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Public speaking skills, critical thinking, college recognition",
+    "requirements": "Interest in public speaking and debate",
+    "website": "https://www.speechanddebate.org/"
+  },
+  {
+    "id": 123,
+    "title": "National Forensic League",
+    "category": "Academic",
+    "description": "Promote speech and debate education",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Communication skills, critical thinking, leadership",
+    "requirements": "Interest in speech and debate",
+    "website": "https://www.speechanddebate.org/"
+  },
+  {
+    "id": 124,
+    "title": "National French Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in French language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "French language study, academic excellence",
+    "website": "https://www.frenchteachers.org/"
+  },
+  {
+    "id": 125,
+    "title": "National Spanish Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Spanish language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Spanish language study, academic excellence",
+    "website": "https://www.aatsp.org/"
+  },
+  {
+    "id": 126,
+    "title": "National German Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in German language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "German language study, academic excellence",
+    "website": "https://www.aatg.org/"
+  },
+  {
+    "id": 127,
+    "title": "National Latin Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Latin language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, classical studies awareness, leadership opportunities",
+    "requirements": "Latin language study, academic excellence",
+    "website": "https://www.etclassics.org/"
+  },
+  {
+    "id": 128,
+    "title": "National Chinese Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Chinese language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Chinese language study, academic excellence",
+    "website": "https://www.classk12.org/"
+  },
+  {
+    "id": 129,
+    "title": "National Japanese Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Japanese language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Japanese language study, academic excellence",
+    "website": "https://www.aatj.org/"
+  },
+  {
+    "id": 130,
+    "title": "National Italian Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Italian language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Italian language study, academic excellence",
+    "website": "https://www.aati-online.org/"
+  },
+  {
+    "id": 131,
+    "title": "National Portuguese Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Portuguese language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Portuguese language study, academic excellence",
+    "website": "https://www.aatsp.org/"
+  },
+  {
+    "id": 132,
+    "title": "National Russian Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Russian language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Russian language study, academic excellence",
+    "website": "https://www.aatseel.org/"
+  },
+  {
+    "id": 133,
+    "title": "National Arabic Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Arabic language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Arabic language study, academic excellence",
+    "website": "https://www.aataweb.org/"
+  },
+  {
+    "id": 134,
+    "title": "National Korean Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Korean language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Korean language study, academic excellence",
+    "website": "https://www.aatk.org/"
+  },
+  {
+    "id": 135,
+    "title": "National Hebrew Honor Society",
+    "category": "Academic",
+    "description": "Recognize excellence in Hebrew language study",
+    "timeCommitment": "2-4 hours/week",
+    "benefits": "Language recognition, cultural awareness, leadership opportunities",
+    "requirements": "Hebrew language study, academic excellence",
+    "website": "https://www.aatj.org/"
   }
 ]

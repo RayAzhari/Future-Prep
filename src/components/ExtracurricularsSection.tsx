@@ -1,53 +1,52 @@
 'use client'
 
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Clock, Users, Search, Filter, Star } from 'lucide-react'
 import extracurricularsData from '../data/extracurriculars.json'
 import type { Extracurricular } from '../types/data'
 
 export default function ExtracurricularsSection() {
+  // source-of-truth: never overwrite this array
+  const [allExtracurriculars] = useState<Extracurricular[]>(extracurricularsData)
+
+  // UI filter state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
-  const [filteredExtracurriculars, setFilteredExtracurriculars] = useState<Extracurricular[]>(extracurricularsData)
+
+  // Get unique categories for filter - memoize to prevent unnecessary re-renders
+  const allCategories = useMemo(() => 
+    Array.from(new Set(allExtracurriculars.map(e => e.category))).sort(), 
+    [allExtracurriculars]
+  )
+  const categoryOptions = ['All', ...allCategories]
+
+  // derived filtered list — safe, pure, and recomputes when inputs change
+  const filteredExtracurriculars = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase()
+    return allExtracurriculars.filter(extracurricular => {
+      // Category filter
+      if (selectedCategory !== 'All' && extracurricular.category !== selectedCategory) {
+        return false
+      }
+
+      // Search filter
+      if (!query) return true
+      return (
+        extracurricular.title.toLowerCase().includes(query) ||
+        extracurricular.description.toLowerCase().includes(query) ||
+        extracurricular.benefits.toLowerCase().includes(query) ||
+        extracurricular.category.toLowerCase().includes(query)
+      )
+    })
+  }, [allExtracurriculars, searchTerm, selectedCategory])
 
   // Reset function to clear all filters
   const resetFilters = () => {
     setSearchTerm('')
     setSelectedCategory('All')
+    // do NOT call setAllExtracurriculars or mutate any arrays here
   }
-
-  // Get unique categories for filter - memoize to prevent unnecessary re-renders
-  const allCategories = useMemo(() => 
-    Array.from(new Set(extracurricularsData.map(e => e.category))).sort(), 
-    []
-  )
-  const categoryOptions = ['All', ...allCategories]
-
-  useEffect(() => {
-    // Start with all data
-    let filtered = [...extracurricularsData]
-
-    // Apply search filter
-    if (searchTerm && searchTerm.trim() !== '') {
-      const searchLower = searchTerm.toLowerCase().trim()
-      filtered = filtered.filter(extracurricular =>
-        extracurricular.title.toLowerCase().includes(searchLower) ||
-        extracurricular.description.toLowerCase().includes(searchLower) ||
-        extracurricular.benefits.toLowerCase().includes(searchLower) ||
-        extracurricular.category.toLowerCase().includes(searchLower)
-      )
-    }
-
-    // Apply category filter
-    if (selectedCategory && selectedCategory !== 'All') {
-      filtered = filtered.filter(extracurricular =>
-        extracurricular.category === selectedCategory
-      )
-    }
-    
-    setFilteredExtracurriculars(filtered)
-  }, [searchTerm, selectedCategory])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -93,10 +92,10 @@ export default function ExtracurricularsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Extracurricular Activities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Discover opportunities to develop skills, pursue passions, and build your college application
           </p>
         </motion.div>
@@ -109,9 +108,9 @@ export default function ExtracurricularsSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
             {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 w-full sm:max-w-md">
               <input
                 type="text"
                 placeholder="Search activities..."
@@ -123,12 +122,12 @@ export default function ExtracurricularsSection() {
             </div>
 
             {/* Category Filter */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               <Filter className="text-gray-400 w-4 h-4" />
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 {categoryOptions.map((category) => (
                   <option key={category} value={category}>
@@ -146,7 +145,7 @@ export default function ExtracurricularsSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={resetFilters}
-                className="px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
               >
                 Reset Filters
               </motion.button>
@@ -265,7 +264,7 @@ export default function ExtracurricularsSection() {
         >
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
-              {extracurricularsData.length}+
+              {allExtracurriculars.length}+
             </div>
             <div className="text-gray-600">Total Activities</div>
           </div>

@@ -21,10 +21,23 @@ export default function Navigation() {
       // Navigate to a different page
       window.location.href = item.href
     } else {
-      // Scroll to section on current page
-      const element = document.getElementById(item.id)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+      // For Home and Resources, navigate to home page first if not already there
+      if (item.id === 'home' || item.id === 'resources') {
+        if (window.location.pathname !== '/') {
+          window.location.href = '/'
+          return
+        }
+        // If already on home page, scroll to section
+        const element = document.getElementById(item.id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      } else {
+        // Scroll to section on current page
+        const element = document.getElementById(item.id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
       }
     }
     setIsMobileMenuOpen(false)
@@ -63,25 +76,18 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-2 lg:space-x-4">
               {navItems.map((item) => (
                 <motion.button
                   key={item.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavigation(item)}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200"
+                  className="px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200"
                 >
                   {item.label}
                 </motion.button>
               ))}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700 transition-colors duration-200"
-              >
-                Sign Up
-              </motion.button>
             </div>
           </div>
 
@@ -121,14 +127,7 @@ export default function Navigation() {
               >
                 {item.label}
               </motion.button>
-            ))}
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="block w-full text-left ml-3 px-3 py-2 bg-primary-600 text-white rounded-md text-base font-medium hover:bg-primary-700 transition-colors duration-200"
-            >
-              Sign Up
-            </motion.button>
+              ))}
           </div>
         </motion.div>
       )}

@@ -83,7 +83,7 @@
     "id": 11,
     "title": "AP Classroom",
     "platform": "College Board",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://myap.collegeboard.org/",
     "description": "Official progress checks, practice questions, and videos for all AP subjects"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "title": "Heimler's History",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP US History",
     "link": "https://www.youtube.com/c/SteveHeimler",
     "description": "Best for AP History, Government, and Economics with clear explanations"
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "title": "Khan Academy AP Courses",
     "platform": "Khan Academy",
-    "category": "AP",
+    "category": "AP Math/Science",
     "link": "https://www.khanacademy.org/",
     "description": "Comprehensive AP Math and Science courses with practice problems"
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "title": "Bozeman Science",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP Biology",
     "link": "https://www.youtube.com/user/bozemanbiology",
     "description": "Excellent for Biology and Environmental Science with detailed explanations"
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "title": "Knowt AP Resources",
     "platform": "Knowt",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://knowt.com/",
     "description": "AI-powered study notes and flashcards for all AP subjects"
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "title": "Crash Course",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://www.youtube.com/user/crashcourse",
     "description": "Fast-paced, entertaining reviews for multiple AP subjects"
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "title": "Princeton Review AP Guides",
     "platform": "Princeton Review",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://www.princetonreview.com/college/ap-test-prep",
     "description": "Good for content review and test-taking strategies"
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "title": "Barron's AP Guides",
     "platform": "Barron's",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://www.barronseduc.com/ap",
     "description": "More in-depth practice with comprehensive content review"
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "title": "Fiveable AP Community",
     "platform": "Fiveable",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://fiveable.me/",
     "description": "Community-based live reviews, guides, and practice sessions"
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "title": "Quizlet AP Flashcards",
     "platform": "Quizlet",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://quizlet.com/subject/ap/",
     "description": "User-made flashcards for every AP subject and topic"
   },
@@ -163,7 +163,7 @@
     "id": 21,
     "title": "Tyler DeWitt Chemistry",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP Chemistry",
     "link": "https://www.youtube.com/c/TylerDeWitt",
     "description": "Clear, step-by-step chemistry explanations perfect for AP Chemistry"
   },
@@ -171,7 +171,7 @@
     "id": 22,
     "title": "Flipping Physics",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP Physics",
     "link": "https://www.youtube.com/c/FlippingPhysics",
     "description": "Comprehensive physics tutorials for AP Physics 1, 2, and C"
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "title": "Stats Medic",
     "platform": "Stats Medic",
-    "category": "AP",
+    "category": "AP Statistics",
     "link": "https://www.statsmedic.com/",
     "description": "Excellent resources for AP Statistics with real-world applications"
   },
@@ -187,7 +187,7 @@
     "id": 24,
     "title": "CodingBat",
     "platform": "CodingBat",
-    "category": "AP",
+    "category": "AP Computer Science",
     "link": "https://codingbat.com/java",
     "description": "Java practice problems perfect for AP Computer Science A"
   },
@@ -195,7 +195,7 @@
     "id": 25,
     "title": "Gilder Lehrman Institute",
     "platform": "Gilder Lehrman",
-    "category": "AP",
+    "category": "AP US History",
     "link": "https://www.gilderlehrman.org/",
     "description": "Premium resources for AP US History with primary sources and essays"
   },
@@ -203,7 +203,7 @@
     "id": 26,
     "title": "LitCharts",
     "platform": "LitCharts",
-    "category": "AP",
+    "category": "AP English",
     "link": "https://www.litcharts.com/",
     "description": "Detailed literary analysis perfect for AP English Literature"
   },
@@ -211,7 +211,7 @@
     "id": 27,
     "title": "ACDC Economics",
     "platform": "YouTube",
-    "category": "AP",
+    "category": "AP Economics",
     "link": "https://www.youtube.com/user/ACDCEcon",
     "description": "Clear explanations for AP Macroeconomics and Microeconomics"
   },
@@ -219,7 +219,7 @@
     "id": 28,
     "title": "Teoria Music Theory",
     "platform": "Teoria",
-    "category": "AP",
+    "category": "AP Music Theory",
     "link": "https://www.teoria.com/",
     "description": "Interactive exercises and tutorials for AP Music Theory"
   },
@@ -227,7 +227,7 @@
     "id": 29,
     "title": "Wheelock's Latin",
     "platform": "Wheelock's Latin",
-    "category": "AP",
+    "category": "AP Latin",
     "link": "https://www.wheelockslatin.com/",
     "description": "Comprehensive Latin textbook and resources for AP Latin"
   },
@@ -235,8 +235,88 @@
     "id": 30,
     "title": "Reddit AP Students",
     "platform": "Reddit",
-    "category": "AP",
+    "category": "AP General",
     "link": "https://www.reddit.com/r/APStudents/",
     "description": "Community tips, study resources, and peer support for all AP subjects"
+  },
+  {
+    "id": 31,
+    "title": "AP Psychology Study Guide",
+    "platform": "Fiveable",
+    "category": "AP Psychology",
+    "link": "https://fiveable.me/ap-psych",
+    "description": "Comprehensive AP Psychology study guides and practice tests"
+  },
+  {
+    "id": 32,
+    "title": "Crash Course Psychology",
+    "platform": "YouTube",
+    "category": "AP Psychology",
+    "link": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6",
+    "description": "Complete psychology course covering all AP Psychology topics"
+  },
+  {
+    "id": 33,
+    "title": "AP Psychology Flashcards",
+    "platform": "Quizlet",
+    "category": "AP Psychology",
+    "link": "https://quizlet.com/subject/ap-psychology/",
+    "description": "Thousands of flashcards for AP Psychology terms and concepts"
+  },
+  {
+    "id": 34,
+    "title": "AP World History Study Guide",
+    "platform": "Fiveable",
+    "category": "AP World History",
+    "link": "https://fiveable.me/ap-world",
+    "description": "Complete AP World History study guides and practice questions"
+  },
+  {
+    "id": 35,
+    "title": "Crash Course World History",
+    "platform": "YouTube",
+    "category": "AP World History",
+    "link": "https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9",
+    "description": "Comprehensive world history content for AP World History"
+  },
+  {
+    "id": 36,
+    "title": "AP Calculus AB/BC Resources",
+    "platform": "Khan Academy",
+    "category": "AP Calculus",
+    "link": "https://www.khanacademy.org/math/ap-calculus-ab",
+    "description": "Complete AP Calculus courses with practice problems and videos"
+  },
+  {
+    "id": 37,
+    "title": "Paul's Online Math Notes",
+    "platform": "Paul's Online",
+    "category": "AP Calculus",
+    "link": "https://tutorial.math.lamar.edu/classes/calci/calci.aspx",
+    "description": "Detailed calculus notes and practice problems for AP Calculus"
+  },
+  {
+    "id": 38,
+    "title": "AP Spanish Language Resources",
+    "platform": "College Board",
+    "category": "AP Spanish",
+    "link": "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture",
+    "description": "Official AP Spanish Language and Culture course materials"
+  },
+  {
+    "id": 39,
+    "title": "AP French Language Resources",
+    "platform": "College Board",
+    "category": "AP French",
+    "link": "https://apcentral.collegeboard.org/courses/ap-french-language-and-culture",
+    "description": "Official AP French Language and Culture course materials"
+  },
+  {
+    "id": 40,
+    "title": "AP Environmental Science Guide",
+    "platform": "Fiveable",
+    "category": "AP Environmental Science",
+    "link": "https://fiveable.me/ap-environ",
+    "description": "Complete AP Environmental Science study guides and practice tests"
   }
 ]
