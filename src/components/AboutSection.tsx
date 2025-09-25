@@ -3,11 +3,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Users, BookOpen, Target, Lightbulb, Globe } from 'lucide-react'
-import { useVisitorCounter } from '../hooks/useVisitorCounter'
 
 export default function AboutSection() {
-  const { visitorCount, isLoading } = useVisitorCounter()
-  
   const features = [
     {
       icon: BookOpen,
@@ -257,14 +254,10 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-3xl md:text-4xl font-bold mb-2">
-                  {isLoading ? (
-                    <div className="animate-pulse bg-white/20 h-10 w-20 mx-auto rounded"></div>
-                  ) : (
-                    visitorCount.toLocaleString()
-                  )}
+                  2,500+
                 </div>
                 <div className="text-primary-100 text-sm md:text-base">
-                  Total Visits
+                  Students Helped
                 </div>
               </div>
               
