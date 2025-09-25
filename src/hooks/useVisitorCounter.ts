@@ -5,68 +5,40 @@ export const useVisitorCounter = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const incrementGlobalCounter = async () => {
-      // Check if we've already incremented in this session
-      const hasIncremented = sessionStorage.getItem('future-prep-counter-incremented')
-      
-      if (hasIncremented) {
-        // Just get the current count without incrementing
-        console.log('🔄 Already incremented this session, getting current count')
-        try {
-          const response = await fetch('/api/visitor-count')
-          const data = await response.json()
-          if (response.ok) {
-            setVisitorCount(data.count)
-            console.log('📊 Current count:', data.count)
-          }
-        } catch (error) {
-          console.error('💥 Error getting current count:', error)
-          setVisitorCount(1000)
-        } finally {
-          setIsLoading(false)
-        }
-        return
-      }
-
-      console.log('🚀 Visitor counter hook triggered - first time this session')
+    const incrementVisitorCount = async () => {
       try {
-        console.log('📡 Making POST request to /api/visitor-count')
-        // Increment the global counter
-        const response = await fetch('/api/visitor-count', {
+        // Use absolute URL for production deployment
+        const baseUrl = typeof window !== 'undefined' 
+          ? window.location.origin 
+          : 'https://future-prep.vercel.app'
+        
+        const response = await fetch(`${baseUrl}/api/visitor-count`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
         })
         
-        const data = await response.json()
-        console.log('📊 API response:', data)
-        
         if (response.ok) {
+          const data = await response.json()
           setVisitorCount(data.count)
-          console.log('✅ Counter updated to:', data.count)
-          // Mark that we've incremented in this session
-          sessionStorage.setItem('future-prep-counter-incremented', 'true')
         } else {
-          console.error('❌ Failed to increment counter:', data)
-          // Fallback: try to get current count
-          const getResponse = await fetch('/api/visitor-count')
-          const getData = await getResponse.json()
+          // If POST fails, try to get current count
+          const getResponse = await fetch(`${baseUrl}/api/visitor-count`)
           if (getResponse.ok) {
+            const getData = await getResponse.json()
             setVisitorCount(getData.count)
-          } else {
-            setVisitorCount(1000)
           }
         }
       } catch (error) {
-        console.error('💥 Error updating visitor counter:', error)
-        setVisitorCount(1000)
+        console.error('Error updating visitor counter:', error)
+        // Don't set fallback value, just show 0
       } finally {
         setIsLoading(false)
       }
     }
 
-    incrementGlobalCounter()
+    incrementVisitorCount()
   }, [])
 
   return { visitorCount, isLoading }

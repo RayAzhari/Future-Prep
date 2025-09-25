@@ -4,58 +4,43 @@ import path from 'path'
 
 const COUNTER_FILE = path.join(process.cwd(), 'data', 'visitor-counter.json')
 
-// Ensure the data directory exists
-async function ensureDataDirectory() {
-  const dataDir = path.dirname(COUNTER_FILE)
-  try {
-    await fs.access(dataDir)
-  } catch {
-    await fs.mkdir(dataDir, { recursive: true })
-  }
+// CORS headers for production
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
 }
 
-// Initialize counter file if it doesn't exist
-async function initializeCounterFile() {
+async function readCounter() {
   try {
-    await fs.access(COUNTER_FILE)
-  } catch {
-    await fs.writeFile(COUNTER_FILE, JSON.stringify({ count: 0 }))
-  }
-}
-
-export async function GET() {
-  try {
-    await ensureDataDirectory()
-    await initializeCounterFile()
-    
     const data = await fs.readFile(COUNTER_FILE, 'utf8')
-    const { count } = JSON.parse(data)
-    
-    return NextResponse.json({ count })
-  } catch (error) {
-    console.error('Error reading visitor counter:', error)
-    return NextResponse.json({ count: 0 }, { status: 500 })
+    return JSON.parse(data).count || 0
+  } catch {
+    return 0
   }
 }
 
-export async function POST() {
+async function writeCounter(count: number) {
   try {
-    await ensureDataDirectory()
-    await initializeCounterFile()
-    
-    // Read current count
-    const data = await fs.readFile(COUNTER_FILE, 'utf8')
-    const { count: currentCount } = JSON.parse(data)
-    
-    // Increment count
-    const newCount = currentCount + 1
-    
-    // Write back to file
-    await fs.writeFile(COUNTER_FILE, JSON.stringify({ count: newCount }))
-    
-    return NextResponse.json({ count: newCount })
+    await fs.mkdir(path.dirname(COUNTER_FILE), { recursive: true })
+    await fs.writeFile(COUNTER_FILE, JSON.stringify({ count }))
   } catch (error) {
-    console.error('Error incrementing visitor counter:', error)
-    return NextResponse.json({ error: 'Failed to increment counter' }, { status: 500 })
+    console.error('Error writing counter:', error)
   }
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 200, headers: corsHeaders })
+}
+
+export async function GET(request: NextRequest) {
+  const count = await readCounter()
+  return NextResponse.json({ count }, { headers: corsHeaders })
+}
+
+export async function POST(request: NextRequest) {
+  const currentCount = await readCounter()
+  const newCount = currentCount + 1
+  await writeCounter(newCount)
+  return NextResponse.json({ count: newCount }, { headers: corsHeaders })
 }
