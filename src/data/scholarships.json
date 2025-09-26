@@ -121,11 +121,11 @@
   },
   {
     "id": 13,
-    "title": "Intel Science Talent Search",
+    "title": "Regeneron Science Talent Search",
     "majors": ["STEM Fields"],
     "deadline": "2025-11-13",
     "amount": 250000,
-    "description": "Premier science competition for high school seniors",
+    "description": "Premier science competition for high school seniors (formerly Intel STS)",
     "link": "https://www.societyforscience.org/regeneron-sts/",
     "eligibility": "High school seniors with original research projects"
   },
@@ -500,26 +500,6 @@
     "eligibility": "Eagle Scouts with 2.5+ GPA"
   },
   {
-    "id": 51,
-    "title": "Intel Science Talent Search Scholarship",
-    "majors": ["STEM", "Computer Science", "Engineering", "Mathematics", "Physics", "Chemistry", "Biology"],
-    "deadline": "2024-11-13",
-    "amount": 150000,
-    "description": "Nation's oldest and most prestigious science competition for high school seniors",
-    "link": "https://www.societyforscience.org/regeneron-sts/",
-    "eligibility": "High school seniors with original research projects"
-  },
-  {
-    "id": 52,
-    "title": "Regeneron Science Talent Search",
-    "majors": ["STEM", "Computer Science", "Engineering", "Mathematics", "Physics", "Chemistry", "Biology"],
-    "deadline": "2024-11-13",
-    "amount": 250000,
-    "description": "Premier science competition for high school seniors with significant research projects",
-    "link": "https://www.societyforscience.org/regeneron-sts/",
-    "eligibility": "High school seniors with original research projects"
-  },
-  {
     "id": 53,
     "title": "Davidson Fellows Scholarship",
     "majors": ["STEM", "Computer Science", "Engineering", "Mathematics", "Physics", "Chemistry", "Biology"],
@@ -551,26 +531,6 @@
   },
   {
     "id": 56,
-    "title": "Microsoft Tuition Scholarship",
-    "majors": ["Computer Science", "Engineering", "Mathematics"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://careers.microsoft.com/us/en/usstudentscholarshipprogram",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 57,
-    "title": "Apple Scholars Program",
-    "majors": ["Computer Science", "Engineering"],
-    "deadline": "2025-01-15",
-    "amount": 10000,
-    "description": "For students pursuing computer science or engineering with focus on technology",
-    "link": "https://www.apple.com/education/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 58,
     "title": "Amazon Future Engineer Scholarship",
     "majors": ["Computer Science", "Engineering"],
     "deadline": "2025-01-15",
@@ -580,47 +540,17 @@
     "eligibility": "High school seniors from underserved communities, pursuing CS"
   },
   {
-    "id": 59,
-    "title": "Facebook Engineering Scholarship",
-    "majors": ["Computer Science", "Engineering"],
+    "id": 57,
+    "title": "Microsoft Tuition Scholarship",
+    "majors": ["Computer Science", "Engineering", "Mathematics"],
     "deadline": "2025-01-15",
     "amount": 5000,
     "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.facebook.com/careers/students-and-grads/",
+    "link": "https://careers.microsoft.com/us/en/usstudentscholarshipprogram",
     "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
   },
   {
-    "id": 60,
-    "title": "Tesla Engineering Scholarship",
-    "majors": ["Engineering", "Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing engineering or computer science degrees",
-    "link": "https://www.tesla.com/careers",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
-  },
-  {
-    "id": 61,
-    "title": "SpaceX Engineering Scholarship",
-    "majors": ["Engineering", "Computer Science", "Physics"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing engineering, computer science, or physics degrees",
-    "link": "https://www.spacex.com/careers/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering, CS, or physics"
-  },
-  {
-    "id": 62,
-    "title": "NASA STEM Scholarship",
-    "majors": ["STEM", "Engineering", "Computer Science", "Mathematics", "Physics"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing STEM degrees with interest in aerospace",
-    "link": "https://www.nasa.gov/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing STEM degrees"
-  },
-  {
-    "id": 63,
+    "id": 58,
     "title": "Lockheed Martin STEM Scholarship",
     "majors": ["Engineering", "Computer Science", "Mathematics", "Physics"],
     "deadline": "2025-01-15",
@@ -630,7 +560,7 @@
     "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering, CS, or math"
   },
   {
-    "id": 64,
+    "id": 59,
     "title": "Boeing Engineering Scholarship",
     "majors": ["Engineering", "Computer Science"],
     "deadline": "2025-01-15",
@@ -640,7 +570,7 @@
     "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
   },
   {
-    "id": 65,
+    "id": 60,
     "title": "General Electric Engineering Scholarship",
     "majors": ["Engineering", "Computer Science"],
     "deadline": "2025-01-15",
@@ -650,353 +580,103 @@
     "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
   },
   {
-    "id": 66,
-    "title": "IBM Engineering Scholarship",
-    "majors": ["Computer Science", "Engineering"],
-    "deadline": "2025-01-15",
+    "id": 61,
+    "title": "Society of Women Engineers Scholarship",
+    "majors": ["Engineering", "Computer Science"],
+    "deadline": "2025-05-01",
+    "amount": 15000,
+    "description": "For women pursuing engineering or computer science degrees",
+    "link": "https://swe.org/scholarships/",
+    "eligibility": "Female high school seniors, 3.0+ GPA, pursuing engineering or CS"
+  },
+  {
+    "id": 62,
+    "title": "National Society of Black Engineers Scholarship",
+    "majors": ["Engineering", "Computer Science"],
+    "deadline": "2025-03-31",
+    "amount": 10000,
+    "description": "For African American students pursuing engineering or computer science",
+    "link": "https://www.nsbe.org/",
+    "eligibility": "African American high school seniors, 3.0+ GPA, pursuing engineering or CS"
+  },
+  {
+    "id": 63,
+    "title": "Society of Hispanic Professional Engineers Scholarship",
+    "majors": ["Engineering", "Computer Science"],
+    "deadline": "2025-04-30",
+    "amount": 10000,
+    "description": "For Hispanic students pursuing engineering or computer science",
+    "link": "https://www.shpe.org/",
+    "eligibility": "Hispanic high school seniors, 3.0+ GPA, pursuing engineering or CS"
+  },
+  {
+    "id": 64,
+    "title": "American Indian Science and Engineering Society Scholarship",
+    "majors": ["STEM", "Engineering", "Computer Science"],
+    "deadline": "2025-03-31",
     "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.ibm.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
+    "description": "For Native American students pursuing STEM fields",
+    "link": "https://www.aises.org/",
+    "eligibility": "Native American high school seniors, 3.0+ GPA, pursuing STEM"
+  },
+  {
+    "id": 65,
+    "title": "National Action Council for Minorities in Engineering Scholarship",
+    "majors": ["Engineering", "Computer Science"],
+    "deadline": "2025-03-31",
+    "amount": 25000,
+    "description": "For underrepresented minorities pursuing engineering or computer science",
+    "link": "https://www.nacme.org/",
+    "eligibility": "Underrepresented minority high school seniors, 3.0+ GPA, pursuing engineering or CS"
+  },
+  {
+    "id": 66,
+    "title": "Thurgood Marshall College Fund Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-03-31",
+    "amount": 20000,
+    "description": "For students attending historically black colleges and universities",
+    "link": "https://www.tmcf.org/",
+    "eligibility": "High school seniors planning to attend HBCU, 3.0+ GPA"
   },
   {
     "id": 67,
-    "title": "Oracle Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
+    "title": "Hispanic Scholarship Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-02-15",
     "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.oracle.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
+    "description": "For Hispanic students pursuing higher education",
+    "link": "https://www.hsf.net/",
+    "eligibility": "Hispanic high school seniors, 3.0+ GPA"
   },
   {
     "id": 68,
-    "title": "Salesforce Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
+    "title": "Asian & Pacific Islander American Scholarship Fund",
+    "majors": ["All Majors"],
+    "deadline": "2025-01-20",
     "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.salesforce.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
+    "description": "For Asian and Pacific Islander students pursuing higher education",
+    "link": "https://www.apiasf.org/",
+    "eligibility": "Asian/Pacific Islander high school seniors, 3.0+ GPA"
   },
   {
     "id": 69,
-    "title": "Adobe Creative Technology Scholarship",
-    "majors": ["Computer Science", "Engineering", "Design"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science, engineering, or design degrees",
-    "link": "https://www.adobe.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS, engineering, or design"
+    "title": "United Negro College Fund Scholarship",
+    "majors": ["All Majors"],
+    "deadline": "2025-03-31",
+    "amount": 10000,
+    "description": "For African American students pursuing higher education",
+    "link": "https://www.uncf.org/",
+    "eligibility": "African American high school seniors, 3.0+ GPA"
   },
   {
     "id": 70,
-    "title": "NVIDIA Computer Science Scholarship",
-    "majors": ["Computer Science", "Engineering"],
+    "title": "Gates Millennium Scholars Program",
+    "majors": ["All Majors"],
     "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.nvidia.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 71,
-    "title": "AMD Engineering Scholarship",
-    "majors": ["Engineering", "Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing engineering or computer science degrees",
-    "link": "https://www.amd.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
-  },
-  {
-    "id": 72,
-    "title": "Intel Engineering Scholarship",
-    "majors": ["Engineering", "Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing engineering or computer science degrees",
-    "link": "https://www.intel.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
-  },
-  {
-    "id": 73,
-    "title": "Qualcomm Engineering Scholarship",
-    "majors": ["Engineering", "Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing engineering or computer science degrees",
-    "link": "https://www.qualcomm.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing engineering or CS"
-  },
-  {
-    "id": 74,
-    "title": "Cisco Computer Science Scholarship",
-    "majors": ["Computer Science", "Engineering"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.cisco.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 75,
-    "title": "Hewlett Packard Enterprise Scholarship",
-    "majors": ["Computer Science", "Engineering"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.hpe.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 76,
-    "title": "Dell Technologies Scholarship",
-    "majors": ["Computer Science", "Engineering"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science or engineering degrees",
-    "link": "https://www.dell.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing CS or engineering"
-  },
-  {
-    "id": 77,
-    "title": "VMware Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.vmware.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 78,
-    "title": "Red Hat Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.redhat.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 79,
-    "title": "MongoDB Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.mongodb.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 80,
-    "title": "Databricks Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.databricks.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 81,
-    "title": "Snowflake Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.snowflake.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 82,
-    "title": "Palantir Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.palantir.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 83,
-    "title": "Stripe Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://stripe.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 84,
-    "title": "Square Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://squareup.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 85,
-    "title": "Airbnb Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.airbnb.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 86,
-    "title": "Uber Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.uber.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 87,
-    "title": "Lyft Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.lyft.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 88,
-    "title": "Pinterest Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.pinterest.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 89,
-    "title": "Snapchat Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.snap.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 90,
-    "title": "TikTok Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.tiktok.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 91,
-    "title": "Discord Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://discord.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 92,
-    "title": "Slack Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://slack.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 93,
-    "title": "Zoom Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://zoom.us/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 94,
-    "title": "Dropbox Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.dropbox.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 95,
-    "title": "Box Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.box.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 96,
-    "title": "GitHub Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://github.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 97,
-    "title": "GitLab Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://gitlab.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 98,
-    "title": "Atlassian Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.atlassian.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 99,
-    "title": "JetBrains Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://www.jetbrains.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
-  },
-  {
-    "id": 100,
-    "title": "Unity Computer Science Scholarship",
-    "majors": ["Computer Science"],
-    "deadline": "2025-01-15",
-    "amount": 5000,
-    "description": "For students pursuing computer science degrees",
-    "link": "https://unity.com/",
-    "eligibility": "High school seniors, 3.0+ GPA, pursuing computer science"
+    "amount": 50000,
+    "description": "For outstanding minority students with significant financial need",
+    "link": "https://www.gmsp.org/",
+    "eligibility": "Minority high school seniors, 3.3+ GPA, significant financial need"
   }
 ]
