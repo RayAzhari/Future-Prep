@@ -318,5 +318,501 @@
     "category": "AP Environmental Science",
     "link": "https://fiveable.me/ap-environ",
     "description": "Complete AP Environmental Science study guides and practice tests"
+  },
+  {
+    "id": 41,
+    "title": "Khan Academy SAT Prep",
+    "platform": "Khan Academy",
+    "category": "SAT",
+    "link": "https://www.khanacademy.org/sat",
+    "description": "Free comprehensive SAT preparation with practice tests and personalized study plans"
+  },
+  {
+    "id": 42,
+    "title": "College Board SAT Practice",
+    "platform": "College Board",
+    "category": "SAT",
+    "link": "https://satsuite.collegeboard.org/practice",
+    "description": "Official SAT practice tests and study materials from College Board"
+  },
+  {
+    "id": 43,
+    "title": "Princeton Review SAT Prep",
+    "platform": "Princeton Review",
+    "category": "SAT",
+    "link": "https://www.princetonreview.com/college/sat-test-prep",
+    "description": "Comprehensive SAT prep courses with practice tests and strategies"
+  },
+  {
+    "id": 44,
+    "title": "Kaplan SAT Prep",
+    "platform": "Kaplan",
+    "category": "SAT",
+    "link": "https://www.kaptest.com/sat",
+    "description": "SAT prep courses with practice tests and personalized study plans"
+  },
+  {
+    "id": 45,
+    "title": "Magoosh SAT Prep",
+    "platform": "Magoosh",
+    "category": "SAT",
+    "link": "https://magoosh.com/sat/",
+    "description": "Online SAT prep with video lessons and practice questions"
+  },
+  {
+    "id": 46,
+    "title": "ACT Official Prep",
+    "platform": "ACT",
+    "category": "ACT",
+    "link": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html",
+    "description": "Official ACT practice tests and study materials"
+  },
+  {
+    "id": 47,
+    "title": "Princeton Review ACT Prep",
+    "platform": "Princeton Review",
+    "category": "ACT",
+    "link": "https://www.princetonreview.com/college/act-test-prep",
+    "description": "Comprehensive ACT prep courses with practice tests and strategies"
+  },
+  {
+    "id": 48,
+    "title": "Kaplan ACT Prep",
+    "platform": "Kaplan",
+    "category": "ACT",
+    "link": "https://www.kaptest.com/act",
+    "description": "ACT prep courses with practice tests and personalized study plans"
+  },
+  {
+    "id": 49,
+    "title": "Magoosh ACT Prep",
+    "platform": "Magoosh",
+    "category": "ACT",
+    "link": "https://magoosh.com/act/",
+    "description": "Online ACT prep with video lessons and practice questions"
+  },
+  {
+    "id": 50,
+    "title": "Coursera AP Courses",
+    "platform": "Coursera",
+    "category": "AP General",
+    "link": "https://www.coursera.org/",
+    "description": "University-level courses that can help with AP exam preparation"
+  },
+  {
+    "id": 51,
+    "title": "edX AP Courses",
+    "platform": "edX",
+    "category": "AP General",
+    "link": "https://www.edx.org/",
+    "description": "Free online courses from top universities for AP exam preparation"
+  },
+  {
+    "id": 52,
+    "title": "MIT OpenCourseWare",
+    "platform": "MIT",
+    "category": "AP General",
+    "link": "https://ocw.mit.edu/",
+    "description": "Free MIT course materials for advanced study and AP exam preparation"
+  },
+  {
+    "id": 53,
+    "title": "Coursera Computer Science",
+    "platform": "Coursera",
+    "category": "AP Computer Science",
+    "link": "https://www.coursera.org/",
+    "description": "Computer science courses from top universities for AP CS preparation"
+  },
+  {
+    "id": 54,
+    "title": "edX Computer Science",
+    "platform": "edX",
+    "category": "AP Computer Science",
+    "link": "https://www.edx.org/",
+    "description": "Free computer science courses for AP CS exam preparation"
+  },
+  {
+    "id": 55,
+    "title": "Codecademy",
+    "platform": "Codecademy",
+    "category": "AP Computer Science",
+    "link": "https://www.codecademy.com/",
+    "description": "Interactive coding lessons for programming fundamentals"
+  },
+  {
+    "id": 56,
+    "title": "FreeCodeCamp",
+    "platform": "FreeCodeCamp",
+    "category": "AP Computer Science",
+    "link": "https://www.freecodecamp.org/",
+    "description": "Free coding bootcamp with comprehensive programming curriculum"
+  },
+  {
+    "id": 57,
+    "title": "Khan Academy Computer Science",
+    "platform": "Khan Academy",
+    "category": "AP Computer Science",
+    "link": "https://www.khanacademy.org/computing",
+    "description": "Free computer science courses and programming tutorials"
+  },
+  {
+    "id": 58,
+    "title": "Coursera Mathematics",
+    "platform": "Coursera",
+    "category": "AP Calculus",
+    "link": "https://www.coursera.org/",
+    "description": "Advanced mathematics courses for AP Calculus preparation"
+  },
+  {
+    "id": 59,
+    "title": "edX Mathematics",
+    "platform": "edX",
+    "category": "AP Calculus",
+    "link": "https://www.edx.org/",
+    "description": "Free mathematics courses for AP Calculus exam preparation"
+  },
+  {
+    "id": 60,
+    "title": "Khan Academy Calculus",
+    "platform": "Khan Academy",
+    "category": "AP Calculus",
+    "link": "https://www.khanacademy.org/math/calculus-1",
+    "description": "Free calculus courses and practice problems"
+  },
+  {
+    "id": 61,
+    "title": "Coursera Statistics",
+    "platform": "Coursera",
+    "category": "AP Statistics",
+    "link": "https://www.coursera.org/",
+    "description": "Statistics courses for AP Statistics exam preparation"
+  },
+  {
+    "id": 62,
+    "title": "edX Statistics",
+    "platform": "edX",
+    "category": "AP Statistics",
+    "link": "https://www.edx.org/",
+    "description": "Free statistics courses for AP Statistics exam preparation"
+  },
+  {
+    "id": 63,
+    "title": "Khan Academy Statistics",
+    "platform": "Khan Academy",
+    "category": "AP Statistics",
+    "link": "https://www.khanacademy.org/math/statistics-probability",
+    "description": "Free statistics and probability courses"
+  },
+  {
+    "id": 64,
+    "title": "Coursera Physics",
+    "platform": "Coursera",
+    "category": "AP Physics",
+    "link": "https://www.coursera.org/",
+    "description": "Physics courses for AP Physics exam preparation"
+  },
+  {
+    "id": 65,
+    "title": "edX Physics",
+    "platform": "edX",
+    "category": "AP Physics",
+    "link": "https://www.edx.org/",
+    "description": "Free physics courses for AP Physics exam preparation"
+  },
+  {
+    "id": 66,
+    "title": "Khan Academy Physics",
+    "platform": "Khan Academy",
+    "category": "AP Physics",
+    "link": "https://www.khanacademy.org/science/physics",
+    "description": "Free physics courses and practice problems"
+  },
+  {
+    "id": 67,
+    "title": "Coursera Chemistry",
+    "platform": "Coursera",
+    "category": "AP Chemistry",
+    "link": "https://www.coursera.org/",
+    "description": "Chemistry courses for AP Chemistry exam preparation"
+  },
+  {
+    "id": 68,
+    "title": "edX Chemistry",
+    "platform": "edX",
+    "category": "AP Chemistry",
+    "link": "https://www.edx.org/",
+    "description": "Free chemistry courses for AP Chemistry exam preparation"
+  },
+  {
+    "id": 69,
+    "title": "Khan Academy Chemistry",
+    "platform": "Khan Academy",
+    "category": "AP Chemistry",
+    "link": "https://www.khanacademy.org/science/chemistry",
+    "description": "Free chemistry courses and practice problems"
+  },
+  {
+    "id": 70,
+    "title": "Coursera Biology",
+    "platform": "Coursera",
+    "category": "AP Biology",
+    "link": "https://www.coursera.org/",
+    "description": "Biology courses for AP Biology exam preparation"
+  },
+  {
+    "id": 71,
+    "title": "edX Biology",
+    "platform": "edX",
+    "category": "AP Biology",
+    "link": "https://www.edx.org/",
+    "description": "Free biology courses for AP Biology exam preparation"
+  },
+  {
+    "id": 72,
+    "title": "Khan Academy Biology",
+    "platform": "Khan Academy",
+    "category": "AP Biology",
+    "link": "https://www.khanacademy.org/science/biology",
+    "description": "Free biology courses and practice problems"
+  },
+  {
+    "id": 73,
+    "title": "Coursera Psychology",
+    "platform": "Coursera",
+    "category": "AP Psychology",
+    "link": "https://www.coursera.org/",
+    "description": "Psychology courses for AP Psychology exam preparation"
+  },
+  {
+    "id": 74,
+    "title": "edX Psychology",
+    "platform": "edX",
+    "category": "AP Psychology",
+    "link": "https://www.edx.org/",
+    "description": "Free psychology courses for AP Psychology exam preparation"
+  },
+  {
+    "id": 75,
+    "title": "Khan Academy Psychology",
+    "platform": "Khan Academy",
+    "category": "AP Psychology",
+    "link": "https://www.khanacademy.org/test-prep/mcat/behavior",
+    "description": "Free psychology courses and practice problems"
+  },
+  {
+    "id": 76,
+    "title": "Coursera History",
+    "platform": "Coursera",
+    "category": "AP US History",
+    "link": "https://www.coursera.org/",
+    "description": "History courses for AP US History exam preparation"
+  },
+  {
+    "id": 77,
+    "title": "edX History",
+    "platform": "edX",
+    "category": "AP US History",
+    "link": "https://www.edx.org/",
+    "description": "Free history courses for AP US History exam preparation"
+  },
+  {
+    "id": 78,
+    "title": "Khan Academy US History",
+    "platform": "Khan Academy",
+    "category": "AP US History",
+    "link": "https://www.khanacademy.org/humanities/us-history",
+    "description": "Free US history courses and practice problems"
+  },
+  {
+    "id": 79,
+    "title": "Coursera World History",
+    "platform": "Coursera",
+    "category": "AP World History",
+    "link": "https://www.coursera.org/",
+    "description": "World history courses for AP World History exam preparation"
+  },
+  {
+    "id": 80,
+    "title": "edX World History",
+    "platform": "edX",
+    "category": "AP World History",
+    "link": "https://www.edx.org/",
+    "description": "Free world history courses for AP World History exam preparation"
+  },
+  {
+    "id": 81,
+    "title": "Khan Academy World History",
+    "platform": "Khan Academy",
+    "category": "AP World History",
+    "link": "https://www.khanacademy.org/humanities/world-history",
+    "description": "Free world history courses and practice problems"
+  },
+  {
+    "id": 82,
+    "title": "Coursera Economics",
+    "platform": "Coursera",
+    "category": "AP Economics",
+    "link": "https://www.coursera.org/",
+    "description": "Economics courses for AP Economics exam preparation"
+  },
+  {
+    "id": 83,
+    "title": "edX Economics",
+    "platform": "edX",
+    "category": "AP Economics",
+    "link": "https://www.edx.org/",
+    "description": "Free economics courses for AP Economics exam preparation"
+  },
+  {
+    "id": 84,
+    "title": "Khan Academy Economics",
+    "platform": "Khan Academy",
+    "category": "AP Economics",
+    "link": "https://www.khanacademy.org/economics-finance-domain",
+    "description": "Free economics courses and practice problems"
+  },
+  {
+    "id": 85,
+    "title": "Coursera English",
+    "platform": "Coursera",
+    "category": "AP English",
+    "link": "https://www.coursera.org/",
+    "description": "English literature courses for AP English exam preparation"
+  },
+  {
+    "id": 86,
+    "title": "edX English",
+    "platform": "edX",
+    "category": "AP English",
+    "link": "https://www.edx.org/",
+    "description": "Free English literature courses for AP English exam preparation"
+  },
+  {
+    "id": 87,
+    "title": "Khan Academy English",
+    "platform": "Khan Academy",
+    "category": "AP English",
+    "link": "https://www.khanacademy.org/humanities/grammar",
+    "description": "Free English grammar and literature courses"
+  },
+  {
+    "id": 88,
+    "title": "Coursera Spanish",
+    "platform": "Coursera",
+    "category": "AP Spanish",
+    "link": "https://www.coursera.org/",
+    "description": "Spanish language courses for AP Spanish exam preparation"
+  },
+  {
+    "id": 89,
+    "title": "edX Spanish",
+    "platform": "edX",
+    "category": "AP Spanish",
+    "link": "https://www.edx.org/",
+    "description": "Free Spanish language courses for AP Spanish exam preparation"
+  },
+  {
+    "id": 90,
+    "title": "Khan Academy Spanish",
+    "platform": "Khan Academy",
+    "category": "AP Spanish",
+    "link": "https://www.khanacademy.org/humanities/grammar",
+    "description": "Free Spanish language courses and practice problems"
+  },
+  {
+    "id": 91,
+    "title": "Coursera French",
+    "platform": "Coursera",
+    "category": "AP French",
+    "link": "https://www.coursera.org/",
+    "description": "French language courses for AP French exam preparation"
+  },
+  {
+    "id": 92,
+    "title": "edX French",
+    "platform": "edX",
+    "category": "AP French",
+    "link": "https://www.edx.org/",
+    "description": "Free French language courses for AP French exam preparation"
+  },
+  {
+    "id": 93,
+    "title": "Khan Academy French",
+    "platform": "Khan Academy",
+    "category": "AP French",
+    "link": "https://www.khanacademy.org/humanities/grammar",
+    "description": "Free French language courses and practice problems"
+  },
+  {
+    "id": 94,
+    "title": "Coursera Environmental Science",
+    "platform": "Coursera",
+    "category": "AP Environmental Science",
+    "link": "https://www.coursera.org/",
+    "description": "Environmental science courses for AP Environmental Science exam preparation"
+  },
+  {
+    "id": 95,
+    "title": "edX Environmental Science",
+    "platform": "edX",
+    "category": "AP Environmental Science",
+    "link": "https://www.edx.org/",
+    "description": "Free environmental science courses for AP Environmental Science exam preparation"
+  },
+  {
+    "id": 96,
+    "title": "Khan Academy Environmental Science",
+    "platform": "Khan Academy",
+    "category": "AP Environmental Science",
+    "link": "https://www.khanacademy.org/science/biology/ecology",
+    "description": "Free environmental science courses and practice problems"
+  },
+  {
+    "id": 97,
+    "title": "Coursera Music Theory",
+    "platform": "Coursera",
+    "category": "AP Music Theory",
+    "link": "https://www.coursera.org/",
+    "description": "Music theory courses for AP Music Theory exam preparation"
+  },
+  {
+    "id": 98,
+    "title": "edX Music Theory",
+    "platform": "edX",
+    "category": "AP Music Theory",
+    "link": "https://www.edx.org/",
+    "description": "Free music theory courses for AP Music Theory exam preparation"
+  },
+  {
+    "id": 99,
+    "title": "Khan Academy Music Theory",
+    "platform": "Khan Academy",
+    "category": "AP Music Theory",
+    "link": "https://www.khanacademy.org/humanities/music",
+    "description": "Free music theory courses and practice problems"
+  },
+  {
+    "id": 100,
+    "title": "Coursera Latin",
+    "platform": "Coursera",
+    "category": "AP Latin",
+    "link": "https://www.coursera.org/",
+    "description": "Latin language courses for AP Latin exam preparation"
+  },
+  {
+    "id": 101,
+    "title": "edX Latin",
+    "platform": "edX",
+    "category": "AP Latin",
+    "link": "https://www.edx.org/",
+    "description": "Free Latin language courses for AP Latin exam preparation"
+  },
+  {
+    "id": 102,
+    "title": "Khan Academy Latin",
+    "platform": "Khan Academy",
+    "category": "AP Latin",
+    "link": "https://www.khanacademy.org/humanities/grammar",
+    "description": "Free Latin language courses and practice problems"
   }
 ]

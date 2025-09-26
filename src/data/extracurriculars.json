@@ -1254,5 +1254,505 @@
     "benefits": "Language recognition, cultural awareness, leadership opportunities",
     "requirements": "Hebrew language study, academic excellence",
     "website": "https://www.aatj.org/"
+  },
+  {
+    "id": 136,
+    "title": "USACO Programming Competition",
+    "category": "STEM",
+    "description": "Competitive programming competition for high school students",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Programming skills, algorithmic thinking, college recognition, scholarships",
+    "requirements": "Strong programming skills, algorithmic knowledge",
+    "website": "https://usaco.org/"
+  },
+  {
+    "id": 137,
+    "title": "Intel ISEF (International Science and Engineering Fair)",
+    "category": "STEM",
+    "description": "World's largest international pre-college science competition",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Research experience, scholarships, college recognition, networking",
+    "requirements": "Original research project, regional fair qualification",
+    "website": "https://www.societyforscience.org/isef/"
+  },
+  {
+    "id": 138,
+    "title": "Regeneron Science Talent Search",
+    "category": "STEM",
+    "description": "Nation's oldest and most prestigious science competition",
+    "timeCommitment": "15-25 hours/week",
+    "benefits": "Scholarships up to $250,000, college recognition, research experience",
+    "requirements": "Original research project, strong academic record",
+    "website": "https://www.societyforscience.org/regeneron-sts/"
+  },
+  {
+    "id": 139,
+    "title": "Google Code Jam",
+    "category": "Technology",
+    "description": "Google's annual programming competition",
+    "timeCommitment": "6-12 hours/week",
+    "benefits": "Programming skills, Google recognition, networking opportunities",
+    "requirements": "Strong programming skills, algorithmic thinking",
+    "website": "https://codingcompetitions.withgoogle.com/codejam"
+  },
+  {
+    "id": 140,
+    "title": "Microsoft Imagine Cup",
+    "category": "Technology",
+    "description": "Global student technology competition",
+    "timeCommitment": "10-20 hours/week",
+    "benefits": "Technology skills, Microsoft recognition, prizes up to $100,000",
+    "requirements": "Technology project, team of 1-4 students",
+    "website": "https://imaginecup.microsoft.com/"
+  },
+  {
+    "id": 141,
+    "title": "Hackathons",
+    "category": "Technology",
+    "description": "Intensive programming competitions to build software projects",
+    "timeCommitment": "24-48 hours per event",
+    "benefits": "Programming skills, networking, prizes, portfolio building",
+    "requirements": "Programming knowledge, creativity, teamwork",
+    "website": "https://devpost.com/"
+  },
+  {
+    "id": 142,
+    "title": "MIT THINK Scholars Program",
+    "category": "STEM",
+    "description": "Research program for high school students",
+    "timeCommitment": "8-15 hours/week",
+    "benefits": "Research experience, MIT mentorship, $1,000 grant",
+    "requirements": "Research proposal, academic excellence",
+    "website": "https://think.mit.edu/"
+  },
+  {
+    "id": 143,
+    "title": "NASA High School Aerospace Scholars",
+    "category": "STEM",
+    "description": "Online program culminating in a week at NASA Johnson Space Center",
+    "timeCommitment": "6-10 hours/week",
+    "benefits": "NASA experience, STEM skills, college preparation",
+    "requirements": "Texas resident, strong STEM background",
+    "website": "https://www.nasa.gov/audience/foreducators/has/"
+  },
+  {
+    "id": 144,
+    "title": "MIT PRIMES Program",
+    "category": "STEM",
+    "description": "Year-long research program in mathematics",
+    "timeCommitment": "10-15 hours/week",
+    "benefits": "Research experience, MIT mentorship, college recognition",
+    "requirements": "Strong math background, research interest",
+    "website": "https://math.mit.edu/research/highschool/primes/"
+  },
+  {
+    "id": 145,
+    "title": "Intel Science Talent Search",
+    "category": "STEM",
+    "description": "Prestigious science competition for high school seniors",
+    "timeCommitment": "15-25 hours/week",
+    "benefits": "Scholarships up to $150,000, college recognition",
+    "requirements": "Original research project, senior status",
+    "website": "https://www.societyforscience.org/intel-sts/"
+  },
+  {
+    "id": 146,
+    "title": "Siemens Competition in Math, Science & Technology",
+    "category": "STEM",
+    "description": "National research competition for high school students",
+    "timeCommitment": "15-25 hours/week",
+    "benefits": "Scholarships up to $100,000, research experience",
+    "requirements": "Original research project, academic excellence",
+    "website": "https://www.siemens-foundation.org/"
+  },
+  {
+    "id": 147,
+    "title": "Davidson Fellows Scholarship",
+    "category": "STEM",
+    "description": "Scholarship for students who have completed significant work in STEM",
+    "timeCommitment": "Varies",
+    "benefits": "Scholarships up to $50,000, recognition",
+    "requirements": "Significant STEM achievement, age 18 or younger",
+    "website": "https://www.davidsongifted.org/fellows/"
+  },
+  {
+    "id": 148,
+    "title": "MITES (Minority Introduction to Engineering and Science)",
+    "category": "STEM",
+    "description": "Six-week residential program at MIT",
+    "timeCommitment": "Full-time summer program",
+    "benefits": "MIT experience, STEM skills, college preparation",
+    "requirements": "Underrepresented minority, strong academic record",
+    "website": "https://mites.mit.edu/"
+  },
+  {
+    "id": 149,
+    "title": "Stanford Pre-Collegiate Studies",
+    "category": "STEM",
+    "description": "Summer programs in various STEM subjects",
+    "timeCommitment": "2-6 weeks",
+    "benefits": "Stanford experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, specific program requirements",
+    "website": "https://spcs.stanford.edu/"
+  },
+  {
+    "id": 150,
+    "title": "Johns Hopkins Center for Talented Youth",
+    "category": "STEM",
+    "description": "Academic programs for gifted students",
+    "timeCommitment": "Varies by program",
+    "benefits": "Advanced coursework, college credit, peer networking",
+    "requirements": "Gifted identification, strong academic record",
+    "website": "https://cty.jhu.edu/"
+  },
+  {
+    "id": 151,
+    "title": "MIT OpenCourseWare Study Groups",
+    "category": "STEM",
+    "description": "Study groups using MIT's free online courses",
+    "timeCommitment": "3-6 hours/week",
+    "benefits": "Advanced knowledge, self-directed learning, college preparation",
+    "requirements": "Self-motivation, strong academic background",
+    "website": "https://ocw.mit.edu/"
+  },
+  {
+    "id": 152,
+    "title": "Khan Academy Advanced Courses",
+    "category": "STEM",
+    "description": "Self-paced advanced courses in math and science",
+    "timeCommitment": "2-5 hours/week",
+    "benefits": "Advanced knowledge, flexible learning, college preparation",
+    "requirements": "Self-motivation, internet access",
+    "website": "https://www.khanacademy.org/"
+  },
+  {
+    "id": 153,
+    "title": "Coursera/edX Online Courses",
+    "category": "STEM",
+    "description": "University-level online courses in various subjects",
+    "timeCommitment": "3-8 hours/week",
+    "benefits": "College-level knowledge, certificates, college credit",
+    "requirements": "Self-motivation, internet access",
+    "website": "https://www.coursera.org/"
+  },
+  {
+    "id": 154,
+    "title": "MIT Beaver Works Summer Institute",
+    "category": "STEM",
+    "description": "Four-week program in autonomous systems",
+    "timeCommitment": "Full-time summer program",
+    "benefits": "MIT experience, advanced STEM skills, project portfolio",
+    "requirements": "Strong STEM background, rising senior",
+    "website": "https://beaverworks.ll.mit.edu/"
+  },
+  {
+    "id": 155,
+    "title": "Carnegie Mellon Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in computer science and engineering",
+    "timeCommitment": "3-6 weeks",
+    "benefits": "CMU experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, specific program requirements",
+    "website": "https://www.cmu.edu/pre-college/"
+  },
+  {
+    "id": 156,
+    "title": "Caltech Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in science and engineering",
+    "timeCommitment": "2-4 weeks",
+    "benefits": "Caltech experience, advanced coursework, research exposure",
+    "requirements": "Strong STEM background, rising junior/senior",
+    "website": "https://www.caltech.edu/"
+  },
+  {
+    "id": 157,
+    "title": "Harvard Pre-College Program",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "2-7 weeks",
+    "benefits": "Harvard experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://precollege.summer.harvard.edu/"
+  },
+  {
+    "id": 158,
+    "title": "Yale Young Global Scholars",
+    "category": "STEM",
+    "description": "Summer program with STEM tracks",
+    "timeCommitment": "2 weeks",
+    "benefits": "Yale experience, advanced coursework, global networking",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://globalscholars.yale.edu/"
+  },
+  {
+    "id": 159,
+    "title": "Princeton Summer Journalism Program",
+    "category": "Media",
+    "description": "Free program for low-income students interested in journalism",
+    "timeCommitment": "10 days",
+    "benefits": "Princeton experience, journalism skills, college preparation",
+    "requirements": "Low-income background, journalism interest",
+    "website": "https://psjp.princeton.edu/"
+  },
+  {
+    "id": 160,
+    "title": "Columbia University Summer Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-6 weeks",
+    "benefits": "Columbia experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, specific program requirements",
+    "website": "https://precollege.sps.columbia.edu/"
+  },
+  {
+    "id": 161,
+    "title": "University of Chicago Summer Session",
+    "category": "STEM",
+    "description": "Summer courses in various subjects including STEM",
+    "timeCommitment": "3-6 weeks",
+    "benefits": "UChicago experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://summer.uchicago.edu/"
+  },
+  {
+    "id": 162,
+    "title": "Northwestern University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-6 weeks",
+    "benefits": "Northwestern experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, specific program requirements",
+    "website": "https://precollege.northwestern.edu/"
+  },
+  {
+    "id": 163,
+    "title": "Duke University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-4 weeks",
+    "benefits": "Duke experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://precollege.duke.edu/"
+  },
+  {
+    "id": 164,
+    "title": "Vanderbilt University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Vanderbilt experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.vanderbilt.edu/summer/"
+  },
+  {
+    "id": 165,
+    "title": "Emory University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-4 weeks",
+    "benefits": "Emory experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://precollege.emory.edu/"
+  },
+  {
+    "id": 166,
+    "title": "Rice University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Rice experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://precollege.rice.edu/"
+  },
+  {
+    "id": 167,
+    "title": "University of Pennsylvania Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-6 weeks",
+    "benefits": "Penn experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.sas.upenn.edu/summer/"
+  },
+  {
+    "id": 168,
+    "title": "Cornell University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-6 weeks",
+    "benefits": "Cornell experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://sce.cornell.edu/precollege/"
+  },
+  {
+    "id": 169,
+    "title": "Brown University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-6 weeks",
+    "benefits": "Brown experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://precollege.brown.edu/"
+  },
+  {
+    "id": 170,
+    "title": "Dartmouth College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-4 weeks",
+    "benefits": "Dartmouth experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://summer.dartmouth.edu/"
+  },
+  {
+    "id": 171,
+    "title": "Amherst College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Amherst experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.amherst.edu/"
+  },
+  {
+    "id": 172,
+    "title": "Williams College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Williams experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.williams.edu/"
+  },
+  {
+    "id": 173,
+    "title": "Wellesley College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Wellesley experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.wellesley.edu/"
+  },
+  {
+    "id": 174,
+    "title": "Smith College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Smith experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.smith.edu/"
+  },
+  {
+    "id": 175,
+    "title": "Mount Holyoke College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Mount Holyoke experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.mtholyoke.edu/"
+  },
+  {
+    "id": 176,
+    "title": "Vassar College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Vassar experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.vassar.edu/"
+  },
+  {
+    "id": 177,
+    "title": "Wesleyan University Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Wesleyan experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.wesleyan.edu/"
+  },
+  {
+    "id": 178,
+    "title": "Middlebury College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Middlebury experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.middlebury.edu/"
+  },
+  {
+    "id": 179,
+    "title": "Bowdoin College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Bowdoin experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.bowdoin.edu/"
+  },
+  {
+    "id": 180,
+    "title": "Colby College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Colby experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.colby.edu/"
+  },
+  {
+    "id": 181,
+    "title": "Bates College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Bates experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.bates.edu/"
+  },
+  {
+    "id": 182,
+    "title": "Hamilton College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Hamilton experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.hamilton.edu/"
+  },
+  {
+    "id": 183,
+    "title": "Union College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Union experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.union.edu/"
+  },
+  {
+    "id": 184,
+    "title": "Skidmore College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Skidmore experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.skidmore.edu/"
+  },
+  {
+    "id": 185,
+    "title": "Trinity College Pre-College Programs",
+    "category": "STEM",
+    "description": "Summer programs in various subjects including STEM",
+    "timeCommitment": "1-3 weeks",
+    "benefits": "Trinity experience, advanced coursework, college credit",
+    "requirements": "Strong academic record, rising junior/senior",
+    "website": "https://www.trincoll.edu/"
   }
 ]
