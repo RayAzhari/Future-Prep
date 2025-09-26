@@ -36,6 +36,7 @@ export interface Extracurricular {
   category: string
   description: string
   timeCommitment: string
+  gradeLevels?: string[]
   benefits: string
   requirements: string
   website?: string

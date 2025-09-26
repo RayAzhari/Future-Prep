@@ -9,6 +9,13 @@ import type { Extracurricular } from '../types/data'
 export default function ExtracurricularsSection() {
   // source-of-truth: never overwrite this array
   const [allExtracurriculars] = useState<Extracurricular[]>(extracurricularsData)
+  
+  // Debug: Log the data on component mount
+  console.log('📊 Extracurriculars Data:', {
+    totalCount: allExtracurriculars.length,
+    firstItem: allExtracurriculars[0],
+    categories: Array.from(new Set(allExtracurriculars.map(e => e.category)))
+  })
 
   // UI filter state
   const [searchTerm, setSearchTerm] = useState('')
@@ -28,11 +35,20 @@ export default function ExtracurricularsSection() {
     // Always start with the original full list
     let filtered = [...allExtracurriculars]
     
+    // Debug logging
+    console.log('🔍 Filtering Debug:', {
+      totalItems: allExtracurriculars.length,
+      selectedCategory,
+      searchTerm: query,
+      beforeFiltering: filtered.length
+    })
+    
     // Apply category filter
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(extracurricular => 
         extracurricular.category === selectedCategory
       )
+      console.log('After category filter:', filtered.length)
     }
 
     // Apply search filter
@@ -43,8 +59,10 @@ export default function ExtracurricularsSection() {
         extracurricular.benefits.toLowerCase().includes(query) ||
         extracurricular.category.toLowerCase().includes(query)
       )
+      console.log('After search filter:', filtered.length)
     }
 
+    console.log('Final filtered count:', filtered.length)
     return filtered
   }, [allExtracurriculars, searchTerm, selectedCategory])
 
@@ -160,6 +178,15 @@ export default function ExtracurricularsSection() {
             )}
           </div>
         </motion.div>
+
+        {/* Debug Info */}
+        <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
+          <p className="text-sm text-yellow-800">
+            <strong>Debug:</strong> Showing {filteredExtracurriculars.length} of {allExtracurriculars.length} activities
+            {selectedCategory !== 'All' && ` (filtered by ${selectedCategory})`}
+            {searchTerm && ` (searching for "${searchTerm}")`}
+          </p>
+        </div>
 
         {/* Extracurriculars Grid */}
         <motion.div

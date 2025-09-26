@@ -14,6 +14,13 @@ export default function ResearchSection() {
   const [allOpportunities] = useState<ResearchOpportunity[]>(researchData)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedInstitution, setSelectedInstitution] = useState<string>('All')
+  
+  // Debug: Log the data on component mount
+  console.log('📊 Research Data:', {
+    totalCount: allOpportunities.length,
+    firstItem: allOpportunities[0],
+    institutions: Array.from(new Set(allOpportunities.map(o => o.institution)))
+  })
 
   // Get unique institutions for filter
   const allInstitutions = useMemo(() => 
@@ -29,11 +36,20 @@ export default function ResearchSection() {
     // Always start with the original full list
     let filtered = [...allOpportunities]
     
+    // Debug logging
+    console.log('🔍 Research Filtering Debug:', {
+      totalItems: allOpportunities.length,
+      selectedInstitution,
+      searchTerm: query,
+      beforeFiltering: filtered.length
+    })
+    
     // Apply institution filter
     if (selectedInstitution !== 'All') {
       filtered = filtered.filter(opportunity => 
         opportunity.institution === selectedInstitution
       )
+      console.log('After institution filter:', filtered.length)
     }
 
     // Apply search filter
@@ -44,8 +60,10 @@ export default function ResearchSection() {
         opportunity.institution.toLowerCase().includes(query) ||
         opportunity.location.toLowerCase().includes(query)
       )
+      console.log('After search filter:', filtered.length)
     }
 
+    console.log('Final research filtered count:', filtered.length)
     return filtered
   }, [allOpportunities, searchTerm, selectedInstitution])
 
@@ -309,6 +327,15 @@ Respectfully,
                 )}
               </div>
             </motion.div>
+
+            {/* Debug Info */}
+            <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
+              <p className="text-sm text-yellow-800">
+                <strong>Debug:</strong> Showing {filteredOpportunities.length} of {allOpportunities.length} opportunities
+                {selectedInstitution !== 'All' && ` (filtered by ${selectedInstitution})`}
+                {searchTerm && ` (searching for "${searchTerm}")`}
+              </p>
+            </div>
 
             {/* Opportunities Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

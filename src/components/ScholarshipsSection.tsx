@@ -13,6 +13,13 @@ export default function ScholarshipsSection() {
   // UI filter state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedMajor, setSelectedMajor] = useState<string>('All')
+  
+  // Debug: Log the data on component mount
+  console.log('📊 Scholarships Data:', {
+    totalCount: allScholarships.length,
+    firstItem: allScholarships[0],
+    majors: Array.from(new Set(allScholarships.flatMap(s => s.majors)))
+  })
 
   // Get unique majors for filter
   const allMajors = useMemo(() => 
@@ -28,12 +35,21 @@ export default function ScholarshipsSection() {
     // Always start with the original full list
     let filtered = [...allScholarships]
     
+    // Debug logging
+    console.log('🔍 Scholarships Filtering Debug:', {
+      totalItems: allScholarships.length,
+      selectedMajor,
+      searchTerm: query,
+      beforeFiltering: filtered.length
+    })
+    
     // Apply major filter
     if (selectedMajor !== 'All') {
       filtered = filtered.filter(scholarship => 
         scholarship.majors.includes(selectedMajor) || 
         scholarship.majors.includes('All Majors')
       )
+      console.log('After major filter:', filtered.length)
     }
 
     // Apply search filter
@@ -43,8 +59,10 @@ export default function ScholarshipsSection() {
         scholarship.description.toLowerCase().includes(query) ||
         scholarship.eligibility.toLowerCase().includes(query)
       )
+      console.log('After search filter:', filtered.length)
     }
 
+    console.log('Final scholarships filtered count:', filtered.length)
     return filtered
   }, [allScholarships, searchTerm, selectedMajor])
 
@@ -157,6 +175,15 @@ export default function ScholarshipsSection() {
             )}
           </div>
         </motion.div>
+
+        {/* Debug Info */}
+        <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
+          <p className="text-sm text-yellow-800">
+            <strong>Debug:</strong> Showing {filteredScholarships.length} of {allScholarships.length} scholarships
+            {selectedMajor !== 'All' && ` (filtered by ${selectedMajor})`}
+            {searchTerm && ` (searching for "${searchTerm}")`}
+          </p>
+        </div>
 
         {/* Scholarships Grid */}
         <motion.div
