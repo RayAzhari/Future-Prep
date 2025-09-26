@@ -10,61 +10,45 @@ export default function ResearchSection() {
   const [activeTab, setActiveTab] = useState<'templates' | 'opportunities'>('templates')
   const [copiedTemplate, setCopiedTemplate] = useState<string | null>(null)
   
-  // Research opportunities filtering
+  // Research opportunities sorting
   const [allOpportunities] = useState<ResearchOpportunity[]>(researchData)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedInstitution, setSelectedInstitution] = useState<string>('All')
-  
-  // Debug: Log the data on component mount
-  console.log('📊 Research Data:', {
-    totalCount: allOpportunities.length,
-    firstItem: allOpportunities[0],
-    institutions: Array.from(new Set(allOpportunities.map(o => o.institution)))
-  })
 
-  // Get unique institutions for filter
+  // Get unique institutions for sorting
   const allInstitutions = useMemo(() => 
     Array.from(new Set(allOpportunities.map(o => o.institution))).sort(),
     [allOpportunities]
   )
   const institutionOptions = ['All', ...allInstitutions]
 
-  // Filtered opportunities — always filter from original data, never from filtered results
-  const filteredOpportunities = useMemo(() => {
+  // Sorted opportunities — always sort from original data, never from sorted results
+  const sortedOpportunities = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
     
     // Always start with the original full list
-    let filtered = [...allOpportunities]
+    let sorted = [...allOpportunities]
     
-    // Debug logging
-    console.log('🔍 Research Filtering Debug:', {
-      totalItems: allOpportunities.length,
-      selectedInstitution,
-      searchTerm: query,
-      beforeFiltering: filtered.length
-    })
-    
-    // Apply institution filter
-    if (selectedInstitution !== 'All') {
-      filtered = filtered.filter(opportunity => 
-        opportunity.institution === selectedInstitution
-      )
-      console.log('After institution filter:', filtered.length)
-    }
-
-    // Apply search filter
+    // Apply search filter first (if searching)
     if (query) {
-      filtered = filtered.filter(opportunity => 
+      sorted = sorted.filter(opportunity => 
         opportunity.title.toLowerCase().includes(query) ||
         opportunity.description.toLowerCase().includes(query) ||
         opportunity.institution.toLowerCase().includes(query) ||
         opportunity.location.toLowerCase().includes(query)
       )
-      console.log('After search filter:', filtered.length)
     }
 
-    console.log('Final research filtered count:', filtered.length)
-    return filtered
+    // Apply institution sorting (selected institution first, then others)
+    if (selectedInstitution !== 'All') {
+      sorted.sort((a, b) => {
+        if (a.institution === selectedInstitution && b.institution !== selectedInstitution) return -1
+        if (a.institution !== selectedInstitution && b.institution === selectedInstitution) return 1
+        return 0
+      })
+    }
+
+    return sorted
   }, [allOpportunities, searchTerm, selectedInstitution])
 
   // Reset function to clear all filters
@@ -328,18 +312,9 @@ Respectfully,
               </div>
             </motion.div>
 
-            {/* Debug Info */}
-            <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
-              <p className="text-sm text-yellow-800">
-                <strong>Debug:</strong> Showing {filteredOpportunities.length} of {allOpportunities.length} opportunities
-                {selectedInstitution !== 'All' && ` (filtered by ${selectedInstitution})`}
-                {searchTerm && ` (searching for "${searchTerm}")`}
-              </p>
-            </div>
-
             {/* Opportunities Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredOpportunities.map((opportunity) => {
+              {sortedOpportunities.map((opportunity) => {
               const daysLeft = getDaysUntilDeadline(opportunity.deadline)
               const isUrgent = daysLeft <= 30 && daysLeft > 0
 
@@ -433,7 +408,7 @@ Respectfully,
             </div>
 
             {/* No Results */}
-            {filteredOpportunities.length === 0 && (
+            {sortedOpportunities.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -446,7 +421,7 @@ Respectfully,
                   No opportunities found
                 </h3>
                 <p className="text-gray-500">
-                  Try adjusting your search terms or institution filter
+                  Try adjusting your search terms
                 </p>
               </motion.div>
             )}

@@ -10,60 +10,44 @@ export default function ExtracurricularsSection() {
   // source-of-truth: never overwrite this array
   const [allExtracurriculars] = useState<Extracurricular[]>(extracurricularsData)
   
-  // Debug: Log the data on component mount
-  console.log('📊 Extracurriculars Data:', {
-    totalCount: allExtracurriculars.length,
-    firstItem: allExtracurriculars[0],
-    categories: Array.from(new Set(allExtracurriculars.map(e => e.category)))
-  })
-
-  // UI filter state
+  // UI sort state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
 
-  // Get unique categories for filter - memoize to prevent unnecessary re-renders
+  // Get unique categories for sorting - memoize to prevent unnecessary re-renders
   const allCategories = useMemo(() => 
     Array.from(new Set(allExtracurriculars.map(e => e.category))).sort(), 
     [allExtracurriculars]
   )
   const categoryOptions = ['All', ...allCategories]
 
-  // derived filtered list — always filter from original data, never from filtered results
-  const filteredExtracurriculars = useMemo(() => {
+  // derived sorted list — always sort from original data, never from sorted results
+  const sortedExtracurriculars = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
     
     // Always start with the original full list
-    let filtered = [...allExtracurriculars]
+    let sorted = [...allExtracurriculars]
     
-    // Debug logging
-    console.log('🔍 Filtering Debug:', {
-      totalItems: allExtracurriculars.length,
-      selectedCategory,
-      searchTerm: query,
-      beforeFiltering: filtered.length
-    })
-    
-    // Apply category filter
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(extracurricular => 
-        extracurricular.category === selectedCategory
-      )
-      console.log('After category filter:', filtered.length)
-    }
-
-    // Apply search filter
+    // Apply search filter first (if searching)
     if (query) {
-      filtered = filtered.filter(extracurricular => 
+      sorted = sorted.filter(extracurricular => 
         extracurricular.title.toLowerCase().includes(query) ||
         extracurricular.description.toLowerCase().includes(query) ||
         extracurricular.benefits.toLowerCase().includes(query) ||
         extracurricular.category.toLowerCase().includes(query)
       )
-      console.log('After search filter:', filtered.length)
     }
 
-    console.log('Final filtered count:', filtered.length)
-    return filtered
+    // Apply category sorting (selected category first, then others)
+    if (selectedCategory !== 'All') {
+      sorted.sort((a, b) => {
+        if (a.category === selectedCategory && b.category !== selectedCategory) return -1
+        if (a.category !== selectedCategory && b.category === selectedCategory) return 1
+        return 0
+      })
+    }
+
+    return sorted
   }, [allExtracurriculars, searchTerm, selectedCategory])
 
   // Reset function to clear all filters
@@ -179,15 +163,6 @@ export default function ExtracurricularsSection() {
           </div>
         </motion.div>
 
-        {/* Debug Info */}
-        <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
-          <p className="text-sm text-yellow-800">
-            <strong>Debug:</strong> Showing {filteredExtracurriculars.length} of {allExtracurriculars.length} activities
-            {selectedCategory !== 'All' && ` (filtered by ${selectedCategory})`}
-            {searchTerm && ` (searching for "${searchTerm}")`}
-          </p>
-        </div>
-
         {/* Extracurriculars Grid */}
         <motion.div
           variants={containerVariants}
@@ -196,7 +171,7 @@ export default function ExtracurricularsSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredExtracurriculars.map((extracurricular) => (
+          {sortedExtracurriculars.map((extracurricular) => (
             <motion.div
               key={extracurricular.id}
               variants={itemVariants}
@@ -271,7 +246,7 @@ export default function ExtracurricularsSection() {
         </motion.div>
 
         {/* No Results */}
-        {filteredExtracurriculars.length === 0 && (
+        {sortedExtracurriculars.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -284,7 +259,7 @@ export default function ExtracurricularsSection() {
               No activities found
             </h3>
             <p className="text-gray-500">
-              Try adjusting your search terms or category filter
+              Try adjusting your search terms
             </p>
           </motion.div>
         )}
@@ -305,7 +280,7 @@ export default function ExtracurricularsSection() {
           </div>
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">
-              {filteredExtracurriculars.length}
+              {sortedExtracurriculars.length}
             </div>
             <div className="text-gray-600">Showing Now</div>
           </div>

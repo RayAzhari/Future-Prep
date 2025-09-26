@@ -10,60 +10,45 @@ export default function ScholarshipsSection() {
   // source-of-truth: never overwrite this array
   const [allScholarships] = useState<Scholarship[]>(scholarshipsData)
 
-  // UI filter state
+  // UI sort state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedMajor, setSelectedMajor] = useState<string>('All')
-  
-  // Debug: Log the data on component mount
-  console.log('📊 Scholarships Data:', {
-    totalCount: allScholarships.length,
-    firstItem: allScholarships[0],
-    majors: Array.from(new Set(allScholarships.flatMap(s => s.majors)))
-  })
 
-  // Get unique majors for filter
+  // Get unique majors for sorting
   const allMajors = useMemo(() => 
     Array.from(new Set(allScholarships.flatMap(s => s.majors))).sort(),
     [allScholarships]
   )
   const majorOptions = ['All', ...allMajors]
 
-  // derived filtered list — always filter from original data, never from filtered results
-  const filteredScholarships = useMemo(() => {
+  // derived sorted list — always sort from original data, never from sorted results
+  const sortedScholarships = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
     
     // Always start with the original full list
-    let filtered = [...allScholarships]
+    let sorted = [...allScholarships]
     
-    // Debug logging
-    console.log('🔍 Scholarships Filtering Debug:', {
-      totalItems: allScholarships.length,
-      selectedMajor,
-      searchTerm: query,
-      beforeFiltering: filtered.length
-    })
-    
-    // Apply major filter
-    if (selectedMajor !== 'All') {
-      filtered = filtered.filter(scholarship => 
-        scholarship.majors.includes(selectedMajor) || 
-        scholarship.majors.includes('All Majors')
-      )
-      console.log('After major filter:', filtered.length)
-    }
-
-    // Apply search filter
+    // Apply search filter first (if searching)
     if (query) {
-      filtered = filtered.filter(scholarship => 
+      sorted = sorted.filter(scholarship => 
         scholarship.title.toLowerCase().includes(query) ||
         scholarship.description.toLowerCase().includes(query) ||
         scholarship.eligibility.toLowerCase().includes(query)
       )
-      console.log('After search filter:', filtered.length)
     }
 
-    console.log('Final scholarships filtered count:', filtered.length)
-    return filtered
+    // Apply major sorting (selected major first, then others)
+    if (selectedMajor !== 'All') {
+      sorted.sort((a, b) => {
+        const aMatches = a.majors.includes(selectedMajor) || a.majors.includes('All Majors')
+        const bMatches = b.majors.includes(selectedMajor) || b.majors.includes('All Majors')
+        if (aMatches && !bMatches) return -1
+        if (!aMatches && bMatches) return 1
+        return 0
+      })
+    }
+
+    return sorted
   }, [allScholarships, searchTerm, selectedMajor])
 
   // Reset function to clear all filters
@@ -176,15 +161,6 @@ export default function ScholarshipsSection() {
           </div>
         </motion.div>
 
-        {/* Debug Info */}
-        <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
-          <p className="text-sm text-yellow-800">
-            <strong>Debug:</strong> Showing {filteredScholarships.length} of {allScholarships.length} scholarships
-            {selectedMajor !== 'All' && ` (filtered by ${selectedMajor})`}
-            {searchTerm && ` (searching for "${searchTerm}")`}
-          </p>
-        </div>
-
         {/* Scholarships Grid */}
         <motion.div
           variants={containerVariants}
@@ -193,7 +169,7 @@ export default function ScholarshipsSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredScholarships.map((scholarship) => {
+          {sortedScholarships.map((scholarship) => {
             const daysLeft = getDaysUntilDeadline(scholarship.deadline)
             const isUrgent = daysLeft <= 30 && daysLeft > 0
             
@@ -301,7 +277,7 @@ export default function ScholarshipsSection() {
         </motion.div>
 
         {/* No Results */}
-        {filteredScholarships.length === 0 && (
+        {sortedScholarships.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -314,7 +290,7 @@ export default function ScholarshipsSection() {
               No scholarships found
             </h3>
             <p className="text-gray-500">
-              Try adjusting your search terms or major filter
+              Try adjusting your search terms
             </p>
           </motion.div>
         )}

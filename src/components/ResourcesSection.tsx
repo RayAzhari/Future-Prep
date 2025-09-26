@@ -10,54 +10,38 @@ export default function ResourcesSection() {
   // source-of-truth: never overwrite this array
   const [allResources] = useState<Resource[]>(resourcesData)
 
-  // UI filter state
+  // UI sort state
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
-  
-  // Debug: Log the data on component mount
-  console.log('📊 Resources Data:', {
-    totalCount: allResources.length,
-    firstItem: allResources[0],
-    categories: Array.from(new Set(allResources.map(r => r.category)))
-  })
 
   const categories = ['All', 'SAT', 'ACT', 'AP General', 'AP Psychology', 'AP Biology', 'AP Chemistry', 'AP Physics', 'AP Calculus', 'AP Statistics', 'AP Computer Science', 'AP US History', 'AP World History', 'AP Economics', 'AP English', 'AP Spanish', 'AP French', 'AP Environmental Science', 'AP Music Theory', 'AP Latin']
 
-  // derived filtered list — always filter from original data, never from filtered results
-  const filteredResources = useMemo(() => {
+  // derived sorted list — always sort from original data, never from sorted results
+  const sortedResources = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
     
     // Always start with the original full list
-    let filtered = [...allResources]
+    let sorted = [...allResources]
     
-    // Debug logging
-    console.log('🔍 Resources Filtering Debug:', {
-      totalItems: allResources.length,
-      selectedCategory,
-      searchTerm: query,
-      beforeFiltering: filtered.length
-    })
-    
-    // Apply category filter
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(resource => 
-        resource.category === selectedCategory
-      )
-      console.log('After category filter:', filtered.length)
-    }
-
-    // Apply search filter
+    // Apply search filter first (if searching)
     if (query) {
-      filtered = filtered.filter(resource => 
+      sorted = sorted.filter(resource => 
         resource.title.toLowerCase().includes(query) ||
         resource.platform.toLowerCase().includes(query) ||
         resource.description.toLowerCase().includes(query)
       )
-      console.log('After search filter:', filtered.length)
     }
 
-    console.log('Final resources filtered count:', filtered.length)
-    return filtered
+    // Apply category sorting (selected category first, then others)
+    if (selectedCategory !== 'All') {
+      sorted.sort((a, b) => {
+        if (a.category === selectedCategory && b.category !== selectedCategory) return -1
+        if (a.category !== selectedCategory && b.category === selectedCategory) return 1
+        return 0
+      })
+    }
+
+    return sorted
   }, [allResources, searchTerm, selectedCategory])
 
   // Reset function to clear all filters
@@ -154,15 +138,6 @@ export default function ResourcesSection() {
           </div>
         </motion.div>
 
-        {/* Debug Info */}
-        <div className="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
-          <p className="text-sm text-yellow-800">
-            <strong>Debug:</strong> Showing {filteredResources.length} of {allResources.length} resources
-            {selectedCategory !== 'All' && ` (filtered by ${selectedCategory})`}
-            {searchTerm && ` (searching for "${searchTerm}")`}
-          </p>
-        </div>
-
         {/* Resources Grid */}
         <motion.div
           variants={containerVariants}
@@ -171,7 +146,7 @@ export default function ResourcesSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredResources.map((resource) => (
+          {sortedResources.map((resource) => (
             <motion.div
               key={resource.id}
               variants={itemVariants}
@@ -249,7 +224,7 @@ export default function ResourcesSection() {
         </motion.div>
 
         {/* No Results */}
-        {filteredResources.length === 0 && (
+        {sortedResources.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -262,7 +237,7 @@ export default function ResourcesSection() {
               No resources found
             </h3>
             <p className="text-gray-500">
-              Try adjusting your search terms or category filter
+              Try adjusting your search terms
             </p>
           </motion.div>
         )}
