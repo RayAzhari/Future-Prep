@@ -1,14 +1,55 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Copy, Check, MapPin, Clock, DollarSign, Calendar } from 'lucide-react'
+import { ExternalLink, Copy, Check, MapPin, Clock, DollarSign, Calendar, Search, Filter } from 'lucide-react'
 import researchData from '../data/research.json'
 import type { ResearchOpportunity } from '../types/data'
 
 export default function ResearchSection() {
   const [activeTab, setActiveTab] = useState<'templates' | 'opportunities'>('templates')
   const [copiedTemplate, setCopiedTemplate] = useState<string | null>(null)
+  
+  // Research opportunities filtering
+  const [allOpportunities] = useState<ResearchOpportunity[]>(researchData)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedInstitution, setSelectedInstitution] = useState<string>('All')
+
+  // Get unique institutions for filter
+  const allInstitutions = useMemo(() => 
+    Array.from(new Set(allOpportunities.map(o => o.institution))).sort(),
+    [allOpportunities]
+  )
+  const institutionOptions = ['All', ...allInstitutions]
+
+  // Filtered opportunities
+  const filteredOpportunities = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase()
+    return allOpportunities.filter(opportunity => {
+      // Institution filter
+      if (selectedInstitution !== 'All' && opportunity.institution !== selectedInstitution) {
+        return false
+      }
+
+      // Search filter
+      if (query) {
+        return (
+          opportunity.title.toLowerCase().includes(query) ||
+          opportunity.description.toLowerCase().includes(query) ||
+          opportunity.institution.toLowerCase().includes(query) ||
+          opportunity.location.toLowerCase().includes(query)
+        )
+      }
+
+      return true
+    })
+  }, [allOpportunities, searchTerm, selectedInstitution])
+
+  // Reset function to clear all filters
+  const resetFilters = () => {
+    setSearchTerm('')
+    setSelectedInstitution('All')
+  }
 
   const emailTemplates = [
     {
@@ -212,9 +253,62 @@ Respectfully,
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {researchData.map((opportunity) => {
+            {/* Search and Filter */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
+                {/* Search Bar */}
+                <div className="relative flex-1 w-full sm:max-w-md">
+                  <input
+                    type="text"
+                    placeholder="Search opportunities..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                </div>
+
+                {/* Institution Filter */}
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <Filter className="text-gray-400 w-4 h-4" />
+                  <select
+                    value={selectedInstitution}
+                    onChange={(e) => setSelectedInstitution(e.target.value)}
+                    className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  >
+                    {institutionOptions.map((institution) => (
+                      <option key={institution} value={institution}>
+                        {institution}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Reset Button */}
+                {(searchTerm || selectedInstitution !== 'All') && (
+                  <motion.button
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={resetFilters}
+                    className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                  >
+                    Reset Filters
+                  </motion.button>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Opportunities Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredOpportunities.map((opportunity) => {
               const daysLeft = getDaysUntilDeadline(opportunity.deadline)
               const isUrgent = daysLeft <= 30 && daysLeft > 0
 
@@ -305,6 +399,26 @@ Respectfully,
                 </motion.div>
               )
             })}
+            </div>
+
+            {/* No Results */}
+            {filteredOpportunities.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-12"
+              >
+                <div className="text-gray-400 mb-4">
+                  <Search className="w-16 h-16 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">
+                  No opportunities found
+                </h3>
+                <p className="text-gray-500">
+                  Try adjusting your search terms or institution filter
+                </p>
+              </motion.div>
+            )}
           </motion.div>
         )}
 

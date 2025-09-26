@@ -31,13 +31,16 @@ export default function ExtracurricularsSection() {
       }
 
       // Search filter
-      if (!query) return true
-      return (
-        extracurricular.title.toLowerCase().includes(query) ||
-        extracurricular.description.toLowerCase().includes(query) ||
-        extracurricular.benefits.toLowerCase().includes(query) ||
-        extracurricular.category.toLowerCase().includes(query)
-      )
+      if (query) {
+        return (
+          extracurricular.title.toLowerCase().includes(query) ||
+          extracurricular.description.toLowerCase().includes(query) ||
+          extracurricular.benefits.toLowerCase().includes(query) ||
+          extracurricular.category.toLowerCase().includes(query)
+        )
+      }
+
+      return true
     })
   }, [allExtracurriculars, searchTerm, selectedCategory])
 
@@ -98,6 +101,7 @@ export default function ExtracurricularsSection() {
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Discover opportunities to develop skills, pursue passions, and build your college application
           </p>
+          
         </motion.div>
 
         {/* Search and Filter */}

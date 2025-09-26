@@ -178,10 +178,10 @@ export default function AboutSection() {
                 
                 <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-6 border border-primary-200">
                   <p className="text-lg font-medium text-gray-900 mb-2">
-                    &ldquo;Education should be accessible to everyone, regardless of their background or financial situation.&rdquo;
+                    &ldquo;Education is the most powerful weapon which you can use to change the world.&rdquo;
                   </p>
                   <p className="text-gray-600">
-                    — Rayan Azhari
+                    — Nelson Mandela
                   </p>
                 </div>
               </div>
