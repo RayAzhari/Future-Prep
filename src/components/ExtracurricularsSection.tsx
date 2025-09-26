@@ -110,7 +110,7 @@ export default function ExtracurricularsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-8"
         >
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
             {/* Search Bar */}

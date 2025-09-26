@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Filter } from 'lucide-react'
+import { ExternalLink, Filter, Search } from 'lucide-react'
 import resourcesData from '../data/resources.json'
 import type { Resource } from '../types/data'
 
@@ -81,7 +81,7 @@ export default function ResourcesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-8"
         >
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
             {/* Search Bar */}
@@ -93,7 +93,7 @@ export default function ResourcesSection() {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               />
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             </div>
 
             {/* Category Filter */}
@@ -221,7 +221,7 @@ export default function ResourcesSection() {
             className="text-center py-12"
           >
             <div className="text-gray-400 mb-4">
-              <Filter className="w-16 h-16 mx-auto" />
+              <Search className="w-16 h-16 mx-auto" />
             </div>
             <h3 className="text-xl font-semibold text-gray-600 mb-2">
               No resources found
