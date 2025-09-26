@@ -21,31 +21,31 @@ export default function ScholarshipsSection() {
   )
   const majorOptions = ['All', ...allMajors]
 
-  // derived filtered list — safe, pure, and recomputes when inputs change
+  // derived filtered list — always filter from original data, never from filtered results
   const filteredScholarships = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
-    return allScholarships.filter(scholarship => {
-      // Search filter
-      if (query) {
-        const matchesSearch = (
-          scholarship.title.toLowerCase().includes(query) ||
-          scholarship.description.toLowerCase().includes(query) ||
-          scholarship.eligibility.toLowerCase().includes(query)
-        )
-        if (!matchesSearch) return false
-      }
+    
+    // Always start with the original full list
+    let filtered = [...allScholarships]
+    
+    // Apply major filter
+    if (selectedMajor !== 'All') {
+      filtered = filtered.filter(scholarship => 
+        scholarship.majors.includes(selectedMajor) || 
+        scholarship.majors.includes('All Majors')
+      )
+    }
 
-      // Major filter
-      if (selectedMajor !== 'All') {
-        const matchesMajor = (
-          scholarship.majors.includes(selectedMajor) || 
-          scholarship.majors.includes('All Majors')
-        )
-        if (!matchesMajor) return false
-      }
+    // Apply search filter
+    if (query) {
+      filtered = filtered.filter(scholarship => 
+        scholarship.title.toLowerCase().includes(query) ||
+        scholarship.description.toLowerCase().includes(query) ||
+        scholarship.eligibility.toLowerCase().includes(query)
+      )
+    }
 
-      return true
-    })
+    return filtered
   }, [allScholarships, searchTerm, selectedMajor])
 
   // Reset function to clear all filters

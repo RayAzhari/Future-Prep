@@ -22,27 +22,31 @@ export default function ResearchSection() {
   )
   const institutionOptions = ['All', ...allInstitutions]
 
-  // Filtered opportunities
+  // Filtered opportunities — always filter from original data, never from filtered results
   const filteredOpportunities = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
-    return allOpportunities.filter(opportunity => {
-      // Institution filter
-      if (selectedInstitution !== 'All' && opportunity.institution !== selectedInstitution) {
-        return false
-      }
+    
+    // Always start with the original full list
+    let filtered = [...allOpportunities]
+    
+    // Apply institution filter
+    if (selectedInstitution !== 'All') {
+      filtered = filtered.filter(opportunity => 
+        opportunity.institution === selectedInstitution
+      )
+    }
 
-      // Search filter
-      if (query) {
-        return (
-          opportunity.title.toLowerCase().includes(query) ||
-          opportunity.description.toLowerCase().includes(query) ||
-          opportunity.institution.toLowerCase().includes(query) ||
-          opportunity.location.toLowerCase().includes(query)
-        )
-      }
+    // Apply search filter
+    if (query) {
+      filtered = filtered.filter(opportunity => 
+        opportunity.title.toLowerCase().includes(query) ||
+        opportunity.description.toLowerCase().includes(query) ||
+        opportunity.institution.toLowerCase().includes(query) ||
+        opportunity.location.toLowerCase().includes(query)
+      )
+    }
 
-      return true
-    })
+    return filtered
   }, [allOpportunities, searchTerm, selectedInstitution])
 
   // Reset function to clear all filters

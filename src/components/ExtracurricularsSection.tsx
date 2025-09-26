@@ -21,27 +21,31 @@ export default function ExtracurricularsSection() {
   )
   const categoryOptions = ['All', ...allCategories]
 
-  // derived filtered list — safe, pure, and recomputes when inputs change
+  // derived filtered list — always filter from original data, never from filtered results
   const filteredExtracurriculars = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
-    return allExtracurriculars.filter(extracurricular => {
-      // Category filter
-      if (selectedCategory !== 'All' && extracurricular.category !== selectedCategory) {
-        return false
-      }
+    
+    // Always start with the original full list
+    let filtered = [...allExtracurriculars]
+    
+    // Apply category filter
+    if (selectedCategory !== 'All') {
+      filtered = filtered.filter(extracurricular => 
+        extracurricular.category === selectedCategory
+      )
+    }
 
-      // Search filter
-      if (query) {
-        return (
-          extracurricular.title.toLowerCase().includes(query) ||
-          extracurricular.description.toLowerCase().includes(query) ||
-          extracurricular.benefits.toLowerCase().includes(query) ||
-          extracurricular.category.toLowerCase().includes(query)
-        )
-      }
+    // Apply search filter
+    if (query) {
+      filtered = filtered.filter(extracurricular => 
+        extracurricular.title.toLowerCase().includes(query) ||
+        extracurricular.description.toLowerCase().includes(query) ||
+        extracurricular.benefits.toLowerCase().includes(query) ||
+        extracurricular.category.toLowerCase().includes(query)
+      )
+    }
 
-      return true
-    })
+    return filtered
   }, [allExtracurriculars, searchTerm, selectedCategory])
 
   // Reset function to clear all filters

@@ -16,22 +16,30 @@ export default function ResourcesSection() {
 
   const categories = ['All', 'SAT', 'ACT', 'AP General', 'AP Psychology', 'AP Biology', 'AP Chemistry', 'AP Physics', 'AP Calculus', 'AP Statistics', 'AP Computer Science', 'AP US History', 'AP World History', 'AP Economics', 'AP English', 'AP Spanish', 'AP French', 'AP Environmental Science', 'AP Music Theory', 'AP Latin']
 
-  // derived filtered list — safe, pure, and recomputes when inputs change
+  // derived filtered list — always filter from original data, never from filtered results
   const filteredResources = useMemo(() => {
     const query = searchTerm.trim().toLowerCase()
-    return allResources.filter(resource => {
-      // Category filter
-      if (selectedCategory !== 'All' && resource.category !== selectedCategory) {
-        return false
-      }
-      // Search filter
-      if (!query) return true
-      return (
+    
+    // Always start with the original full list
+    let filtered = [...allResources]
+    
+    // Apply category filter
+    if (selectedCategory !== 'All') {
+      filtered = filtered.filter(resource => 
+        resource.category === selectedCategory
+      )
+    }
+
+    // Apply search filter
+    if (query) {
+      filtered = filtered.filter(resource => 
         resource.title.toLowerCase().includes(query) ||
         resource.platform.toLowerCase().includes(query) ||
         resource.description.toLowerCase().includes(query)
       )
-    })
+    }
+
+    return filtered
   }, [allResources, searchTerm, selectedCategory])
 
   // Reset function to clear all filters
