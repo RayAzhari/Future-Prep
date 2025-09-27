@@ -47,7 +47,8 @@
     "description": "Design, build, and program robots for competitions",
     "timeCommitment": "10-20 hours/week",
     "benefits": "Engineering skills, programming, teamwork, competition experience",
-    "requirements": "Interest in engineering and programming"
+    "requirements": "Interest in engineering and programming",
+    "website": "https://www.firstinspires.org/"
   },
   {
     "id": 6,
@@ -56,7 +57,8 @@
     "description": "Compete in various science and engineering events",
     "timeCommitment": "8-15 hours/week",
     "benefits": "Scientific knowledge, problem-solving, teamwork, competition experience",
-    "requirements": "Strong science background, dedication to practice"
+    "requirements": "Strong science background, dedication to practice",
+    "website": "https://www.soinc.org/"
   },
   {
     "id": 7,
@@ -65,7 +67,8 @@
     "description": "Participate in math competitions and problem-solving activities",
     "timeCommitment": "4-8 hours/week",
     "benefits": "Advanced math skills, competition experience, scholarships",
-    "requirements": "Strong math background, problem-solving interest"
+    "requirements": "Strong math background, problem-solving interest",
+    "website": "https://www.maa.org/math-competitions"
   },
   {
     "id": 8,
@@ -74,7 +77,8 @@
     "description": "Learn programming, participate in coding competitions, and work on projects",
     "timeCommitment": "6-12 hours/week",
     "benefits": "Programming skills, project portfolio, competition experience",
-    "requirements": "Interest in computer science and programming"
+    "requirements": "Interest in computer science and programming",
+    "website": "https://code.org/"
   },
   {
     "id": 9,
@@ -83,7 +87,8 @@
     "description": "Promote environmental awareness and sustainability initiatives",
     "timeCommitment": "3-6 hours/week",
     "benefits": "Environmental knowledge, leadership, community impact",
-    "requirements": "Interest in environmental issues, commitment to sustainability"
+    "requirements": "Interest in environmental issues, commitment to sustainability",
+    "website": "https://www.sierraclub.org/"
   },
   {
     "id": 10,
@@ -92,7 +97,8 @@
     "description": "International student-led organization providing service opportunities",
     "timeCommitment": "4-8 hours/week",
     "benefits": "Community service, leadership development, networking",
-    "requirements": "Commitment to service, good character"
+    "requirements": "Commitment to service, good character",
+    "website": "https://www.keyclub.org/"
   },
   {
     "id": 11,
@@ -191,7 +197,8 @@
     "description": "Learn and compete in chess tournaments",
     "timeCommitment": "3-6 hours/week",
     "benefits": "Strategic thinking, problem-solving, competition experience",
-    "requirements": "Interest in chess, strategic thinking ability"
+    "requirements": "Interest in chess, strategic thinking ability",
+    "website": "https://www.uschess.org/"
   },
   {
     "id": 22,
@@ -200,7 +207,8 @@
     "description": "Compete in academic trivia competitions",
     "timeCommitment": "4-8 hours/week",
     "benefits": "General knowledge, quick thinking, teamwork",
-    "requirements": "Broad academic knowledge, quick recall ability"
+    "requirements": "Broad academic knowledge, quick recall ability",
+    "website": "https://www.naqt.com/"
   },
   {
     "id": 23,
@@ -209,7 +217,8 @@
     "description": "Simulate courtroom trials and legal proceedings",
     "timeCommitment": "6-12 hours/week",
     "benefits": "Public speaking, legal knowledge, critical thinking",
-    "requirements": "Interest in law, strong speaking skills"
+    "requirements": "Interest in law, strong speaking skills",
+    "website": "https://www.nationalmocktrial.org/"
   },
   {
     "id": 24,
@@ -218,7 +227,8 @@
     "description": "Develop business and leadership skills through competitions",
     "timeCommitment": "4-8 hours/week",
     "benefits": "Business knowledge, leadership, networking, competitions",
-    "requirements": "Interest in business, leadership potential"
+    "requirements": "Interest in business, leadership potential",
+    "website": "https://www.fbla.org/"
   },
   {
     "id": 25,
@@ -227,7 +237,8 @@
     "description": "Marketing, finance, hospitality, and management competitions",
     "timeCommitment": "6-12 hours/week",
     "benefits": "Business skills, competition experience, networking",
-    "requirements": "Interest in business careers, competitive spirit"
+    "requirements": "Interest in business careers, competitive spirit",
+    "website": "https://www.deca.org/"
   },
   {
     "id": 26,
@@ -254,7 +265,8 @@
     "description": "Prepare for careers in healthcare through competitions and activities",
     "timeCommitment": "4-8 hours/week",
     "benefits": "Healthcare knowledge, leadership, competition experience",
-    "requirements": "Interest in healthcare careers, academic excellence"
+    "requirements": "Interest in healthcare careers, academic excellence",
+    "website": "https://www.hosa.org/"
   },
   {
     "id": 29,
@@ -263,7 +275,8 @@
     "description": "Promote health and safety awareness in the community",
     "timeCommitment": "3-6 hours/week",
     "benefits": "Health knowledge, community service, leadership",
-    "requirements": "Interest in health and safety, commitment to service"
+    "requirements": "Interest in health and safety, commitment to service",
+    "website": "https://www.redcross.org/"
   },
   {
     "id": 30,

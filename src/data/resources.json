@@ -454,5 +454,29 @@
     "category": "AP Computer Science",
     "link": "https://www.khanacademy.org/computing",
     "description": "Free computer science courses and programming tutorials"
+  },
+  {
+    "id": 58,
+    "title": "Tony Villarreal - AP Environmental Science",
+    "platform": "YouTube",
+    "category": "AP Environmental Science",
+    "link": "https://www.youtube.com/@TonyVillarreal",
+    "description": "Comprehensive AP Environmental Science content with engaging explanations and music videos"
+  },
+  {
+    "id": 59,
+    "title": "Tony Villarreal - Science Music Videos",
+    "platform": "YouTube",
+    "category": "AP General",
+    "link": "https://www.youtube.com/@TonyVillarreal",
+    "description": "Educational science music videos that make learning fun and memorable"
+  },
+  {
+    "id": 60,
+    "title": "Tony Villarreal - Oneprep",
+    "platform": "YouTube",
+    "category": "AP General",
+    "link": "https://www.youtube.com/@TonyVillarreal",
+    "description": "Comprehensive AP exam preparation content with unique teaching methods"
   }
 ]
