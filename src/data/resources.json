@@ -460,23 +460,31 @@
     "title": "Tony Villarreal - AP Environmental Science",
     "platform": "YouTube",
     "category": "AP Environmental Science",
-    "link": "https://www.youtube.com/@TonyVillarreal",
+    "link": "https://www.youtube.com/@MrVscience",
     "description": "Comprehensive AP Environmental Science content with engaging explanations and music videos"
   },
   {
     "id": 59,
-    "title": "Tony Villarreal - Science Music Videos",
+    "title": "Science Music Videos",
     "platform": "YouTube",
     "category": "AP General",
-    "link": "https://www.youtube.com/@TonyVillarreal",
+    "link": "https://www.youtube.com/@MrVscience",
     "description": "Educational science music videos that make learning fun and memorable"
   },
   {
     "id": 60,
-    "title": "Tony Villarreal - Oneprep",
-    "platform": "YouTube",
-    "category": "AP General",
-    "link": "https://www.youtube.com/@TonyVillarreal",
-    "description": "Comprehensive AP exam preparation content with unique teaching methods"
+    "title": "OnePrep",
+    "platform": "OnePrep",
+    "category": "SAT",
+    "link": "https://www.oneprep.com/",
+    "description": "Comprehensive SAT study platform with practice tests and personalized learning"
+  },
+  {
+    "id": 61,
+    "title": "Acely AI",
+    "platform": "Acely AI",
+    "category": "SAT",
+    "link": "https://www.acely.ai/",
+    "description": "AI-powered SAT prep with personalized study plans and practice questions"
   }
 ]
