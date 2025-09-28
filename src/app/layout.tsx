@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Future Prep - Prep smarter, apply stronger',
   description: 'Free SAT/ACT/AP resources, scholarships, and research opportunities for high schoolers.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/images/favicon.ico',
   },
 }
 
