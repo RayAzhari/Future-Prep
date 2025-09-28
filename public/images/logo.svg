@@ -1,0 +1,45 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for graduation cap and "FUTURE" text -->
+    <linearGradient id="blueToPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for book and "PREP" text -->
+    <linearGradient id="purpleToPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="80" fill="#F5F5DC" rx="8"/>
+  
+  <!-- Graduation Cap -->
+  <g transform="translate(10, 8)">
+    <!-- Cap base -->
+    <rect x="0" y="8" width="24" height="3" fill="url(#blueToPurple)" rx="1.5"/>
+    <!-- Cap top -->
+    <polygon points="12,0 24,8 0,8" fill="url(#blueToPurple)"/>
+    <!-- Tassel -->
+    <line x1="22" y1="8" x2="28" y2="8" stroke="#8B5CF6" stroke-width="1"/>
+    <circle cx="28" cy="8" r="1.5" fill="#8B5CF6"/>
+  </g>
+  
+  <!-- Open Book -->
+  <g transform="translate(10, 20)">
+    <!-- Left page -->
+    <path d="M 2 0 Q 2 2 2 12 Q 2 14 4 14 L 12 14" stroke="url(#purpleToPink)" stroke-width="2" fill="none"/>
+    <!-- Right page -->
+    <path d="M 12 0 Q 12 2 12 12 Q 12 14 10 14 L 2 14" stroke="url(#purpleToPink)" stroke-width="2" fill="none"/>
+    <!-- Book spine -->
+    <rect x="2" y="0" width="10" height="14" fill="url(#purpleToPink)" rx="1"/>
+  </g>
+  
+  <!-- FUTURE text -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="url(#blueToPurple)">FUTURE</text>
+  
+  <!-- PREP text -->
+  <text x="50" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="url(#purpleToPink)">PREP</text>
+</svg>

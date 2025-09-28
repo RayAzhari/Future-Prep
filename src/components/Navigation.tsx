@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -69,9 +70,14 @@ export default function Navigation() {
             className="flex-shrink-0 cursor-pointer"
             onClick={() => handleNavigation({ label: 'Home', id: 'home' })}
           >
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              Future Prep
-            </h1>
+            <Image
+              src="/images/logo.svg"
+              alt="Future Prep Logo"
+              width={120}
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
