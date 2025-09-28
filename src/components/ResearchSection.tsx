@@ -29,14 +29,22 @@ export default function ResearchSection() {
     // Always start with the original full list
     let sorted = [...allOpportunities]
     
-    // Apply search filter first (if searching)
+    // Apply search sorting first (if searching) - show matching items first, then the rest
     if (query) {
-      sorted = sorted.filter(opportunity => 
-        opportunity.title.toLowerCase().includes(query) ||
-        opportunity.description.toLowerCase().includes(query) ||
-        opportunity.institution.toLowerCase().includes(query) ||
-        opportunity.location.toLowerCase().includes(query)
-      )
+      sorted.sort((a, b) => {
+        const aMatches = a.title.toLowerCase().includes(query) ||
+                        a.description.toLowerCase().includes(query) ||
+                        a.institution.toLowerCase().includes(query) ||
+                        a.location.toLowerCase().includes(query)
+        const bMatches = b.title.toLowerCase().includes(query) ||
+                        b.description.toLowerCase().includes(query) ||
+                        b.institution.toLowerCase().includes(query) ||
+                        b.location.toLowerCase().includes(query)
+        
+        if (aMatches && !bMatches) return -1
+        if (!aMatches && bMatches) return 1
+        return 0
+      })
     }
 
     // Apply institution sorting (selected institution first, then others)

@@ -23,13 +23,20 @@ export default function ResourcesSection() {
     // Always start with the original full list
     let sorted = [...allResources]
     
-    // Apply search filter first (if searching)
+    // Apply search sorting first (if searching) - show matching items first, then the rest
     if (query) {
-      sorted = sorted.filter(resource => 
-        resource.title.toLowerCase().includes(query) ||
-        resource.platform.toLowerCase().includes(query) ||
-        resource.description.toLowerCase().includes(query)
-      )
+      sorted.sort((a, b) => {
+        const aMatches = a.title.toLowerCase().includes(query) ||
+                        a.platform.toLowerCase().includes(query) ||
+                        a.description.toLowerCase().includes(query)
+        const bMatches = b.title.toLowerCase().includes(query) ||
+                        b.platform.toLowerCase().includes(query) ||
+                        b.description.toLowerCase().includes(query)
+        
+        if (aMatches && !bMatches) return -1
+        if (!aMatches && bMatches) return 1
+        return 0
+      })
     }
 
     // Apply category sorting (selected category first, then others)

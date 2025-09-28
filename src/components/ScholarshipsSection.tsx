@@ -28,13 +28,20 @@ export default function ScholarshipsSection() {
     // Always start with the original full list
     let sorted = [...allScholarships]
     
-    // Apply search filter first (if searching)
+    // Apply search sorting first (if searching) - show matching items first, then the rest
     if (query) {
-      sorted = sorted.filter(scholarship => 
-        scholarship.title.toLowerCase().includes(query) ||
-        scholarship.description.toLowerCase().includes(query) ||
-        scholarship.eligibility.toLowerCase().includes(query)
-      )
+      sorted.sort((a, b) => {
+        const aMatches = a.title.toLowerCase().includes(query) ||
+                        a.description.toLowerCase().includes(query) ||
+                        a.eligibility.toLowerCase().includes(query)
+        const bMatches = b.title.toLowerCase().includes(query) ||
+                        b.description.toLowerCase().includes(query) ||
+                        b.eligibility.toLowerCase().includes(query)
+        
+        if (aMatches && !bMatches) return -1
+        if (!aMatches && bMatches) return 1
+        return 0
+      })
     }
 
     // Apply major sorting (selected major first, then others)

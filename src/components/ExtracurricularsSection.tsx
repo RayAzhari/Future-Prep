@@ -28,14 +28,22 @@ export default function ExtracurricularsSection() {
     // Always start with the original full list
     let sorted = [...allExtracurriculars]
     
-    // Apply search filter first (if searching)
+    // Apply search sorting first (if searching) - show matching items first, then the rest
     if (query) {
-      sorted = sorted.filter(extracurricular => 
-        extracurricular.title.toLowerCase().includes(query) ||
-        extracurricular.description.toLowerCase().includes(query) ||
-        extracurricular.benefits.toLowerCase().includes(query) ||
-        extracurricular.category.toLowerCase().includes(query)
-      )
+      sorted.sort((a, b) => {
+        const aMatches = a.title.toLowerCase().includes(query) ||
+                        a.description.toLowerCase().includes(query) ||
+                        a.benefits.toLowerCase().includes(query) ||
+                        a.category.toLowerCase().includes(query)
+        const bMatches = b.title.toLowerCase().includes(query) ||
+                        b.description.toLowerCase().includes(query) ||
+                        b.benefits.toLowerCase().includes(query) ||
+                        b.category.toLowerCase().includes(query)
+        
+        if (aMatches && !bMatches) return -1
+        if (!aMatches && bMatches) return 1
+        return 0
+      })
     }
 
     // Apply category sorting (selected category first, then others)
