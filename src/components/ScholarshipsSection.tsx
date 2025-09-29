@@ -107,10 +107,10 @@ export default function ScholarshipsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Scholarships & Opportunities
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
             Find funding opportunities that match your interests and academic goals
           </p>
         </motion.div>
@@ -123,33 +123,36 @@ export default function ScholarshipsSection() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 w-full sm:max-w-md">
-              <input
-                type="text"
-                placeholder="Search scholarships..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            </div>
+          <div className="flex flex-col gap-3 sm:gap-4">
+            {/* Search and Filter Row */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
+              {/* Search Bar */}
+              <div className="relative flex-1 w-full sm:max-w-md">
+                <input
+                  type="text"
+                  placeholder="Search scholarships..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm sm:text-base"
+                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              </div>
 
-            {/* Major Filter */}
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              <Filter className="text-gray-400 w-4 h-4" />
-              <select
-                value={selectedMajor}
-                onChange={(e) => setSelectedMajor(e.target.value)}
-                className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              >
-                {majorOptions.map((major) => (
-                  <option key={major} value={major}>
-                    {major}
-                  </option>
-                ))}
-              </select>
+              {/* Major Filter */}
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <Filter className="text-gray-400 w-4 h-4 flex-shrink-0" />
+                <select
+                  value={selectedMajor}
+                  onChange={(e) => setSelectedMajor(e.target.value)}
+                  className="flex-1 sm:flex-none px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm sm:text-base min-w-0 sm:min-w-[180px]"
+                >
+                  {majorOptions.map((major) => (
+                    <option key={major} value={major}>
+                      {major}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             {/* Reset Button */}
@@ -160,7 +163,7 @@ export default function ScholarshipsSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={resetFilters}
-                className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium self-start sm:self-auto"
               >
                 Reset Filters
               </motion.button>
@@ -174,7 +177,7 @@ export default function ScholarshipsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {sortedScholarships.map((scholarship) => {
             const daysLeft = getDaysUntilDeadline(scholarship.deadline)
@@ -185,7 +188,7 @@ export default function ScholarshipsSection() {
                 key={scholarship.id}
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
+                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
               >
                 {/* Urgent Badge */}
                 {isUrgent && (

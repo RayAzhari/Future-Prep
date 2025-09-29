@@ -58,12 +58,12 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4">
               <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-secondary-600 bg-clip-text text-transparent">
                 About Future Prep
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
               Empowering high school students with the resources and opportunities they need to succeed in college admissions and beyond.
             </p>
           </motion.div>
@@ -80,14 +80,14 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 px-4">
               Our Mission
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+            <div className="max-w-4xl mx-auto px-4">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                 College admissions can be overwhelming, confusing, and expensive. Future Prep was created to level the playing field by providing high school students with free access to the best resources, scholarships, and research opportunities.
               </p>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                 We believe that every student, regardless of their background or financial situation, deserves access to the tools they need to achieve their academic dreams.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16"
           >
             {features.map((feature, index) => (
               <motion.div
@@ -109,15 +109,15 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
+                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -136,7 +136,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 px-4">
               Meet the Creator
             </h2>
           </motion.div>
@@ -148,39 +148,39 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl">
               <div className="flex items-center justify-center mb-8">
                 <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                   <span className="text-3xl font-bold text-white">RA</span>
                 </div>
               </div>
               
-              <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3 sm:mb-4 leading-tight">
                 Rayan Azhari
               </h3>
               
-              <p className="text-lg text-gray-600 text-center mb-6">
+              <p className="text-base sm:text-lg text-gray-600 text-center mb-4 sm:mb-6">
                 Creator & Founder
               </p>
 
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="mb-6">
+              <div className="prose prose-sm sm:prose-lg max-w-none text-gray-700">
+                <p className="mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
                   Hi! I&apos;m Rayan Azhari, a high school student who understands the challenges of navigating college admissions firsthand. After spending countless hours researching scholarships, study resources, and research opportunities, I realized how scattered and overwhelming this information can be.
                 </p>
                 
-                <p className="mb-6">
+                <p className="mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
                   I created Future Prep to solve this problem. As someone going through the same process as many of you, I wanted to build a platform that consolidates the best resources in one place, making it easier for students to find what they need without the stress of endless searching.
                 </p>
                 
-                <p className="mb-6">
+                <p className="mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
                   My goal is simple: help other high school students like me succeed in their college admissions journey by providing free access to the resources and opportunities that can make a real difference.
                 </p>
                 
-                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-6 border border-primary-200">
-                  <p className="text-lg font-medium text-gray-900 mb-2">
+                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-4 sm:p-6 border border-primary-200">
+                  <p className="text-base sm:text-lg font-medium text-gray-900 mb-2 leading-relaxed">
                     &ldquo;Education is the most powerful weapon which you can use to change the world.&rdquo;
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     — Nelson Mandela
                   </p>
                 </div>
@@ -200,10 +200,10 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
               The principles that guide everything we do at Future Prep
             </p>
           </motion.div>
@@ -213,7 +213,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
           >
             {values.map((value, index) => (
               <motion.div
@@ -222,12 +222,12 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 hover:bg-gray-100 transition-colors duration-300"
+                className="bg-gray-50 rounded-xl p-6 sm:p-8 hover:bg-gray-100 transition-colors duration-300"
               >
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4 leading-tight">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                   {value.description}
                 </p>
               </motion.div>

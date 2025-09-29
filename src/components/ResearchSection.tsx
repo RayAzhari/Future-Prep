@@ -168,10 +168,10 @@ Respectfully,
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Research Opportunities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
             Connect with professors and find research opportunities to enhance your academic profile
           </p>
         </motion.div>
@@ -275,33 +275,36 @@ Respectfully,
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-8"
             >
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
-                {/* Search Bar */}
-                <div className="relative flex-1 w-full sm:max-w-md">
-                  <input
-                    type="text"
-                    placeholder="Search opportunities..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  />
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                </div>
+              <div className="flex flex-col gap-3 sm:gap-4">
+                {/* Search and Filter Row */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
+                  {/* Search Bar */}
+                  <div className="relative flex-1 w-full sm:max-w-md">
+                    <input
+                      type="text"
+                      placeholder="Search opportunities..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm sm:text-base"
+                    />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  </div>
 
-                {/* Institution Filter */}
-                <div className="flex items-center gap-2 w-full sm:w-auto">
-                  <Filter className="text-gray-400 w-4 h-4" />
-                  <select
-                    value={selectedInstitution}
-                    onChange={(e) => setSelectedInstitution(e.target.value)}
-                    className="flex-1 sm:flex-none px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    {institutionOptions.map((institution) => (
-                      <option key={institution} value={institution}>
-                        {institution}
-                      </option>
-                    ))}
-                  </select>
+                  {/* Institution Filter */}
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <Filter className="text-gray-400 w-4 h-4 flex-shrink-0" />
+                    <select
+                      value={selectedInstitution}
+                      onChange={(e) => setSelectedInstitution(e.target.value)}
+                      className="flex-1 sm:flex-none px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm sm:text-base min-w-0 sm:min-w-[180px]"
+                    >
+                      {institutionOptions.map((institution) => (
+                        <option key={institution} value={institution}>
+                          {institution}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 {/* Reset Button */}
@@ -312,7 +315,7 @@ Respectfully,
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={resetFilters}
-                    className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                    className="w-full sm:w-auto px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-sm font-medium self-start sm:self-auto"
                   >
                     Reset Filters
                   </motion.button>
@@ -321,7 +324,7 @@ Respectfully,
             </motion.div>
 
             {/* Opportunities Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {sortedOpportunities.map((opportunity) => {
               const daysLeft = getDaysUntilDeadline(opportunity.deadline)
               const isUrgent = daysLeft <= 30 && daysLeft > 0
@@ -334,7 +337,7 @@ Respectfully,
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
+                  className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
                 >
                   {/* Urgent Badge */}
                   {isUrgent && (
@@ -447,7 +450,7 @@ Respectfully,
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
             Tips for Successful Research Applications
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="text-center">
               <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary-600 font-bold text-lg">1</span>
