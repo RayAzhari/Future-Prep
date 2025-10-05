@@ -39,7 +39,7 @@ export default function HeroSection() {
       title: "Support",
       description: "Email templates for professors",
       color: "from-orange-500 to-orange-600",
-      action: () => scrollToSection('research')
+      action: () => window.location.href = '/research'
     }
   ]
 
