@@ -17,25 +17,29 @@ export default function HeroSection() {
       icon: BookOpen,
       title: "Practice",
       description: "SAT, ACT, AP resources",
-      color: "from-blue-500 to-blue-600"
+      color: "from-blue-500 to-blue-600",
+      action: () => scrollToSection('resources')
     },
     {
       icon: DollarSign,
       title: "Money",
       description: "Scholarships database",
-      color: "from-green-500 to-green-600"
+      color: "from-green-500 to-green-600",
+      action: () => window.location.href = '/scholarships'
     },
     {
       icon: Search,
       title: "Experience",
       description: "Research opportunities",
-      color: "from-purple-500 to-purple-600"
+      color: "from-purple-500 to-purple-600",
+      action: () => window.location.href = '/research'
     },
     {
       icon: Users,
       title: "Support",
       description: "Email templates for professors",
-      color: "from-orange-500 to-orange-600"
+      color: "from-orange-500 to-orange-600",
+      action: () => scrollToSection('research')
     }
   ]
 
@@ -107,7 +111,7 @@ export default function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('scholarships')}
+            onClick={() => window.location.href = '/scholarships'}
             className="group px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-full font-semibold text-base sm:text-lg hover:bg-primary-50 transition-all duration-300 flex items-center justify-center"
           >
             Find Scholarships
@@ -123,13 +127,15 @@ export default function HeroSection() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto px-4"
         >
           {features.map((feature, index) => (
-            <motion.div
+            <motion.button
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20"
+              whileTap={{ scale: 0.98 }}
+              onClick={feature.action}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 w-full text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
                 <feature.icon className="w-6 h-6 text-white" />
@@ -140,7 +146,7 @@ export default function HeroSection() {
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>
+            </motion.button>
           ))}
         </motion.div>
 
